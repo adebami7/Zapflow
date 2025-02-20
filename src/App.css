@@ -1,0 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+
+:root {
+  --primary: #735dff;
+}
+
+body {
+  font-family: "Quicksand", serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}

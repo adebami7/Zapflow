@@ -127,7 +127,7 @@ function Testimonials() {
           <h1 className="mt-4 mb-2 font-semibold text-center lg:text-[28px] text-white">
             See What People Are Saying About Us
           </h1>
-          <p className="text-[15px] mb-12 text-white text-center">
+          <p className="text-[15px] mb-6 text-white text-center">
             Customer satisfaction and experience are our top priorities.
           </p>
 

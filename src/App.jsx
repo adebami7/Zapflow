@@ -1,5 +1,6 @@
 import "./App.css";
 import AboutUs from "./sections/AboutUs";
+import ContactUs from "./sections/ContactUs";
 import FAQs from "./sections/FAQs";
 import Hero from "./sections/Hero";
 import Navbar from "./sections/Navbar";
@@ -17,6 +18,7 @@ export default function App() {
       <Pricing />
       <FAQs />
       <Testimonials />
+      <ContactUs />
     </main>
   );
 }

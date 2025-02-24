@@ -17,7 +17,7 @@ export function Card({
         className="w-[220px] h-[120px] absolute top-0 right-0"
       />
       <div
-        className={`bg-[${iconBg}] rounded-[4px] mb-6 w-16 h-16 flex items-center justify-center`}
+        className={`${iconBg} rounded-[4px] mb-6 w-16 h-16 flex items-center justify-center`}
       >
         <div
           className={`w-12 h-12 rounded-[4px] ${iconColor} flex items-center justify-center`}

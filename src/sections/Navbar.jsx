@@ -4,40 +4,77 @@ import Drawer from "../components/Drawer";
 import { Link as ScrollLink } from "react-scroll";
 
 function MenuItems() {
+  const navbarHeight = 100;
+
   return (
     <>
       <li className="p-3 text-[#657a99] text-sm font-medium hover:text-brandPrimary cursor-pointer">
-        <ScrollLink to="home" smooth={true} duration={500}>
+        <ScrollLink
+          to="home"
+          smooth={true}
+          duration={500}
+          offset={-navbarHeight}
+        >
           Home
         </ScrollLink>
       </li>
       <li className="p-3 text-[#657a99] text-sm font-medium hover:text-brandPrimary cursor-pointer">
-        <ScrollLink to="about" smooth={true} duration={500}>
+        <ScrollLink
+          to="about"
+          smooth={true}
+          duration={500}
+          offset={-navbarHeight}
+        >
           About
         </ScrollLink>
       </li>
       <li className="p-3 text-[#657a99] text-sm font-medium hover:text-brandPrimary cursor-pointer">
-        <ScrollLink to="services" smooth={true} duration={500}>
+        <ScrollLink
+          to="services"
+          smooth={true}
+          duration={500}
+          offset={-navbarHeight}
+        >
           Services
         </ScrollLink>
       </li>
       <li className="p-3 text-[#3b4a62] text-sm font-medium hover:text-brandPrimary cursor-pointer">
-        <ScrollLink to="pricing" smooth={true} duration={500}>
+        <ScrollLink
+          to="pricing"
+          smooth={true}
+          duration={500}
+          offset={-navbarHeight}
+        >
           Pricing
         </ScrollLink>
       </li>
       <li className="p-3 text-[#657a99] text-sm font-medium hover:text-brandPrimary cursor-pointer">
-        <ScrollLink to="faqs" smooth={true} duration={500}>
+        <ScrollLink
+          to="faqs"
+          smooth={true}
+          duration={500}
+          offset={-navbarHeight}
+        >
           FAQs
         </ScrollLink>
       </li>
       <li className="p-3 text-[#657a99] text-sm font-medium hover:text-brandPrimary cursor-pointer">
-        <ScrollLink to="testimonials" smooth={true} duration={500}>
+        <ScrollLink
+          to="testimonials"
+          smooth={true}
+          duration={500}
+          offset={-navbarHeight}
+        >
           Testimonials
         </ScrollLink>
       </li>
       <li className="p-3 text-[#657a99] text-sm font-medium hover:text-brandPrimary cursor-pointer">
-        <ScrollLink to="contact" smooth={true} duration={500}>
+        <ScrollLink
+          to="contact"
+          smooth={true}
+          duration={500}
+          offset={-navbarHeight}
+        >
           Contact Us
         </ScrollLink>
       </li>
@@ -66,7 +103,7 @@ function Navbar() {
 
   return (
     <nav
-      className={`relative  bg-[#fffefe] py-2 px-10 ${
+      className={`relative bg-[#fffefe] py-2 px-10 ${
         isFixed ? "fixed-navbar" : ""
       }`}
     >

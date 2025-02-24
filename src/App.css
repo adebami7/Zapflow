@@ -36,3 +36,13 @@ textarea:focus {
   box-shadow: 0 0 4px #735dff1a;
   outline: none;
 }
+
+.fixed-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: #fffefe; /* Match the background color of your navbar */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for better visibility */
+}

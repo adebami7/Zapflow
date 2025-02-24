@@ -57,7 +57,7 @@ function Pricing() {
   ];
 
   return (
-    <section className="max-w-[1296px] mx-auto py-[70px] px-6">
+    <section id="pricing" className="max-w-[1296px] mx-auto py-[70px] px-6">
       <SectionBadge label="Pricing" />
 
       <h3 className="text-[28px] mt-4 mb-2 text-[#222f36] font-semibold text-center">

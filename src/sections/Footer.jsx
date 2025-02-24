@@ -8,6 +8,7 @@ import {
   MessageSquare,
   Youtube,
 } from "lucide-react";
+import { Link as ScrollLink } from "react-scroll";
 
 function Footer() {
   return (
@@ -35,12 +36,14 @@ function Footer() {
             <ul className="space-y-2">
               {["Home", "About", "Services", "Pricing"].map((item) => (
                 <li key={item}>
-                  <a
-                    href={`#${item.toLowerCase()}`}
-                    className="text-sm hover:text-white transition-colors"
+                  <ScrollLink
+                    to={item.toLowerCase()}
+                    smooth={true}
+                    duration={500}
+                    className="text-sm hover:text-white transition-colors cursor-pointer"
                   >
                     {item}
-                  </a>
+                  </ScrollLink>
                 </li>
               ))}
             </ul>
@@ -52,12 +55,14 @@ function Footer() {
               {["Contact Us", "FAQs", "Testimonials", "Terms & Conditions"].map(
                 (item) => (
                   <li key={item}>
-                    <a
-                      href={`#${item.toLowerCase().replace(/ /g, "-")}`}
-                      className="text-sm hover:text-white transition-colors"
+                    <ScrollLink
+                      to={item.toLowerCase().replace(/ /g, "-")}
+                      smooth={true}
+                      duration={500}
+                      className="text-sm hover:text-white transition-colors cursor-pointer"
                     >
                       {item}
-                    </a>
+                    </ScrollLink>
                   </li>
                 )
               )}

@@ -112,6 +112,7 @@ function TestimonialCard({ name, since, text, rating, daysAgo }) {
 function Testimonials() {
   return (
     <section
+      id="testimonials"
       className="px-6 py-[70px] bg-contain bg-center bg-repeat"
       style={{ backgroundImage: `url(${Cover})` }}
     >

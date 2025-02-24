@@ -12,7 +12,10 @@ function AboutUs() {
   ];
 
   return (
-    <section className="max-w-[1296px] mx-auto flex flex-col lg:flex-row items-center justify-between py-[70px] px-6">
+    <section
+      id="about"
+      className="max-w-[1296px] mx-auto flex flex-col lg:flex-row items-center justify-between py-[70px] px-6"
+    >
       <div className="xl:min-w-[550px] min-w-[450px] hidden lg:flex justify-start">
         <img src={About} alt="about" />
       </div>

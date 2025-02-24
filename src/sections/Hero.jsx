@@ -8,7 +8,7 @@ import { Card } from "../components/HeroCard";
 
 function Hero() {
   return (
-    <section>
+    <section id="home">
       <div
         className="hero-background bg-cover bg-center py-[70px] min-h-[640px] xl:min-h-[540px]"
         style={{ backgroundImage: `url(${Cover})` }}

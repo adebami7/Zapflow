@@ -13,14 +13,16 @@ export default function App() {
   return (
     <main>
       <Navbar />
-      <Hero id="home" />
-      <AboutUs id="about" />
-      <Services id="services" />
-      <Pricing id="pricing" />
-      <FAQs id="faqs" />
-      <Testimonials id="testimonials" />
-      <ContactUs id="contact" />
-      <Footer />
+      <div className="">
+        <Hero id="home" />
+        <AboutUs id="about" />
+        <Services id="services" />
+        <Pricing id="pricing" />
+        <FAQs id="faqs" />
+        <Testimonials id="testimonials" />
+        <ContactUs id="contact" />
+        <Footer />
+      </div>
     </main>
   );
 }

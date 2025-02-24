@@ -69,7 +69,7 @@ function FAQs() {
   const [openIndex, setOpenIndex] = useState(0);
 
   return (
-    <section className="py-[70px] px-6 bg-[#f5f6fa]">
+    <section id="faqs" className="py-[70px] px-6 bg-[#f5f6fa]">
       <div className="max-w-[1296px] mx-auto">
         <SectionBadge label="FAQs" />
         <h1 className="mt-4 mb-2 font-semibold text-center lg:text-[28px] text-[#222f36]">

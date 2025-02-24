@@ -5,6 +5,7 @@ import Hero from "./sections/Hero";
 import Navbar from "./sections/Navbar";
 import Pricing from "./sections/Pricing";
 import Services from "./sections/Services";
+import Testimonials from "./sections/Testimonials";
 
 export default function App() {
   return (
@@ -15,6 +16,7 @@ export default function App() {
       <Services />
       <Pricing />
       <FAQs />
+      <Testimonials />
     </main>
   );
 }

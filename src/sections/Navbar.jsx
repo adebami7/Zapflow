@@ -1,29 +1,44 @@
 import Button from "../components/Button";
 import Drawer from "../components/Drawer";
+import { Link as ScrollLink } from "react-scroll";
 
 function MenuItems() {
   return (
     <>
       <li className="p-3 text-[#657a99] text-sm font-medium hover:text-brandPrimary cursor-pointer">
-        Home
+        <ScrollLink to="home" smooth={true} duration={500}>
+          Home
+        </ScrollLink>
       </li>
       <li className="p-3 text-[#657a99] text-sm font-medium hover:text-brandPrimary cursor-pointer">
-        About
+        <ScrollLink to="about" smooth={true} duration={500}>
+          About
+        </ScrollLink>
       </li>
       <li className="p-3 text-[#657a99] text-sm font-medium hover:text-brandPrimary cursor-pointer">
-        Services
+        <ScrollLink to="services" smooth={true} duration={500}>
+          Services
+        </ScrollLink>
       </li>
       <li className="p-3 text-[#3b4a62] text-sm font-medium hover:text-brandPrimary cursor-pointer">
-        Pricing
+        <ScrollLink to="pricing" smooth={true} duration={500}>
+          Pricing
+        </ScrollLink>
       </li>
       <li className="p-3 text-[#657a99] text-sm font-medium hover:text-brandPrimary cursor-pointer">
-        FAQs
+        <ScrollLink to="faqs" smooth={true} duration={500}>
+          FAQs
+        </ScrollLink>
       </li>
       <li className="p-3 text-[#657a99] text-sm font-medium hover:text-brandPrimary cursor-pointer">
-        Testimonials
+        <ScrollLink to="testimonials" smooth={true} duration={500}>
+          Testimonials
+        </ScrollLink>
       </li>
       <li className="p-3 text-[#657a99] text-sm font-medium hover:text-brandPrimary cursor-pointer">
-        Contact Us
+        <ScrollLink to="contact" smooth={true} duration={500}>
+          Contact Us
+        </ScrollLink>
       </li>
     </>
   );

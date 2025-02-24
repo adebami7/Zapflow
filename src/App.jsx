@@ -2,6 +2,7 @@ import "./App.css";
 import AboutUs from "./sections/AboutUs";
 import Hero from "./sections/Hero";
 import Navbar from "./sections/Navbar";
+import Services from "./sections/Services";
 
 export default function App() {
   return (
@@ -9,6 +10,7 @@ export default function App() {
       <Navbar />
       <Hero />
       <AboutUs />
+      <Services />
     </main>
   );
 }

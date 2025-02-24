@@ -1,4 +1,5 @@
 import "./App.css";
+import AboutUs from "./sections/AboutUs";
 import Hero from "./sections/Hero";
 import Navbar from "./sections/Navbar";
 
@@ -7,6 +8,7 @@ export default function App() {
     <main>
       <Navbar />
       <Hero />
+      <AboutUs />
     </main>
   );
 }

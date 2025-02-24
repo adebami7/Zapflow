@@ -25,7 +25,7 @@ export function Card({
           {icon}
         </div>
       </div>
-      <h3 className="mb-2 text-[#222f36] font-semibold text-lg">{title}</h3>
+      <h3 className="mb-2 text-[#222f36] font-semibold lg:text-xl">{title}</h3>
       <p className="text-sm mb-4 text-[#98a5c3] font-medium">{description}</p>
       <button className="flex items-center gap-3 text-brandPrimary text-[13px] font-medium">
         {buttonText} <MoveRight size={14} className="mt-[3px]" />

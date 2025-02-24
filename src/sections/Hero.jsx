@@ -10,7 +10,7 @@ function Hero() {
   return (
     <section>
       <div
-        className="hero-background bg-cover bg-center py-[70px] min-h-[640px]"
+        className="hero-background bg-cover bg-center py-[70px] min-h-[640px] xl:min-h-[540px]"
         style={{ backgroundImage: `url(${Cover})` }}
       >
         <style>
@@ -55,7 +55,7 @@ function Hero() {
       <div className="pt-[48px] pb-[70px] px-6 bg-[#f5f6fa]">
         <SectionBadge label="Glance" />
 
-        <h1 className="mt-4 mb-2 font-semibold text-center text-[#222f36]">
+        <h1 className="mt-4 mb-2 font-semibold text-center lg:text-[28px] text-[#222f36]">
           Why Opt for Our Services?
         </h1>
         <p className="text-[15px] mb-12 text-[#98a5c3] text-center">

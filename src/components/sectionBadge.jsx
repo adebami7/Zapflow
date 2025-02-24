@@ -1,6 +1,6 @@
-function SectionBadge({ label }) {
+function SectionBadge({ label, className }) {
   return (
-    <div className="flex items-center justify-center w-full">
+    <div className={`flex items-center justify-center w-full ${className}`}>
       <div
         className="py-[1px] px-[10px] text-[#ff5a29] font-medium w-fit text-xs bg-transparent rounded-[5px]"
         style={{

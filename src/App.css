@@ -6,8 +6,43 @@
 
 body {
   font-family: "Quicksand", serif;
+  background-color: #fffefe;
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+input,
+textarea {
+  font-family: "Quicksand", serif;
+  border-radius: 4px;
+  border: 1px solid #e2e6f1;
+  padding: 8px 16px;
+  transition: #735dff 0.3s;
+  width: 100%;
+  color: #222f36;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+input {
+  height: 44.8px;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #735dff;
+  box-shadow: 0 0 4px #735dff1a;
+  outline: none;
+}
+
+.fixed-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: #fffefe; /* Match the background color of your navbar */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for better visibility */
 }

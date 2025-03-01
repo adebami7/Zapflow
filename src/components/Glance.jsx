@@ -9,24 +9,25 @@ const Glance = () => {
           Glance
         </span>
         <h2 className="text-3xl font-semibold text-gray-800">
-          Why Opt For Our Services?
+          Why Choose Zapflow?
         </h2>
         <p className="mt-2 text-gray-600">
-          We are dedicated to supporting you in achieving your objectives.
+        The all-in-one marketing automation tool 
+        designed to simplify sales, nurture leads, and skyrocket conversions—all in one place!
         </p>
         <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-8">
           {[
             {
-              title: "Unparalleled Expertise",
-              desc: "Our team brings years of combined and diverse professional experience designed to address your specific needs.",
+              title: "Generate High-Quality Leads – Fast & Easy!",
+              desc: "Effortlessly create high-converting landing pages and lead forms with a single click. Our AI-powered copy generator helps you craft compelling content in minutes.",
             },
             {
-              title: "Proven Track Record",
-              desc: "Having accomplished many projects, we have earned a reputable standing in our field.",
+              title: "Automate & Nurture Leads with WhatsApp, sms, voice & Email",
+              desc: "Stay connected with your audience! Set up automated follow-ups, broadcasts, and personalized messages that engage and convert leads into loyal customers.",
             },
             {
-              title: "Commitment to Quality",
-              desc: "We go above and beyond to ensure you receive the highest level of service possible.",
+              title: "Save Time, Effort & Money with ZapFlow",
+              desc: "Ditch multiple subscriptions and complex systems—ZapFlow does it all!",
             },
           ].map((item, index) => (
             <div

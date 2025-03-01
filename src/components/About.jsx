@@ -9,11 +9,13 @@ const About = () => {
           About Us
         </span>
         <h2 className="text-3xl font-semibold text-gray-800">
-          Delivering More Than Expected!
+        ZapFlow – The ALL-IN-ONE Marketing Automation Tool
         </h2>
         <p className="mt-4 text-gray-600">
-          Welcome to Zapflow, where we provide a unique and personalized experience
-          designed to surpass your expectations.
+        What is ZapFlow? <br></br>
+         ZapFlow is an all-in-one marketing automation platform designed for <em> businesses, creators, and marketers </em> to capture leads, nurture prospects, and close sales effortlessly. With built-in <em>email, SMS, WhatsApp automation, landing page creation.</em> 
+         ZapFlow helps you scale your business faster and smarter.
+
         </p>
         <ul className="mt-6 space-y-2 text-gray-700">
           {[

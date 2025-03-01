@@ -28,7 +28,7 @@ const Services = () => {
           Services
         </span>
         <h2 className="text-3xl font-semibold text-gray-800">
-          Premium Services at Your Fingertips
+          Why Zapflow
         </h2>
         <p className="mt-2 text-gray-600">
           Enjoy top-tier services with just one click.

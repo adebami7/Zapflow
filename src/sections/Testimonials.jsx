@@ -125,14 +125,13 @@ function Testimonials() {
             boxShadow="3px 3px 0 0 rgba(255, 255, 255, 0.2)"
           />
 
-          <h1 className="mt-4 mb-2 font-semibold text-center lg:text-[18px] text-white">
-          Ready to 10X Your Sales?
-          Start using ZapFlow today and transform the way you market and sell online.
-
+          <h1 className="pt-4 pb-2 font-semibold text-center lg:text-[28px] text-white max-w-[900px] mx-auto">
+            Ready to 10X Your Sales? Start using ZapFlow today and transform the
+            way you market and sell online.
           </h1>
           <p className="text-[15px] mb-6 text-white text-center">
-          Trusted by Top Entrepreneurs & Marketers.
-          Customer satisfaction and experience are our top priorities.
+            Trusted by Top Entrepreneurs & Marketers. Customer satisfaction and
+            experience are our top priorities.
           </p>
 
           <div className="mt-8">

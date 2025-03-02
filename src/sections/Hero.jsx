@@ -29,13 +29,16 @@ function Hero() {
               Streamlined and Inclusive
             </p>
             <h1 className="text-[32px] mb-4 text-white font-semibold uppercase">
-              AUTOMATE AND SCALE YOUR{" "} BUSINESS WITH
-              <span className="text-[#ff9a13]"> ZAPFLOW</span> 
+              AUTOMATE AND SCALE YOUR BUSINESS WITH
+              <span className="text-[#ff9a13]"> ZAPFLOW</span>
             </h1>
             <p className="mb-12 text-base text-white max-w-[750px]">
-            Zapflow is an all-in-one marketing software for businesses that lets you reach out to your customers on WhatsApp, Sms, Emails, Voice at scale.
-            Zapflow let's you send message broadcasts, setup transactional notifications, track campaign analytics, setup automations & chatbots and most importantly grow your revenue from your customers on WhatsApp, emails, Sms, Voice.
-
+              Zapflow is an all-in-one marketing software for businesses that
+              lets you reach out to your customers on WhatsApp, Sms, Emails,
+              Voice at scale. Zapflow let's you send message broadcasts, setup
+              transactional notifications, track campaign analytics, setup
+              automations & chatbots and most importantly grow your revenue from
+              your customers on WhatsApp, emails, Sms, Voice.
             </p>
             <div className="flex items-center gap-3">
               <Button className="h-[46px] !bg-[#0cc763] text-xs md:text-sm">
@@ -59,7 +62,8 @@ function Hero() {
           Why Choose Zapflow?
         </h1>
         <p className="text-[15px] mb-12 text-[#98a5c3] text-center">
-        The all-in-one marketing automation tool designed to simplify sales, nurture leads, and skyrocket conversions—all in one place!
+          The all-in-one marketing automation tool designed to simplify sales,
+          nurture leads, and skyrocket conversions—all in one place!
         </p>
 
         <div className="grid lg:grid-cols-3 max-w-[1320px] mx-auto gap-6">
@@ -76,7 +80,7 @@ function Hero() {
             iconBg="bg-[#ff5a2926]"
             iconColor="bg-[#ff5a29]"
             title="Automate & Nurture Leads with WhatsApp, sms, voice & Email"
-            description="Stay connected with your audience! Set up automated follow-ups, broadcasts, and personalized messages that engage and convert leads into loyal customers."
+            description="Stay connected with your audience! Set up automated follow-ups, broadcasts, and personalized messages that engage and converts all your leads into loyal customers."
             buttonText="Read More"
           />
           <Card

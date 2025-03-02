@@ -30,7 +30,7 @@ function Hero() {
             </p>
             <h1 className="text-[32px] mb-4 text-white font-semibold uppercase">
               AUTOMATE AND SCALE YOUR{" "} BUSINESS WITH
-              <span className="text-[#ff9a13]">ZAPFLOW</span> 
+              <span className="text-[#ff9a13]"> ZAPFLOW</span> 
             </h1>
             <p className="mb-12 text-base text-white max-w-[750px]">
             Zapflow is an all-in-one marketing software for businesses that lets you reach out to your customers on WhatsApp, Sms, Emails, Voice at scale.
@@ -79,14 +79,18 @@ function Hero() {
             description="Stay connected with your audience! Set up automated follow-ups, broadcasts, and personalized messages that engage and convert leads into loyal customers."
             buttonText="Read More"
           />
-          {/* <Card
+          <Card
             icon={<Handshake color="white" />}
             iconBg="bg-[#0cc76326]"
             iconColor="bg-[#0cc763]"
-            title="Commitment to Quality"
-            description="We are dedicated to maintaining the highest standards in everything we do, from the initial consultation to the final delivery."
+            title="Save Time, Effort & Money with ZapFlow"
+            description="Ditch multiple subscriptions and complex systems—ZapFlow does it all! 
+            AI-Powered Sales & Marketing Automation
+            WhatsApp, Email & SMS Integration
+            Built for Businesses, Creators & Marketers
+"
             buttonText="Read More"
-          /> */}
+          />
         </div>
       </div>
     </section>

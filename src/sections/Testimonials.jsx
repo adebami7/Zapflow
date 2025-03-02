@@ -12,7 +12,7 @@ const testimonials = [
     since: "2001",
     image:
       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-jc2nx20KcBKrkRGKPbR6rtQ9YRdkno.png",
-    text: "The sleek design immediately caught my eye, and the functionality sealed the deal. It's not just eye candy; it performs exceptionally well",
+    text: "The WhatsApp automation feature is next level—effortless lead nurturing and sales conversion.",
     rating: 5,
     daysAgo: 10,
   },
@@ -32,7 +32,7 @@ const testimonials = [
     since: "2022",
     image:
       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-jc2nx20KcBKrkRGKPbR6rtQ9YRdkno.png",
-    text: "The sleek design immediately caught my eye, and the functionality sealed the deal. It's not just eye candy; it performs exceptionally well",
+    text: "The WhatsApp automation feature is next level—effortless lead nurturing and sales conversion.",
     rating: 5,
     daysAgo: 8,
   },
@@ -42,7 +42,7 @@ const testimonials = [
     since: "2021",
     image:
       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-jc2nx20KcBKrkRGKPbR6rtQ9YRdkno.png",
-    text: "The sleek design immediately caught my eye, and the functionality sealed the deal. It's not just eye candy; it performs exceptionally well",
+    text: "The WhatsApp automation feature is next level—effortless lead nurturing and sales conversion.",
     rating: 5,
     daysAgo: 12,
   },
@@ -52,7 +52,7 @@ const testimonials = [
     since: "2023",
     image:
       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-jc2nx20KcBKrkRGKPbR6rtQ9YRdkno.png",
-    text: "The sleek design immediately caught my eye, and the functionality sealed the deal. It's not just eye candy; it performs exceptionally well",
+    text: "The WhatsApp automation feature is next level—effortless lead nurturing and sales conversion.",
     rating: 5,
     daysAgo: 5,
   },
@@ -125,7 +125,7 @@ function Testimonials() {
             boxShadow="3px 3px 0 0 rgba(255, 255, 255, 0.2)"
           />
 
-          <h1 className="mt-4 mb-2 font-semibold text-center lg:text-[28px] text-white">
+          <h1 className="mt-4 mb-2 font-semibold text-center lg:text-[18px] text-white">
           Ready to 10X Your Sales?
           Start using ZapFlow today and transform the way you market and sell online.
 

@@ -8,7 +8,6 @@ function AboutUs() {
     "Lead Generation Made Simple – Create high-converting landing pages and lead forms in minutes.",
     "Engage & Nurture Leads – Send automated follow-ups via WhatsApp, email, and SMS.",
     "Sell Any Product, Anywhere – Digital products, courses, services, memberships, and more!",
-    "Our support is available around the clock, every day of the year.",
   ];
 
   return (

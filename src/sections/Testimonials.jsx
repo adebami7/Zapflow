@@ -8,61 +8,61 @@ import "swiper/css";
 const testimonials = [
   {
     id: 1,
-    name: "Donovan Frost",
+    name: "Osaro Destiny|CEO, Ekiema Wellness",
     since: "2001",
     image:
       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-jc2nx20KcBKrkRGKPbR6rtQ9YRdkno.png",
-    text: "The sleek design immediately caught my eye, and the functionality sealed the deal. It's not just eye candy; it performs exceptionally well",
+    text: "The WhatsApp automation feature is next level—effortless lead nurturing and sales conversion.",
     rating: 5,
     daysAgo: 10,
   },
   {
     id: 2,
-    name: "Autumn Quinn",
+    name: "Toyin Omotosho|Internet Entrepreneur",
     since: "2023",
     image:
       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-jc2nx20KcBKrkRGKPbR6rtQ9YRdkno.png",
-    text: "The sleek design immediately caught my eye, and the functionality sealed the deal. It's not just eye candy; it performs exceptionally well",
+    text: "Over 1,000 leads in 2 weeks! This tool is a must-have for any serious business owner.",
     rating: 5,
     daysAgo: 10,
   },
   {
     id: 3,
-    name: "Sarah Johnson",
+    name: "Ronald Nzimora | Ecommerce Coach",
     since: "2022",
     image:
       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-jc2nx20KcBKrkRGKPbR6rtQ9YRdkno.png",
-    text: "The sleek design immediately caught my eye, and the functionality sealed the deal. It's not just eye candy; it performs exceptionally well",
+    text: "The WhatsApp automation feature is next level—effortless lead nurturing and sales conversion.",
     rating: 5,
     daysAgo: 8,
   },
   {
     id: 4,
-    name: "Michael Chen",
+    name: "Bruno Nwogu  | Sales Coach",
     since: "2021",
     image:
       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-jc2nx20KcBKrkRGKPbR6rtQ9YRdkno.png",
-    text: "The sleek design immediately caught my eye, and the functionality sealed the deal. It's not just eye candy; it performs exceptionally well",
+    text: "The WhatsApp automation feature is next level—effortless lead nurturing and sales conversion.",
     rating: 5,
     daysAgo: 12,
   },
   {
     id: 5,
-    name: "Emma Wilson",
+    name: "Caleb | Forex Coach",
     since: "2023",
     image:
       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-jc2nx20KcBKrkRGKPbR6rtQ9YRdkno.png",
-    text: "The sleek design immediately caught my eye, and the functionality sealed the deal. It's not just eye candy; it performs exceptionally well",
+    text: "The WhatsApp automation feature is next level—effortless lead nurturing and sales conversion.",
     rating: 5,
     daysAgo: 5,
   },
   {
     id: 6,
-    name: "James Miller",
+    name: "Jackto Precious | Crypto Coach",
     since: "2022",
     image:
       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-jc2nx20KcBKrkRGKPbR6rtQ9YRdkno.png",
-    text: "The sleek design immediately caught my eye, and the functionality sealed the deal. It's not just eye candy; it performs exceptionally well",
+    text: "The WhatsApp automation feature is next level—effortless lead nurturing and sales conversion.",
     rating: 5,
     daysAgo: 15,
   },
@@ -125,11 +125,13 @@ function Testimonials() {
             boxShadow="3px 3px 0 0 rgba(255, 255, 255, 0.2)"
           />
 
-          <h1 className="mt-4 mb-2 font-semibold text-center lg:text-[28px] text-white">
-            See What People Are Saying About Us
+          <h1 className="pt-4 pb-2 font-semibold text-center lg:text-[28px] text-white max-w-[900px] mx-auto">
+            Ready to 10X Your Sales? Start using ZapFlow today and transform the
+            way you market and sell online.
           </h1>
           <p className="text-[15px] mb-6 text-white text-center">
-            Customer satisfaction and experience are our top priorities.
+            Trusted by Top Entrepreneurs & Marketers. Customer satisfaction and
+            experience are our top priorities.
           </p>
 
           <div className="mt-8">

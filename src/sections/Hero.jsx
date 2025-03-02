@@ -29,13 +29,16 @@ function Hero() {
               Streamlined and Inclusive
             </p>
             <h1 className="text-[32px] mb-4 text-white font-semibold uppercase">
-              Streamlined design, intuitively functional discover the{" "}
-              <span className="text-[#ff9a13]">zapflow</span> template
+              AUTOMATE AND SCALE YOUR BUSINESS WITH
+              <span className="text-[#ff9a13]"> ZAPFLOW</span>
             </h1>
             <p className="mb-12 text-base text-white max-w-[750px]">
-              Experience seamless management with an admin template designed for
-              optimal efficiency, featuring a sleek and contemporary interface
-              that enhances task performance.
+              Zapflow is an all-in-one marketing software for businesses that
+              lets you reach out to your customers on WhatsApp, Sms, Emails,
+              Voice at scale. Zapflow let's you send message broadcasts, setup
+              transactional notifications, track campaign analytics, setup
+              automations & chatbots and most importantly grow your revenue from
+              your customers on WhatsApp, emails, Sms, Voice.
             </p>
             <div className="flex items-center gap-3">
               <Button className="h-[46px] !bg-[#0cc763] text-xs md:text-sm">
@@ -56,10 +59,11 @@ function Hero() {
         <SectionBadge label="Glance" />
 
         <h1 className="mt-4 mb-2 font-semibold text-center lg:text-[28px] text-[#222f36]">
-          Why Opt for Our Services?
+          Why Choose Zapflow?
         </h1>
         <p className="text-[15px] mb-12 text-[#98a5c3] text-center">
-          We are dedicated to supporting you in achieving your objectives.
+          The all-in-one marketing automation tool designed to simplify sales,
+          nurture leads, and skyrocket conversions—all in one place!
         </p>
 
         <div className="grid lg:grid-cols-3 max-w-[1320px] mx-auto gap-6">
@@ -67,24 +71,28 @@ function Hero() {
             icon={<Lightbulb color="white" />}
             iconBg="bg-[#735dff26]"
             iconColor="bg-[#735dff]"
-            title="Commitment to Quality"
-            description="We are dedicated to maintaining the highest standards in everything we do, from the initial consultation to the final delivery."
+            title="Generate High-Quality Leads – Fast & Easy!"
+            description="Effortlessly create high-converting landing pages and lead forms with a single click. Our AI-powered copy generator helps you craft compelling content in minutes."
             buttonText="Read More"
           />
           <Card
             icon={<Star color="white" />}
             iconBg="bg-[#ff5a2926]"
             iconColor="bg-[#ff5a29]"
-            title="Proven Track Record"
-            description="With a portfolio of successful projects and satisfied clients, we have a history of delivering high-quality outcomes on time and within budget."
+            title="Automate & Nurture Leads with WhatsApp, sms, voice & Email"
+            description="Stay connected with your audience! Set up automated follow-ups, broadcasts, and personalized messages that engage and converts all your leads into loyal customers."
             buttonText="Read More"
           />
           <Card
             icon={<Handshake color="white" />}
             iconBg="bg-[#0cc76326]"
             iconColor="bg-[#0cc763]"
-            title="Commitment to Quality"
-            description="We are dedicated to maintaining the highest standards in everything we do, from the initial consultation to the final delivery."
+            title="Save Time, Effort & Money with ZapFlow"
+            description="Ditch multiple subscriptions and complex systems—ZapFlow does it all! 
+            AI-Powered Sales & Marketing Automation
+            WhatsApp, Email & SMS Integration
+            Built for Businesses, Creators & Marketers
+"
             buttonText="Read More"
           />
         </div>

@@ -17,73 +17,73 @@ const services = [
     icon: <Earth color="white" />,
     backgroundColor: "bg-brandPrimary",
     iconBgColor: "bg-brandPrimary-100",
-    title: "Business Audit",
+    title: "Coaches & Course Creators",
     description:
-      "This is just a placeholder for an actual text that will be added later for business audit",
+      "Sell courses and memberships with ease.",
   },
   {
     id: 2,
     icon: <CircleDollarSign color="white" />,
     backgroundColor: "bg-[#ff5a29]",
     iconBgColor: "bg-[#ff5a291a]",
-    title: "Marketing",
+    title: "eCommerce Brands",
     description:
-      "This is just a placeholder for an actual text that will be added later for marketing",
+      "Convert more visitors into paying customers.",
   },
   {
     id: 3,
     icon: <Building2 color="white" />,
     backgroundColor: "bg-[#0cc763]",
     iconBgColor: "bg-[#0cc7631a]",
-    title: "Trading",
+    title: "Freelancers & Agencies",
     description:
-      "This is just a placeholder for an actual text that will be added later for trading.",
+      "Automate client outreach and follow-ups.",
   },
   {
     id: 4,
     icon: <ShoppingCartIcon color="white" />,
     backgroundColor: "bg-[#0c9cfc]",
     iconBgColor: "bg-[#0c9cfc1a]",
-    title: "E-commerce",
+    title: " Local Businesses",
     description:
-      "This is just a placeholder for an actual text that will be added later for e-commerce",
+      "Engage customers and drive sales on autopilot.",
   },
-  {
-    id: 5,
-    icon: <HandCoins color="white" />,
-    backgroundColor: "bg-[#ff9a13]",
-    iconBgColor: "bg-[#ff9a131a]",
-    title: "Financial Plans",
-    description:
-      "This is just a placeholder for an actual text that will be added later for financial plans",
-  },
-  {
-    id: 6,
-    icon: <Mail color="white" />,
-    backgroundColor: "bg-[#00d8d8]",
-    iconBgColor: "bg-[#00d8d81a]",
-    title: "Email Services",
-    description:
-      "This is just a placeholder for an actual text that will be added later for email services.",
-  },
-  {
-    id: 7,
-    icon: <UserCheck color="white" />,
-    backgroundColor: "bg-[#ff383c]",
-    iconBgColor: "bg-[#ff383c1a]",
-    title: "Skilled",
-    description:
-      "This is just a placeholder for an actual text that will be added later for skilled.",
-  },
-  {
-    id: 8,
-    icon: <CalendarCheck2 color="white" />,
-    backgroundColor: "bg-[#fe549b]",
-    iconBgColor: "bg-[#fe549b1a]",
-    title: "Planning",
-    description:
-      "This is just a placeholder for an actual text that will be added later for planning.",
-  },
+  // {
+  //   id: 5,
+  //   icon: <HandCoins color="white" />,
+  //   backgroundColor: "bg-[#ff9a13]",
+  //   iconBgColor: "bg-[#ff9a131a]",
+  //   title: "Save Time, Effort & Money with ZapFlow",
+  //   description:
+  //     "Ditch multiple subscriptions and complex systems—ZapFlow does it all!",
+  // },
+  // {
+  //   id: 6,
+  //   icon: <Mail color="white" />,
+  //   backgroundColor: "bg-[#00d8d8]",
+  //   iconBgColor: "bg-[#00d8d81a]",
+  //   title: "Engage & Nurture Leads",
+  //   description:
+  //     "Send automated follow-ups via WhatsApp, email, and SMS.",
+  // },
+  // {
+  //   id: 7,
+  //   icon: <UserCheck color="white" />,
+  //   backgroundColor: "bg-[#ff383c]",
+  //   iconBgColor: "bg-[#ff383c1a]",
+  //   title: "Lead Generation Made Simple",
+  //   description:
+  //     "Create high-converting landing pages and lead forms in minutes.",
+  // },
+  // {
+  //   id: 8,
+  //   icon: <CalendarCheck2 color="white" />,
+  //   backgroundColor: "bg-[#fe549b]",
+  //   iconBgColor: "bg-[#fe549b1a]",
+  //   title: "Planning",
+  //   description:
+  //     "This is just a placeholder for an actual text that will be added later for planning.",
+  // },
 ];
 
 function Services() {
@@ -92,10 +92,10 @@ function Services() {
       <div className="max-w-[1296px] mx-auto">
         <SectionBadge label="Services" />
         <h1 className="mt-4 mb-2 font-semibold text-center lg:text-[28px] text-[#222f36]">
-          Premium Services at Your Fingertips
+          Who is Zapflow for?
         </h1>
         <p className="text-[15px] mb-12 text-[#98a5c3] text-center">
-          Enjoying top-tier services with ease and convenience.
+        The all-in-one marketing automation tool designed to simplify sales, nurture leads, and skyrocket conversions—all in one place!
         </p>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">

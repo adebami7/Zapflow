@@ -126,10 +126,13 @@ function Testimonials() {
           />
 
           <h1 className="mt-4 mb-2 font-semibold text-center lg:text-[28px] text-white">
-            Trusted by Top Entrepreneurs & Marketers
+          Ready to 10X Your Sales?
+          Start using ZapFlow today and transform the way you market and sell online.
+
           </h1>
           <p className="text-[15px] mb-6 text-white text-center">
-            Customer satisfaction and experience are our top priorities.
+          Trusted by Top Entrepreneurs & Marketers.
+          Customer satisfaction and experience are our top priorities.
           </p>
 
           <div className="mt-8">

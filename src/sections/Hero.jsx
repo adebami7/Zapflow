@@ -35,8 +35,8 @@ function Hero() {
             <p className="mb-12 text-base text-white max-w-[750px]">
               Zapflow is an all-in-one marketing software for businesses that
               lets you reach out to your customers on WhatsApp, Sms, Emails,
-              Voice at scale. Zapflow let's you send message broadcasts, setup
-              transactional notifications, track campaign analytics, setup
+              Voice at scale. Zapflow let&apos;s you send message broadcasts,
+              setup transactional notifications, track campaign analytics, setup
               automations & chatbots and most importantly grow your revenue from
               your customers on WhatsApp, emails, Sms, Voice.
             </p>

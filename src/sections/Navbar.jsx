@@ -108,7 +108,9 @@ function Navbar() {
       }`}
     >
       <div className="max-w-[1296px] mx-auto flex items-center justify-between">
-        <h1 className="py-3 text-2xl text-brandPrimary font-semibold">Zapflow</h1>
+        <h1 className="py-3 text-2xl text-brandPrimary font-semibold">
+          Zapflow
+        </h1>
 
         <ul className="hidden lg:flex items-center gap-6">
           <MenuItems />

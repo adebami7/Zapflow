@@ -23,15 +23,18 @@ function AboutUs() {
         <SectionBadge label="About Us" className="!justify-start" />
 
         <h3 className="text-[28px] mt-4 mb-2 text-[#222f36] font-semibold">
-        ZapFlow – The ALL-IN-ONE Marketing Automation Tool!
+          ZapFlow – The ALL-IN-ONE Marketing Automation Tool!
         </h3>
         <p className="text-[#98a5c3] mb-6">
-          What is Zapflow?
-        ZapFlow is an all-in-one marketing automation platform designed for <em> businesses, creators, and marketers </em> to capture leads, nurture prospects, and close sales effortlessly. With built-in <em>email, SMS, WhatsApp automation, landing page creation.</em> 
-         ZapFlow helps you scale your business faster and smarter.
+          What is Zapflow? ZapFlow is an all-in-one marketing automation
+          platform designed for <em> businesses, creators, and marketers </em>{" "}
+          to capture leads, nurture prospects, and close sales effortlessly.
+          With built-in{" "}
+          <em>email, SMS, WhatsApp automation, landing page creation.</em>
+          ZapFlow helps you scale your business faster and smarter.
         </p>
         <h4 className="text-[28px] mt-4 mb-2 text-[#222f36] font-semibold">
-        Why Zapflow?
+          Why Zapflow?
         </h4>
 
         <div className="flex flex-col gap-3">

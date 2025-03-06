@@ -1,12 +1,8 @@
 import {
   Building2,
-  CalendarCheck2,
   CircleDollarSign,
   Earth,
-  HandCoins,
-  Mail,
   ShoppingCartIcon,
-  UserCheck,
 } from "lucide-react";
 import SectionBadge from "../components/sectionBadge";
 import { ServiceCard } from "../components/ServiceCard";
@@ -18,8 +14,7 @@ const services = [
     backgroundColor: "bg-brandPrimary",
     iconBgColor: "bg-brandPrimary-100",
     title: "Coaches & Course Creators",
-    description:
-      "Sell courses and memberships with ease.",
+    description: "Sell courses and memberships with ease.",
   },
   {
     id: 2,
@@ -27,8 +22,7 @@ const services = [
     backgroundColor: "bg-[#ff5a29]",
     iconBgColor: "bg-[#ff5a291a]",
     title: "eCommerce Brands",
-    description:
-      "Convert more visitors into paying customers.",
+    description: "Convert more visitors into paying customers.",
   },
   {
     id: 3,
@@ -36,8 +30,7 @@ const services = [
     backgroundColor: "bg-[#0cc763]",
     iconBgColor: "bg-[#0cc7631a]",
     title: "Freelancers & Agencies",
-    description:
-      "Automate client outreach and follow-ups.",
+    description: "Automate client outreach and follow-ups.",
   },
   {
     id: 4,
@@ -45,45 +38,8 @@ const services = [
     backgroundColor: "bg-[#0c9cfc]",
     iconBgColor: "bg-[#0c9cfc1a]",
     title: " Local Businesses",
-    description:
-      "Engage customers and drive sales on autopilot.",
+    description: "Engage customers and drive sales on autopilot.",
   },
-  // {
-  //   id: 5,
-  //   icon: <HandCoins color="white" />,
-  //   backgroundColor: "bg-[#ff9a13]",
-  //   iconBgColor: "bg-[#ff9a131a]",
-  //   title: "Save Time, Effort & Money with ZapFlow",
-  //   description:
-  //     "Ditch multiple subscriptions and complex systems—ZapFlow does it all!",
-  // },
-  // {
-  //   id: 6,
-  //   icon: <Mail color="white" />,
-  //   backgroundColor: "bg-[#00d8d8]",
-  //   iconBgColor: "bg-[#00d8d81a]",
-  //   title: "Engage & Nurture Leads",
-  //   description:
-  //     "Send automated follow-ups via WhatsApp, email, and SMS.",
-  // },
-  // {
-  //   id: 7,
-  //   icon: <UserCheck color="white" />,
-  //   backgroundColor: "bg-[#ff383c]",
-  //   iconBgColor: "bg-[#ff383c1a]",
-  //   title: "Lead Generation Made Simple",
-  //   description:
-  //     "Create high-converting landing pages and lead forms in minutes.",
-  // },
-  // {
-  //   id: 8,
-  //   icon: <CalendarCheck2 color="white" />,
-  //   backgroundColor: "bg-[#fe549b]",
-  //   iconBgColor: "bg-[#fe549b1a]",
-  //   title: "Planning",
-  //   description:
-  //     "This is just a placeholder for an actual text that will be added later for planning.",
-  // },
 ];
 
 function Services() {
@@ -95,7 +51,8 @@ function Services() {
           Who is Zapflow for?
         </h1>
         <p className="text-[15px] mb-12 text-[#98a5c3] text-center">
-        The all-in-one marketing automation tool designed to simplify sales, nurture leads, and skyrocket conversions—all in one place!
+          The all-in-one marketing automation tool designed to simplify sales,
+          nurture leads, and skyrocket conversions—all in one place!
         </p>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">

@@ -17,7 +17,9 @@ function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 sm:justify-items-center">
           <div className="space-y-4">
             <a href="/" className="flex items-start">
-              <h1 className="text-2xl text-brandPrimary font-semibold">Zapflow</h1>
+              <h1 className="text-2xl text-brandPrimary font-semibold">
+                Zapflow
+              </h1>
             </a>
             <p className="text-sm">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.

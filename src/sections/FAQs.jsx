@@ -5,63 +5,79 @@ import { useState } from "react";
 
 const faqs = [
   {
-    question: "Where can I sign up for your newsletter?",
+    question: "Who can use ZapFlow?",
     answer:
-      "You can sign up for our newsletter through the subscription form in the footer of our website or on our dedicated newsletter page.",
+      "Our tool is perfect for digital marketers, social media managers, e-commerce businesses, agencies, and anyone looking to automate and optimize their digital marketing.",
   },
   {
-    question: "General Terms & Conditions (GTC)",
+    question: "How does ZapFlow work?",
     answer:
-      "Our terms and conditions outline the rules, guidelines, and agreements between our company and our customers. Please review them carefully.",
+      "Our platform integrates with your preferred communication channels (email, SMS, social media, etc.) crafting, scheduling, and sending automated messages based on your audience’s behavior and engagement.",
   },
   {
-    question: "Do I need to create an account to make an order?",
+    question: "What makes ZapFlow different from other automation tools?",
     answer:
-      "Yes, you'll need to create an account to place an order. This helps us manage your orders and provide better service.",
+      "Unlike generic automation tools, we offer AI-powered personalization, advanced segmentation, real-time analytics, multi-channel support, and seamless integrations, all in one platform.",
   },
   {
-    question: "Where can I subscribe to your newsletter?",
+    question: "What types of messages can I automate?",
     answer:
       "You can subscribe to our newsletter by entering your email address in the subscription box found at the bottom of our homepage.",
   },
   {
-    question: "Where can in edit my address?",
-    answer:
-      "You can edit your address in your account settings under the 'Profile' or 'Addresses' section.",
+    question: "Where can I edit my address?",
+    answer: [
+      "You can automate various types of messages, including:",
+      "Email marketing campaigns",
+      "Social media posts and replies",
+      "SMS notifications and promotions",
+      "Chatbot responses",
+      "Drip campaigns and follow-ups"
+    ]
   },
   {
-    question: "What are your opening hours?",
+    question: "Does the tool provide analytics and reporting?",
     answer:
-      "Our standard opening hours are Monday to Friday, 9 AM to 6 PM. We're closed on weekends and major holidays.",
+      "Absolutely! Our built-in analytics dashboard helps you track message performance, engagement rates, conversions, and other key metrics.",
   },
   {
-    question: "Do I have the right to return an item?",
+    question: "Can I import my contact list from other platforms?",
     answer:
-      "Yes, you have the right to return items within 30 days of purchase, provided they are in their original condition.",
+      "Yes! You can easily upload CSV files or integrate with CRMs like HubSpot, Salesforce, and Mailchimp to import your existing contact lists.",
   },
   {
-    question: "What payment methods do you accept?",
-    answer: "We accept all major credit cards, PayPal, and bank transfers.",
+    question: "Is there a limit to the number of messages I can send?",
+    answer: "Message limits depend on your subscription plan. Check our Pricing Page for details on message allowances and upgrades.",
   },
   {
-    question: "How can I track my order?",
+    question: "Does ZapFlow support A/B testing?",
     answer:
-      "You can track your order by logging into your account and viewing the order status.",
+      "Yes! Our A/B testing feature allows you to compare different message variations to see which performs best, helping you optimize your marketing strategy.",
   },
   {
-    question: "What is your shipping policy?",
+    question: "Is there a free trial?",
     answer:
-      "We offer free shipping on orders over $50. Standard shipping takes 3-5 business days.",
+      "Yes! We offer a 14 days free trial so you can explore all features before committing to a plan.",
   },
   {
-    question: "How do I contact customer support?",
+    question: "What are your pricing plans?",
     answer:
-      "You can reach our customer support team via email, phone, or live chat during business hours.",
+      "We offer flexible pricing plans to suit businesses of all sizes. Visit our Pricing Page for detailed information on our plans and features.",
   },
   {
-    question: "What is your privacy policy?",
+    question: "Is my data secure with ZapFlow?",
     answer:
-      "Our privacy policy details how we collect, use, and protect your personal information.",
+      "Absolutely! We prioritize data security and comply with industry standards to protect your information.",
+  },
+  {
+    question: "What if I need help using the platform?",
+    answer:
+      "Our support team is available 24/7 via live chat, email, and phone.",
+  },
+  {
+    question: "How do I cancel my subscription?",
+    answer:
+      "You can cancel your subscription anytime through your account settings. No hidden fees or contracts.",
   },
 ];
 
@@ -76,8 +92,7 @@ function FAQs() {
           Frequently asked questions?
         </h1>
         <p className="text-[15px] mb-12 text-[#98a5c3] text-center">
-          We have shared some of the most frequently asked questions to help you
-          out.
+        Still have questions? Contact us at Support Email or visit our Help Center
         </p>
 
         <div className="grid md:grid-cols-2 gap-4 max-w-[1200px] mx-auto">
@@ -125,9 +140,29 @@ function FAQs() {
                       leaveFrom="transform scale-100 opacity-100"
                       leaveTo="transform scale-95 opacity-0"
                     >
-                      <Disclosure.Panel className="py-3 px-4 text-xs font-medium text-[#98a5c3]">
+                      {/* <Disclosure.Panel className="py-3 px-4 text-xs font-medium text-[#98a5c3]">
                         {faq.answer}
-                      </Disclosure.Panel>
+                      </Disclosure.Panel> */}
+                      <Disclosure.Panel className="py-3 px-4 text-xs font-medium text-[#98a5c3]">
+  {Array.isArray(faq.answer) ? (
+    <>
+      <p>{faq.answer[0]}</p> {/* Display the first sentence as normal text */}
+      <ul className="pl-5 space-y-1">
+  {faq.answer.slice(1).map((item, index) => (
+    <li key={index} className="flex items-center gap-2">
+      <span className="text-brandPrimary">✅</span> {/* Custom bullet icon */}
+      {item}
+    </li>
+  ))}
+</ul>
+
+    </>
+  ) : (
+    <p>{faq.answer}</p>
+  )}
+</Disclosure.Panel>
+
+
                     </Transition>
                   </div>
                 )}

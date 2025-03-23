@@ -2,27 +2,30 @@ import Cover from "../assets/testimonials-cover.png";
 import SectionBadge from "../components/sectionBadge";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
-import User from "../assets/testimonial-face.jpg";
 import "swiper/css";
+import "swiper/css/autoplay";
+
+// ✅ Correct image imports (Osaro, Toyin, and Ronald)
+import Avatar1 from "../assets/images/Osaro-Destiny.jpg";
+import Avatar2 from "../assets/images/Toyin-Omotosho.jpg";
+import Avatar3 from "../assets/images/Ronald-Nzimora.jpg";
 
 const testimonials = [
   {
     id: 1,
-    name: "Osaro Destiny|CEO, Ekiema Wellness",
+    name: "Osaro Destiny | CEO, Ekiema Wellness",
     since: "2001",
-    image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-jc2nx20KcBKrkRGKPbR6rtQ9YRdkno.png",
+    image: Avatar1,
     text: "The WhatsApp automation feature is next level—effortless lead nurturing and sales conversion.",
     rating: 5,
     daysAgo: 10,
   },
   {
     id: 2,
-    name: "Toyin Omotosho|Internet Entrepreneur",
+    name: "Toyin Omotosho | Internet Entrepreneur",
     since: "2023",
-    image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-jc2nx20KcBKrkRGKPbR6rtQ9YRdkno.png",
-    text: "Over 1,000 leads in 2 weeks! This tool is a must-have for any serious business owner.",
+    image: Avatar2,
+    text: "Over (One Thousand)1,000 leads in 2 weeks! This tool is a must-have for any serious business owner.",
     rating: 5,
     daysAgo: 10,
   },
@@ -30,51 +33,20 @@ const testimonials = [
     id: 3,
     name: "Ronald Nzimora | Ecommerce Coach",
     since: "2022",
-    image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-jc2nx20KcBKrkRGKPbR6rtQ9YRdkno.png",
+    image: Avatar3,
     text: "The WhatsApp automation feature is next level—effortless lead nurturing and sales conversion.",
     rating: 5,
     daysAgo: 8,
   },
-  {
-    id: 4,
-    name: "Bruno Nwogu  | Sales Coach",
-    since: "2021",
-    image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-jc2nx20KcBKrkRGKPbR6rtQ9YRdkno.png",
-    text: "The WhatsApp automation feature is next level—effortless lead nurturing and sales conversion.",
-    rating: 5,
-    daysAgo: 12,
-  },
-  {
-    id: 5,
-    name: "Caleb | Forex Coach",
-    since: "2023",
-    image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-jc2nx20KcBKrkRGKPbR6rtQ9YRdkno.png",
-    text: "The WhatsApp automation feature is next level—effortless lead nurturing and sales conversion.",
-    rating: 5,
-    daysAgo: 5,
-  },
-  {
-    id: 6,
-    name: "Jackto Precious | Crypto Coach",
-    since: "2022",
-    image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-jc2nx20KcBKrkRGKPbR6rtQ9YRdkno.png",
-    text: "The WhatsApp automation feature is next level—effortless lead nurturing and sales conversion.",
-    rating: 5,
-    daysAgo: 15,
-  },
 ];
 
-function TestimonialCard({ name, since, text, rating, daysAgo }) {
+function TestimonialCard({ name, since, text, rating, daysAgo, image }) {
   return (
     <div className="bg-[#7d67fd] backdrop-blur-sm rounded-lg p-4 transition-all duration-300 border-2 border-[#7f6cfd]">
       <div className="flex items-center gap-3 p-2 mb-4 bg-[#907efd] rounded-[4px]">
         <img
-          src={User}
-          alt="user"
+          src={image} // ✅ Removed DefaultAvatar fallback
+          alt={name}
           className="w-10 h-10 rounded-full object-cover"
         />
         <div>
@@ -145,16 +117,10 @@ function Testimonials() {
               modules={[Autoplay]}
               loop={true}
               breakpoints={{
-                320: {
-                  slidesPerView: 1,
-                  spaceBetween: 20,
-                },
-                768: {
-                  slidesPerView: 2,
-                  spaceBetween: 30,
-                },
+                320: { slidesPerView: 1, spaceBetween: 20 },
+                768: { slidesPerView: 2, spaceBetween: 30 },
               }}
-              className="testimonials-swiper "
+              className="testimonials-swiper"
             >
               {testimonials.map((testimonial) => (
                 <SwiperSlide key={testimonial.id}>

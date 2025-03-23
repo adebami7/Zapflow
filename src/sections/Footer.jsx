@@ -22,14 +22,11 @@ function Footer() {
               </h1>
             </a>
             <p className="text-sm">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Reprehenderit et magnam, fuga est mollita eius, quo illum illo
-              inventore optia aut quas omnis rem. Dolores accusantium aspernamur
-              minus ea incidunt.
-            </p>
-            <p className="text-sm">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem ea
-              esse ad
+            ZapFlow is an all-in-one marketing automation
+          platform designed for businesses, creators, and marketers{" "}
+          to capture leads, nurture prospects, and close sales effortlessly.
+          With built-in{" "}
+          email, SMS, WhatsApp automation, landing page creation.
             </p>
           </div>
 
@@ -74,18 +71,18 @@ function Footer() {
           <div>
             <h3 className="text-white font-semibold mb-4">CONTACT</h3>
             <ul className="space-y-3 text-xs">
-              <li className="flex items-start gap-2">
+              {/* <li className="flex items-start gap-2">
                 <MapPin size={12} />
                 New York, NY 10012, US
-              </li>
+              </li> */}
               <li className="flex items-center gap-2">
                 <Mail size={12} />
-                info@fmail.com
+                hi@zapflow.io
               </li>
-              <li className="flex items-center gap-2">
+              {/* <li className="flex items-center gap-2">
                 <Phone size={12} />
                 +(555)-1920 1851
-              </li>
+              </li> */}
             </ul>
 
             <div className="mt-6">

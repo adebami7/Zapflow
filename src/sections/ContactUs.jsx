@@ -55,7 +55,7 @@ function ContactUs() {
                 Contact Information
               </h3>
               <div className="space-y-4">
-                <div className="flex items-start gap-3">
+                {/* <div className="flex items-start gap-3">
                   <MapPin size={14} className="text-[#98a5c3]" />
                   <p className="text-gray-600 text-xs">
                     1552/A-12, Abcd Street, KLM Town, Hyderabad.
@@ -67,11 +67,11 @@ function ContactUs() {
                     <p>+122 1234 52422</p>
                     <p>+121 1234 14511</p>
                   </div>
-                </div>
+                </div> */}
                 <div className="flex items-start gap-3">
                   <Mail size={14} className="text-[#98a5c3]" />
                   <p className="text-gray-600 text-xs">
-                    carolinahanasandu4424@example.com
+                  hi@zapflow.io
                   </p>
                 </div>
               </div>

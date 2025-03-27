@@ -77,7 +77,7 @@ function Footer() {
               </li> */}
               <li className="flex items-center gap-2">
                 <Mail size={12} />
-                hi@zapflow.io
+                hi@zapflow.co
               </li>
               {/* <li className="flex items-center gap-2">
                 <Phone size={12} />

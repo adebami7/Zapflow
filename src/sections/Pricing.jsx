@@ -1,138 +1,170 @@
+import { useState } from "react";
 import { PricingCard } from "../components/PricingCard";
 import SectionBadge from "../components/sectionBadge";
 
 function Pricing() {
+  const [selectedPlan, setSelectedPlan] = useState("Yearly");
+
   const pricingData = [
     {
       tier: "Free",
       price: "0",
-      description: "Basic features to get started",
-      features: [
-        { name: "Email Contacts", badge: "500" },
-        { name: "Monthly Emails", badge: "15,000" },
-        { name: "Custom Email Integration", badge: "❌" },
-        { name: "Lead Generation Forms", badge: "3" },
-        { name: "Email Templates (Drag & Drop)", badge: "❌" },
-        { name: "Link in Bio Tool", badge: "✅" },
-        { name: "WhatsApp Accounts", badge: "❌" },
-        { name: "WhatsApp Status Automation", badge: "❌" },
-        { name: "WhatsApp Broadcast", badge: "❌" },
-        { name: "Custom Payment Wallet", badge: "❌" },
-        { name: "Facebook Integration", badge: "❌" },
-        { name: "Sell Digital Products", badge: "❌" },
-        { name: "E-commerce Store (Physical Products)", badge: "❌" },
-        { name: "Landing Pages", badge: "❌" },
-        { name: "User Seats", badge: "1" },
-        { name: "SMS Credits", badge: "❌" },
-        { name: "Restful APIs", badge: "❌" },
-        { name: "Enhanced Reporting", badge: "❌" },
-        { name: "24/7 Support", badge: "✅ (Live Chat & Email)" },
-      ],
+      // description: "Basic features to get started",
       isRecommended: false,
     },
     {
-      tier: "Starter",
-      price: "99",
-      description: "For small businesses and professionals",
-      features: [
-        { name: "Email Contacts", badge: "2,500" },
-        { name: "Monthly Emails", badge: "Unlimited" },
-        { name: "Custom Email Integration", badge: "✅" },
-        { name: "Lead Generation Forms", badge: "Unlimited" },
-        { name: "Email Templates (Drag & Drop)", badge: "✅" },
-        { name: "Link in Bio Tool", badge: "✅" },
-        { name: "WhatsApp Accounts", badge: "2" },
-        { name: "WhatsApp Status Automation", badge: "✅ (Unlimited)" },
-        { name: "WhatsApp Broadcast", badge: "✅ (Unlimited)" },
-        { name: "Custom Payment Wallet", badge: "Coming Soon" },
-        { name: "Facebook Integration", badge: "Coming Soon" },
-        { name: "Sell Digital Products", badge: "Coming Soon" },
-        { name: "E-commerce Store (Physical Products)", badge: "Coming Soon" },
-        { name: "Landing Pages", badge: "Unlimited" },
-        { name: "User Seats", badge: "3" },
-        { name: "SMS Credits", badge: "5,000" },
-        { name: "Restful APIs", badge: "❌" },
-        { name: "Enhanced Reporting", badge: "❌" },
-        { name: "24/7 Support", badge: "✅ (Live Chat & Email)" },
-      ],
+      tier: "Basic",
+      price: "15",
+      // description: "Basic features to get started",
+      isRecommended: false,
+    },
+    {
+      tier: "Standard",
+      price: "29",
+      // description: "For small businesses and professionals",
       isRecommended: true,
     },
     {
-      tier: "Advanced",
-      price: "249",
-      description: "Advanced features for growing businesses",
-      features: [
-        { name: "Email Contacts", badge: "5,500" },
-        { name: "Monthly Emails", badge: "Unlimited" },
-        { name: "Custom Email Integration", badge: "✅" },
-        { name: "Lead Generation Forms", badge: "Unlimited" },
-        { name: "Email Templates (Drag & Drop)", badge: "✅" },
-        { name: "Link in Bio Tool", badge: "✅" },
-        { name: "WhatsApp Accounts", badge: "5" },
-        { name: "WhatsApp Status Automation", badge: "✅ (Unlimited)" },
-        { name: "WhatsApp Broadcast", badge: "✅ (Unlimited)" },
-        { name: "Custom Payment Wallet", badge: "Coming Soon" },
-        { name: "Facebook Integration", badge: "Coming Soon" },
-        { name: "Sell Digital Products", badge: "Coming Soon" },
-        { name: "E-commerce Store (Physical Products)", badge: "Coming Soon" },
-        { name: "Landing Pages", badge: "Unlimited" },
-        { name: "User Seats", badge: "10" },
-        { name: "SMS Credits", badge: "15,000" },
-        { name: "Restful APIs", badge: "✅ (Coming Soon)" },
-        { name: "Enhanced Reporting", badge: "✅ (Coming Soon)" },
-        { name: "24/7 Support", badge: "✅ (Live Chat & Email)" },
-      ],
+      tier: "Premium",
+      price: "69",
+      // description: "Advanced features for growing businesses",
       isRecommended: false,
     },
     {
       tier: "Enterprise",
       price: "Custom",
-      description: "For large-scale businesses with custom needs",
-      features: [
-        { name: "Email Contacts", badge: "Custom" },
-        { name: "Monthly Emails", badge: "Custom" },
-        { name: "Custom Email Integration", badge: "✅" },
-        { name: "Lead Generation Forms", badge: "Unlimited" },
-        { name: "Email Templates (Drag & Drop)", badge: "Everything in Advanced" },
-        { name: "Link in Bio Tool", badge: "✅" },
-        { name: "WhatsApp Accounts", badge: "Custom" },
-        { name: "WhatsApp Status Automation", badge: "✅" },
-        { name: "WhatsApp Broadcast", badge: "✅" },
-        { name: "Custom Payment Wallet", badge: "Coming Soon" },
-        { name: "Facebook Integration", badge: "Coming Soon" },
-        { name: "Sell Digital Products", badge: "Coming Soon" },
-        { name: "E-commerce Store (Physical Products)", badge: "Coming Soon" },
-        { name: "Landing Pages", badge: "Unlimited" },
-        { name: "User Seats", badge: "20" },
-        { name: "SMS Credits", badge: "Custom" },
-        { name: "Restful APIs", badge: "✅" },
-        { name: "Enhanced Reporting", badge: "✅" },
-        { name: "24/7 Support", badge: "Dedicated Support" },
-      ],
+      // description: "For large-scale businesses with custom needs",
       isRecommended: false,
     },
   ];
 
+  const features = [
+    {
+      feature: "Email Contacts",
+      values: ["500", "1,000", "2,500", "4,000", "Custom"],
+    },
+    {
+      feature: "Monthly Emails",
+      values: ["15,000", "Unlimited", "Unlimited", "Unlimited", "Custom"],
+    },
+    {
+      feature: "Custom Email Integration",
+      values: ["❌", "✅", "✅", "✅", "✅"],
+    },
+    {
+      feature: "Lead Generation Forms",
+      values: ["3", "Unlimited", "Unlimited", "Unlimited", "Unlimited"],
+    },
+    {
+      feature: "Email Templates (Drag & Drop)",
+      values: ["❌", "✅", "✅", "✅", "Everything in Advanced"],
+    },
+    {
+      feature: "Link in Bio Tool",
+      values: ["✅", "✅", "✅", "✅", "✅"],
+    },
+    {
+      feature: "WhatsApp Accounts",
+      values: ["❌", "1", "2", "4", "Custom"],
+    },
+    {
+      feature: "WhatsApp Status Automation",
+      values: ["❌", "✅ (Unlimited)", "✅ (Unlimited)", "✅ (Unlimited)", "✅"],
+    },
+    {
+      feature: "WhatsApp Broadcast",
+      values: ["❌", "✅ (Unlimited)", "✅ (Unlimited)", "✅ (Unlimited)", "✅"],
+    },
+    {
+      feature: "Facebook Integration",
+      values: ["❌", "coming soon", "coming soon", "coming soon", "coming soon"],
+    },
+    {
+      feature: "Store Front",
+      values: ["❌", "coming soon", "coming soon", "coming soon", "coming soon"],
+    },
+    {
+      feature: "Landing Pages",
+      values: ["❌", "10", "25", "Unlimited", "Unlimited"],
+    },
+    {
+      feature: "User Seats",
+      values: ["1", "3", "5", "10", "Unlimited"],
+    },
+    {
+      feature: "Import Contacts from External Tools",
+      values: ["Import from Mailchimp, Shopify, Zendesk etc",	"Import from Mailchimp, Shopify, Zendesk etc",	"Import from Mailchimp, Shopify, Zendesk etc",	"Import from Mailchimp, Shopify, Zendesk etc",	"Import from Mailchimp, Shopify, Zendesk etc",],
+    },{
+      feature: "Voice Call",
+      values: ["", "", "", "", ""],
+    },
+    {
+      feature: "SMS Credits",
+      values: ["100", "5,000", "10,000", "15,000", "Custom"],
+    },
+    {
+      feature: "Restful APIs",
+      values: ["❌", "❌", "❌", "✅ (Coming Soon)", "✅"],
+    },
+    {
+      feature: "Reporting",
+      values: ["Basic", "Basic", "Basic", "Enhanced", "✅"],
+    },
+    {
+      feature: "24/7 Support",
+      values: ["✅ (Live Chat & Email)", "✅ (Live Chat & Email)", "✅ (Live Chat & Email)", "✅ (Live Chat & Email)", "Dedicated Support"],
+    },
+  ];
+
   return (
-    <section id="pricing" className="max-w-[1296px] mx-auto py-[70px] px-6">
+    <section className="max-w-7xl mx-auto py-16 px-6">
       <SectionBadge label="Pricing" />
 
-      <h3 className="text-[28px] mt-4 mb-2 text-[#222f36] font-semibold text-center">
+      <h3 className="text-[18px] mt-4 mb-2 text-[#222f36] font-semibold text-center">
         We Provide the Most Competitive Pricing
       </h3>
+
       <p className="text-[#98a5c3] mb-6 text-center max-w-[746px] mx-auto">
         Our plans are designed to be highly affordable, catering to every
         category with a focus on value and accessibility.
       </p>
 
-      <div className="max-w-6xl mx-auto px-4 py-6">
-        <div className="grid md:grid-cols-4 gap-8">
+      {/* Pricing Table */}
+      <div className="mt-10 bg-white shadow-lg rounded-lg overflow-hidden">
+        <div className="grid grid-cols-6 border-b">
+          <div className="bg-gray-100 p-4 font-medium">Features</div>
           {pricingData.map((plan, index) => (
-            <div key={index} className="flex">
-              <PricingCard {...plan} />
+            <div
+              key={index}
+              className={`p-4 text-center font-medium ${
+                plan.isRecommended ? "border-blue-500 border-2 rounded-lg" : ""
+              }`}
+            >
+              <h4 className="text-xl font-bold">{plan.tier}</h4>
+              <p className="text-2xl font-bold">
+                {plan.price === "Custom" ? plan.price : `$${plan.price}`}
+              </p>
+              <p className="mt-2 text-gray-500">{plan.description}</p>
+              <div className="mt-4">
+                <button className="bg-[#735dff] text-white px-4 py-2 rounded w-full hover:bg-[#6a4dfd]">
+                  Subscribe Now
+                </button>
+              </div>
             </div>
           ))}
         </div>
+
+        {/* Features List */}
+        {features.map((feature, featureIndex) => (
+          <div key={featureIndex} className="grid grid-cols-6 border-t">
+            <div className="bg-gray-100 p-4">{feature.feature}</div>
+            {feature.values.map((value, planIndex) => (
+              <div key={planIndex} className="p-4 text-center">
+                {value}
+              </div>
+            ))}
+          </div>
+        ))}
       </div>
     </section>
   );

@@ -15,8 +15,8 @@ export default function App() {
       <Navbar />
       <div className="">
         <Hero id="home" />
-        <AboutUs id="about" />
         <Services id="services" />
+        <AboutUs id="about" />
         <Pricing id="pricing" />
         <FAQs id="faqs" />
         <Testimonials id="testimonials" />

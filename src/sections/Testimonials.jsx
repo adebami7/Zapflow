@@ -5,7 +5,7 @@ import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/autoplay";
 
-// ✅ Correct image imports (Osaro, Toyin, and Ronald)
+
 import Avatar1 from "../assets/images/Osaro-Destiny.jpg";
 import Avatar2 from "../assets/images/Toyin-Omotosho.jpg";
 import Avatar3 from "../assets/images/Ronald-Nzimora.jpg";
@@ -45,7 +45,7 @@ function TestimonialCard({ name, since, text, rating, daysAgo, image }) {
     <div className="bg-[#7d67fd] backdrop-blur-sm rounded-lg p-4 transition-all duration-300 border-2 border-[#7f6cfd]">
       <div className="flex items-center gap-3 p-2 mb-4 bg-[#907efd] rounded-[4px]">
         <img
-          src={image} // ✅ Removed DefaultAvatar fallback
+          src={image} 
           alt={name}
           className="w-10 h-10 rounded-full object-cover"
         />

@@ -1,50 +1,49 @@
-import { CheckIcon, XIcon } from "lucide-react";
-import Button from "./Button";
+import React from "react";
+import { Check } from "lucide-react";
 
-export function PricingCard({ tier, price, description, features, isRecommended }) {
+const PricingCard = ({ title, price, features, highlighted, note, isPopular }) => {
+  const bgTop = highlighted ? "#CEDFFE" : isPopular ? "#F0F0F2" : "#F0F0F2";
+
   return (
     <div
-      className={`relative bg-white p-6 rounded-lg flex flex-col h-full border ${
-        isRecommended ? "border-purple-500 shadow-lg" : "border-gray-200 shadow-md"
-      }`}
+      className={`relative flex flex-col justify-between w-full max-w-[280px] min-h-[550px] rounded-[10px] overflow-hidden shadow-md border
+        ${isPopular ? "border-[#BCF939]" : "border-gray-200"}
+      `}
     >
-      {/* Recommended Badge */}
-      {isRecommended && (
-        <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-          <span className="bg-purple-500 text-white px-4 py-1 rounded-full text-sm">
-            Recommended
-          </span>
+      {/* POPULAR badge */}
+      {isPopular && (
+        <div className="absolute top-3 right-3 bg-[#BCF939] text-[#00329B] text-xs font-semibold px-3 py-1 rounded-full z-10 shadow-sm">
+          POPULAR
         </div>
       )}
 
-      {/* Header Section */}
-      <div className="text-center mb-6 p-4 rounded-md bg-gray-100">
-        <h3 className="text-xl font-semibold mb-2">{tier}</h3>
-        <p className="text-gray-500 text-sm mb-4">{description}</p>
-        <div className="flex items-center justify-center">
-          <span className="text-purple-600 text-3xl font-bold">{price}</span>
-          <span className="text-gray-500 text-sm ml-1">/ Price Per Month</span>
+      {/* Top content */}
+      <div className="p-6" style={{ backgroundColor: bgTop }}>
+        <div className="text-left space-y-2">
+          <h3 className="text-xl font-semibold text-[#1E1E1E]">{title}</h3>
+          <p className="text-3xl font-bold text-[#1E1E1E]">
+            {price}
+            <span className="text-sm font-normal text-[#6B7280]"> /Month</span>
+          </p>
+          {note && <p className="text-xs text-gray-500">{note}</p>}
         </div>
+
+        <button className="mt-6 w-full bg-[#1866FF] hover:bg-[#0049cc] transition text-white py-2 rounded-full font-medium text-sm">
+          Subscribe Now
+        </button>
       </div>
 
-      {/* Features Section */}
-      <div className="space-y-4 mb-6 flex-grow">
+      {/* Features */}
+      <ul className="flex-1 px-6 py-6 text-sm text-left space-y-3 bg-white">
         {features.map((feature, index) => (
-          <div key={index} className="flex items-center">
-            {feature.enabled ? (
-              <CheckIcon className="h-5 w-5 text-green-500 mr-2" />
-            ) : (
-              <XIcon className="h-5 w-5 text-red-500 mr-2" />
-            )}
-            <span className="flex-grow text-xs lg:text-sm">{feature.name}</span>
-          </div>
+          <li key={index} className="flex items-start gap-2">
+            <Check size={16} stroke="#4ADE80" />
+            <span className="text-[#1E1E1E]">{feature}</span>
+          </li>
         ))}
-      </div>
-
-      {/* Button */}
-      <Button className="w-full bg-purple-500 text-white hover:bg-purple-600">
-        Subscribe
-      </Button>
+      </ul>
     </div>
   );
-}
+};
+
+export default PricingCard;

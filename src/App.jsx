@@ -7,6 +7,7 @@ import Hero from "./sections/Hero";
 import Navbar from "./sections/Navbar";
 import Pricing from "./sections/Pricing";
 import Services from "./sections/Services";
+import BusinessTypes from "./sections/BusinessTypes";
 import Testimonials from "./sections/Testimonials";
 
 export default function App() {
@@ -17,6 +18,7 @@ export default function App() {
         <Hero id="home" />
         <Services id="services" />
         <AboutUs id="about" />
+        <BusinessTypes id="businesstypes" />
         <Pricing id="pricing" />
         <FAQs id="faqs" />
         <Testimonials id="testimonials" />

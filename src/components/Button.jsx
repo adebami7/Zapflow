@@ -14,7 +14,7 @@ function Button({
         disabled
           ? "opacity-40 cursor-not-allowed"
           : "hover:opacity-80 transition duration-300"
-      } gap-3 bg-brandPrimary h-[44.8px]  py-3 px-4 rounded flex items-center justify-center text-sm `}
+      } gap-3 bg-[#0A5FFA] h-[44.8px]  py-3 px-4 rounded flex items-center justify-center text-sm `}
     >
       {children}
     </button>

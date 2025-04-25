@@ -1,7 +1,7 @@
 import Button from "../components/Button";
 import SectionBadge from "../components/sectionBadge";
 import { Eye, X } from "lucide-react";
-import ManLaptop from "../assets/Group 4.png"; // Placeholder
+import ManLaptop from "../assets/Group 4.png"; 
 import CircleIcon from "../assets/Ellipse 4.png"; 
 
 function Hero() {

@@ -22,7 +22,7 @@ function MenuItems() {
           key={index}
           className={`p-3 text-sm font-medium cursor-pointer ${
             item.label === "Home" ? "text-[#0A5FFA]" : "text-[#3b4a62]"
-          } hover:text-brandPrimary`}
+          } hover:text-[#0A5FFA]`}
         >
           <ScrollLink
             to={item.to}
@@ -71,7 +71,7 @@ function Navbar() {
           <Button className="bg-transparent border border-[#0A5FFA] text-[#0A5FFA] text-sm px-5 py-1.5 hover:bg-[#e4eaff] rounded-full">
             Log in
           </Button>
-          <Button className="bg-[#0A5FFA] text-white text-sm px-5 py-1.5 hover:bg-[#1f3ecf] rounded-full">
+          <Button className="bg-[#0A5FFA] text-white text-sm px-5 py-1.5 hover:bg-[#0A5FFA] rounded-full">
             Sign up
           </Button>
         </div>

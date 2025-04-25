@@ -1,85 +1,110 @@
-import { useState } from "react";
-import { Check, X } from "lucide-react";
-import SectionBadge from "../components/sectionBadge";
+import React from "react";
+import PricingCard from "../components/PricingCard";
 
-function Pricing() {
-  const [selectedPlan, setSelectedPlan] = useState("Yearly");
-
-  const pricingData = [
-    { tier: "Free", price: "0", description: "Basic features to get started", isRecommended: false },
-    { tier: "Basic", price: "15", description: "Basic features to get started", isRecommended: false },
-    { tier: "Standard", price: "29", description: "For small businesses and professionals", isRecommended: true },
-    { tier: "Premium", price: "69", description: "Advanced features for growing businesses", isRecommended: false },
-    { tier: "Enterprise", price: "Custom", description: "For large-scale businesses with custom needs", isRecommended: false },
-  ];
-
-  const features = [
-    { feature: "Email Contacts", values: ["500", "1,000", "2,500", "4,000", "Custom"] },
-    { feature: "Monthly Emails", values: ["15,000", "Unlimited", "Unlimited", "Unlimited", "Custom"] },
-    { feature: "Custom Email Integration", values: ["❌", "✅", "✅", "✅", "✅"] },
-    { feature: "Lead Generation Forms", values: ["3", "Unlimited", "Unlimited", "Unlimited", "Unlimited"] },
-    { feature: "Email Templates (Drag & Drop)", values: ["❌", "✅", "✅", "✅", "Everything in Advanced"] },
-    { feature: "Link in Bio Tool", values: ["✅", "✅", "✅", "✅", "✅"] },
-    { feature: "WhatsApp Accounts", values: ["❌", "1", "2", "4", "Custom"] },
-    { feature: "WhatsApp Status Automation", values: ["❌", "Unlimited", "Unlimited", "Unlimited", "✅"] },
-    { feature: "WhatsApp Broadcast", values: ["❌", "Unlimited", "Unlimited", "Unlimited", "✅"] },
-    { feature: "Facebook Integration", values: ["❌", "Coming soon", "Coming soon", "Coming soon", "Coming soon"] },
-    { feature: "Store Front", values: ["❌", "Coming soon", "Coming soon", "Coming soon", "Coming soon"] },
-    { feature: "Landing Pages", values: ["❌", "10", "25", "Unlimited", "Unlimited"] },
-    { feature: "User Seats", values: ["1", "3", "5", "10", "Unlimited"] },
-    { feature: "Import Contacts from External Tools", values: ["Import from Mailchimp, Shopify, Zendesk etc", "Import from Mailchimp, Shopify, Zendesk etc", "Import from Mailchimp, Shopify, Zendesk etc", "Import from Mailchimp, Shopify, Zendesk etc", "Import from Mailchimp, Shopify, Zendesk etc"] },
-    { feature: "Voice Call", values: ["", "", "", "", ""] },
-    { feature: "SMS Credits", values: ["100", "5,000", "10,000", "15,000", "Custom"] },
-    { feature: "Restful APIs", values: ["❌", "❌", "❌", "Coming Soon", "✅"] },
-    { feature: "Reporting", values: ["Basic", "Basic", "Basic", "Enhanced", "✅"] },
-    { feature: "24/7 Support", values: ["Live Chat & Email", "Live Chat & Email", "Live Chat & Email", "Live Chat & Email", "Dedicated Support"] },
-  ];
-
+const Pricing = () => {
   return (
-    <section className="max-w-7xl mx-auto py-16 px-6">
-      <SectionBadge label="Pricing" />
+    <section className="bg-[#00329B] py-20 px-4 text-white" id="pricing">
+      <div className="max-w-[1200px] mx-auto text-center">
+        <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+          We’ve got a plan for every{" "}
+          <span
+            className="px-2 rounded"
+            style={{
+              background: "linear-gradient(90deg, #BCF939 0%, rgba(255,255,255,0) 100%)",
+              color: "#ffffff",
+            }}
+          >
+            need
+          </span>
+        </h2>
 
-      <h3 className="text-[18px] mt-4 mb-2 text-[#222f36] font-semibold text-center">
-        We Provide the Most Competitive Pricing
-      </h3>
+        {/* Toggle Switch */}
+        <div className="mt-4 flex justify-center items-center gap-4">
+          <span>Pay Monthly</span>
+          <div className="w-[50px] h-[24px] bg-transparent border border-white rounded-full p-1 flex items-center justify-start">
+            <div className="w-[18px] h-[18px] rounded-full bg-[#BCF939]" />
+          </div>
+          <span>Pay Yearly</span>
 
-      <p className="text-[#98a5c3] mb-6 text-center max-w-[746px] mx-auto">
-        Our plans are designed to be highly affordable, catering to every category with a focus on value and accessibility.
-      </p>
-
-      {/* Pricing Table */}
-      <div className="mt-10 bg-white shadow-lg rounded-lg overflow-hidden">
-        <div className="grid grid-cols-6 border-b">
-          <div className="bg-gray-100 p-4 font-medium">Features</div>
-          {pricingData.map((plan, index) => (
-            <div key={index} className={`p-4 text-center font-medium ${plan.isRecommended ? "border-[#735dff] border-2 rounded-lg" : ""}`}>
-              <h4 className="text-xl text-gray-700 ">{plan.tier}</h4>
-              <p className="text-3xl font-bold">
-                {plan.price === "Custom" ? plan.price : `$${plan.price}`}
-              </p>
-              <button className="bg-[#735dff] text-white px-4 py-2 mt-2 rounded hover:bg-purple-600">
-                Subscribe Now
-              </button>
-            </div>
-          ))}
+          {/* Save 30% button */}
+          <button className="ml-2 bg-[#BCF939] text-[#00329B] font-medium px-4 py-1.5 rounded-full text-sm">
+            Save 30%
+          </button>
         </div>
 
-        {/* Features List */}
-        {features.map((feature, featureIndex) => (
-          <div key={featureIndex} className="grid grid-cols-6 border-t">
-            <div className="bg-gray-100 p-4">{feature.feature}</div>
-            {feature.values.map((value, planIndex) => (
-              <div key={planIndex} className="p-4 text-center">
-                {value === "✅" ? <Check className="text-green-500 inline-block" size={20} /> 
-                : value === "❌" ? <X className="text-red-500 inline-block" size={20} /> 
-                : value}
-              </div>
-            ))}
-          </div>
-        ))}
+        {/* First Row */}
+        <div className="mt-12 flex flex-wrap gap-8 justify-center items-stretch">
+          <PricingCard
+            title="Free"
+            price="$0"
+            note="Test the waters with essential features"
+            features={[
+              "Add up to 500 contacts",
+              "15000 mails monthly",
+              "3 Lead Generation Forms",
+              "100 SMS credits",
+            ]}
+          />
+          <PricingCard
+            title="Basic"
+            price="$15"
+            note="Pay annually ($54) and save $126"
+            features={[
+              "Add up to 1000 contacts",
+              "Unlimited mails monthly",
+              "Unlimited Lead Generation Forms",
+              "5000 SMS credits",
+              "Custom Email Integration",
+              "1 WhatsApp Account",
+              "Unlimited WhatsApp Status Automation",
+              "Unlimited WhatsApp Broadcast",
+              "10 Landing Pages",
+            ]}
+          />
+          <PricingCard
+            title="Standard"
+            price="$29"
+            note="Pay annually ($105) and save $243"
+            isPopular
+            highlighted
+            features={[
+              "Everything in Basic",
+              "Add up to 2500 contacts",
+              "10,000 SMS credits",
+              "2 WhatsApp Account",
+              "Unlimited Landing Pages",
+            ]}
+          />
+        </div>
+
+        {/* Second Row */}
+        <div className="mt-12 flex flex-wrap gap-8 justify-center">
+          <PricingCard
+            title="Premium"
+            price="$69"
+            note="Pay annually ($249) and save $599"
+            features={[
+              "Everything in Standard",
+              "Add up to 4000 contacts",
+              "15,000 SMS credits",
+              "4 WhatsApp Account",
+            ]}
+          />
+          <PricingCard
+            title="Enterprise"
+            price="Custom"
+            note="Pay annually ($105) and save $243"
+            features={[
+              "Everything in Premium",
+              "Add custom contacts",
+              "Send custom mails monthly",
+              "Custom SMS credits",
+            ]}
+          />
+        </div>
       </div>
     </section>
   );
-}
+};
 
 export default Pricing;

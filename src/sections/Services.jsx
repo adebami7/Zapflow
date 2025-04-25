@@ -1,4 +1,3 @@
-import SectionBadge from "../components/sectionBadge";
 import { ServiceCard } from "../components/ServiceCard";
 
 import IconRevenue from "../assets/icons/Frame 64.png";
@@ -49,16 +48,15 @@ const services = [
 function Services() {
   return (
     <section id="services" className="relative py-[70px] px-6 bg-[#f5f6fa] overflow-hidden">
-      {/* Decorative Ellipses */}
+    
       <img src={Ellipse4} alt="gray ellipse" className="absolute top-[120px] left-[100px] w-16 z-0" />
       <img src={Ellipse8} alt="green ellipse" className="absolute bottom-[40px] left-[24%] w-8 z-0" />
       <img src={Ellipse7} alt="blue ellipse" className="absolute bottom-[5px] right-[80px] w-[200px] z-0" />
       <img src={Ellipse6} alt="red ellipse" className="absolute top-[182px] right-[260px] w-4 z-0" />
 
       <div className="relative z-10 max-w-[1296px] mx-auto">
-        
 
-        <h1 className="mt-4 mb-2 font-semibold text-center text-[24px] lg:text-[28px] text-[#222f36]">
+        <h1 className="mt-4 mb-2 font-semibold text-center text-[32px] lg:text-[36px] text-[#222f36]">
           Why choose{" "}
           <span
             className="text-[#1e1e1e] rounded inline-block"

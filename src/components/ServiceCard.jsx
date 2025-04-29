@@ -6,10 +6,11 @@ export const ServiceCard = ({
   description,
 }) => {
   return (
-    <div className="p-8 bg-white rounded-[6px] border shadow-sm flex items-center justify-center flex-col">
-      <div className="relative z-[2]">
+    <div className="p-6 bg-white rounded-[6px] border shadow-sm flex flex-col items-start">
+      {/* Top-left Icon */}
+      <div className="relative w-[48px] h-[48px] mb-4">
         <div
-          className={`mb-6 relative w-12 h-12 rounded ${backgroundColor} flex items-center justify-center`}
+          className={`relative w-full h-full rounded ${backgroundColor} flex items-center justify-center`}
         >
           <div
             className={`absolute w-[60px] h-[60px] ${iconBgColor}`}
@@ -23,8 +24,10 @@ export const ServiceCard = ({
           {icon}
         </div>
       </div>
+
+      {/* Text aligned left */}
       <p className="text-base mb-2 text-[#222f36] font-semibold">{title}</p>
-      <p className="text-sm text-[#98a5c3] text-center">{description}</p>
+      <p className="text-sm text-[#98a5c3]">{description}</p>
     </div>
   );
 };

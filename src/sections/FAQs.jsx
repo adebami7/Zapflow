@@ -1,5 +1,5 @@
 import { Disclosure, Transition } from "@headlessui/react";
-import SectionBadge from "../components/sectionBadge";
+// import SectionBadge from "../components/sectionBadge";
 import { Plus, Minus } from "lucide-react";
 import { useState } from "react";
 
@@ -85,14 +85,23 @@ function FAQs() {
   const [openIndex, setOpenIndex] = useState(0);
 
   return (
-    <section id="faqs" className="py-[70px] px-6 bg-[#f5f6fa]">
+    <section id="faqs" className="py-[70px] px-6 bg-[#f0f0f2]">
       <div className="max-w-[1296px] mx-auto">
-        <SectionBadge label="FAQs" />
-        <h1 className="mt-4 mb-2 font-semibold text-center lg:text-[28px] text-[#222f36]">
-          Frequently asked questions?
+        {/* <SectionBadge label="FAQs" /> */}
+        <h1 className="mt-4 mb-2 font-semibold text-center text-[32px] lg:text-[36px] text-[#222f36]">
+          Frequently asked{" "}
+          <span
+            className="text-[#1e1e1e] rounded inline-block"
+            style={{
+              background:
+                "linear-gradient(90deg, #BCF939 0%, rgba(245, 255, 224, 0) 100%)",
+            }}
+          >
+            questions?
+          </span>
         </h1>
         <p className="text-[15px] mb-12 text-[#98a5c3] text-center">
-        Still have questions? Contact us at Support Email or visit our Help Center
+        Got questions? We've got answers.
         </p>
 
         <div className="grid md:grid-cols-2 gap-4 max-w-[1200px] mx-auto">
@@ -108,12 +117,12 @@ function FAQs() {
                   <div className="overflow-hidden transition-colors duration-200 rounded-[6px] border shadow-sm">
                     <Disclosure.Button
                       className={`flex w-full items-center justify-between px-4 py-3 text-left ${
-                        open ? "bg-brandPrimary-100" : "bg-white"
+                        open ? "bg-[#0A5FFA]-100" : "bg-white"
                       }`}
                     >
                       <span
                         className={`font-medium text-[13px] ${
-                          open ? "text-brandPrimary" : "text-[#222f36]"
+                          open ? "text-[#0A5FFA]" : "text-[#222f36]"
                         }`}
                       >
                         {faq.question}
@@ -121,14 +130,14 @@ function FAQs() {
                       <div
                         className={`w-5 h-5 rounded-full flex items-center justify-center transition-transform duration-200 ${
                           open
-                            ? "bg-brandPrimary rotate-180"
-                            : "bg-brandPrimary-100 rotate-0"
+                            ? "bg-[#0A5FFA] rotate-180"
+                            : "bg-[#0A5FFA]-100 rotate-0"
                         }`}
                       >
                         {open ? (
                           <Minus className="h-3 w-3 text-white" />
                         ) : (
-                          <Plus className="h-3 w-3 text-brandPrimary" />
+                          <Plus className="h-3 w-3 text-[#0A5FFA]" />
                         )}
                       </div>
                     </Disclosure.Button>
@@ -150,7 +159,7 @@ function FAQs() {
       <ul className="pl-5 space-y-1">
   {faq.answer.slice(1).map((item, index) => (
     <li key={index} className="flex items-center gap-2">
-      <span className="text-brandPrimary">✅</span> {/* Custom bullet icon */}
+      <span className="text-[#0A5FFA]">✅</span> {/* Custom bullet icon */}
       {item}
     </li>
   ))}
@@ -180,12 +189,12 @@ function FAQs() {
                   <div className="overflow-hidden transition-colors duration-200 rounded-[6px] border shadow-sm">
                     <Disclosure.Button
                       className={`flex w-full items-center justify-between px-4 py-3 text-left ${
-                        open ? "bg-brandPrimary-100" : "bg-white"
+                        open ? "bg-[#0A5FFA]-100" : "bg-white"
                       }`}
                     >
                       <span
                         className={`font-medium text-[13px] ${
-                          open ? "text-brandPrimary" : "text-[#222f36]"
+                          open ? "text-[#0A5FFA]" : "text-[#222f36]"
                         }`}
                       >
                         {faq.question}
@@ -193,14 +202,14 @@ function FAQs() {
                       <div
                         className={`w-5 h-5 rounded-full flex items-center justify-center transition-transform duration-200 ${
                           open
-                            ? "bg-brandPrimary rotate-180"
-                            : "bg-brandPrimary-100 rotate-0"
+                            ? "bg-[#0A5FFA] rotate-180"
+                            : "bg-[#0A5FFA]-100 rotate-0"
                         }`}
                       >
                         {open ? (
                           <Minus className="h-3 w-3 text-white" />
                         ) : (
-                          <Plus className="h-3 w-3 text-brandPrimary" />
+                          <Plus className="h-3 w-3 text-[#0A5FFA]" />
                         )}
                       </div>
                     </Disclosure.Button>

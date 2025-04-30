@@ -5,7 +5,7 @@ import CircleIcon from "../assets/Ellipse 4.png";
 
 function Hero() {
   return (
-    <section id="home" className="bg-[#f7f8fc] pt-20 pb-12 relative overflow-hidden bottom-[-3rem]">
+    <section id="home" className="bg-[#f7f8fc] pt-10 pb-12 relative overflow-hidden bottom-[-3rem]">
       <div className="max-w-[1296px] mx-auto px-6 flex flex-col-reverse lg:flex-row items-center justify-between">
         <div className="lg:w-1/2">
           <p className="text-sm text-[#0A5FFA] font-medium mb-2">

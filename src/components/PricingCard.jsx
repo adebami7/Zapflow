@@ -34,10 +34,12 @@ const PricingCard = ({ title, price, features, highlighted, note, isPopular }) =
       </div>
 
       {/* Features */}
-      <ul className="flex-1 px-6 py-6 text-sm text-left space-y-3 bg-white">
+      <ul className="flex-1 px-3 py-6 text-sm text-left space-y-3 bg-white">
         {features.map((feature, index) => (
           <li key={index} className="flex items-start gap-2">
-            <Check size={16} stroke="#4ADE80" />
+            <div className="bg-[#BCF939] rounded-full p-1 flex items-center justify-center w-6 h-6">
+              <Check size={14} stroke="#00329B" strokeWidth={2} />
+            </div>
             <span className="text-[#1E1E1E]">{feature}</span>
           </li>
         ))}

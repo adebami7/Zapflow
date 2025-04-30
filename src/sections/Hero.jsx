@@ -1,12 +1,11 @@
 import Button from "../components/Button";
-import SectionBadge from "../components/sectionBadge";
 import { Eye, X } from "lucide-react";
 import ManLaptop from "../assets/Group 4.png"; 
 import CircleIcon from "../assets/Ellipse 4.png"; 
 
 function Hero() {
   return (
-    <section id="home" className="bg-[#f7f8fc] pt-20 pb-12 relative overflow-hidden">
+    <section id="home" className="bg-[#f7f8fc] pt-20 pb-12 relative overflow-hidden bottom-[-3rem]">
       <div className="max-w-[1296px] mx-auto px-6 flex flex-col-reverse lg:flex-row items-center justify-between">
         <div className="lg:w-1/2">
           <p className="text-sm text-[#0A5FFA] font-medium mb-2">
@@ -47,7 +46,7 @@ function Hero() {
   <img
     src={ManLaptop}
     alt="Hero Visual"
-    className="w-full max-w-[700px] mx-auto lg:mx-0" 
+    className="w-full max-w-[900px] mx-auto lg:mx-0" 
   />
 
   {/* Floating Cards */}
@@ -62,7 +61,7 @@ function Hero() {
 {/* Facebook Leads card */}
 
 <div
-  className="absolute top-[150px] left-[170px] bg-[#CEDFFEE3] rounded-full p-4 shadow-lg w-58 text-sm text-[#1e1e1e]  z-0 flex items-center space-x-6  "
+  className="absolute top-[150px] left-[170px] bg-[#CEDFFEE3] rounded-full px-4 py-2 shadow-lg w-58 text-sm text-[#1e1e1e]  z-0 flex items-center space-x-6  "
   style={{
     border: '0.1px solid black',
   }}
@@ -88,7 +87,7 @@ function Hero() {
   </div>
 
   <div
-  className="absolute bottom-[18px] right-[85px] bg-[#CEDFFEE3] rounded-full px-4 py-2 shadow-lg w-fit flex items-center space-x-2 text-sm text-[#1e1e1e]"
+  className="absolute bottom-[18px] right-[85px] bg-[#CEDFFEE3] rounded-full px-4 py-2 shadow-lg w-58 z-0 flex items-center space-x-6 text-sm text-[#1e1e1e]"
   style={{
     border: '0.1px solid black',
   }}
@@ -105,7 +104,7 @@ function Hero() {
       </div>
 
       <div className="bg-[#D7FB88] py-8 mt-10">
-  <div className="max-w-[1296px] mx-auto flex flex-col md:flex-row justify-between items-center text-center gap-6">
+  <div className="max-w-[1296px] mx-auto px-6 flex flex-col md:flex-row justify-between items-center text-center gap-6">
     
     {/* Stat 1 */}
     <div className="flex items-start space-x-2 text-left">

@@ -68,10 +68,10 @@ function Navbar() {
         </ul>
 
         <div className="flex items-center gap-3">
-          <Button className="bg-transparent border border-[#0A5FFA] text-[#0A5FFA] text-sm px-5 py-1.5 hover:bg-[#e4eaff] rounded-full">
+          <Button className=" w-[160px] h-[40px] bg-transparent border border-[#0A5FFA] text-[#0A5FFA] text-sm px-5 py-1.5 hover:bg-[#e4eaff] rounded-full">
             Log in
           </Button>
-          <Button className="bg-[#0A5FFA] text-white text-sm px-5 py-1.5 hover:bg-[#0A5FFA] rounded-full">
+          <Button className=" w-[160px] h-[40px] bg-[#0A5FFA] text-white text-sm px-5 py-1.5 hover:bg-[#0A5FFA] rounded-full">
             Sign up
           </Button>
         </div>

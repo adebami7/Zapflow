@@ -1,11 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+@import url(https://db.onlinewebfonts.com/c/b610afef51f6cc9d89f51da94509b1c8?family=Fustat);
 
 :root {
   --primary: #735dff;
 }
 
 body {
-  font-family: "Quicksand", serif;
+  font-family: "Fustat";
   background-color: #fffefe;
 }
 
@@ -15,7 +15,7 @@ html {
 
 input,
 textarea {
-  font-family: "Quicksand", serif;
+  font-family: "Fustat";
   border-radius: 4px;
   border: 1px solid #e2e6f1;
   padding: 8px 16px;

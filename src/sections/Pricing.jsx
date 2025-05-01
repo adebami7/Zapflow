@@ -43,6 +43,7 @@ const Pricing = () => {
               "15000 mails monthly",
               "3 Lead Generation Forms",
               "100 SMS credits",
+              "1 User Seat",
             ]}
           />
           <PricingCard
@@ -59,6 +60,7 @@ const Pricing = () => {
               "Unlimited WhatsApp Status Automation",
               "Unlimited WhatsApp Broadcast",
               "10 Landing Pages",
+              "3 User Seats",
             ]}
           />
           <PricingCard
@@ -73,12 +75,13 @@ const Pricing = () => {
               "10,000 SMS credits",
               "2 WhatsApp Account",
               "Unlimited Landing Pages",
+              "5 User Seats",
             ]}
           />
         </div>
 
         {/* Second Row */}
-        <div className="mt-12 flex flex-wrap gap-8 justify-center">
+        {/* <div className="mt-12 flex flex-wrap gap-8 justify-center">
           <PricingCard
             title="Premium"
             price="$69"
@@ -101,7 +104,7 @@ const Pricing = () => {
               "Custom SMS credits",
             ]}
           />
-        </div>
+        </div> */}
       </div>
     </section>
   );

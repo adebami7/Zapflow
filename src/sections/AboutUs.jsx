@@ -10,7 +10,7 @@ const HowZapflowWorks = () => {
   return (
     <section className="bg-[#00329B] py-20 px-4" id="how-it-works">
       <div className="max-w-[1296px] mx-auto">
-        <h2 className="text-white text-[32px] sm:text-[36px] text-center font-semibold mb-12">
+        <h1 className="text-white text-[32px] sm:text-[36px] text-center font-semibold mb-12">
           How Zapflow{" "}
           <span
             className="text-[#ffffff] rounded inline-block"
@@ -21,7 +21,7 @@ const HowZapflowWorks = () => {
           >
             works
           </span>
-        </h2>
+        </h1>
 
         <div className="flex flex-col sm:flex-row justify-center items-center gap-8">
           <FeatureCard

@@ -11,14 +11,14 @@ function ContactUs() {
       <div className="grid lg:grid-cols-2 min-h-screen">
         {/* Left Image Side */}
         <div className="relative">
-        <img
-            src="/src/assets/black-girl-with-laptop 1.png" 
+          <img
+            src="/src/assets/black-girl-with-laptop 1.png"
             alt="Start Reaching Your Customers"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-black/20 flex flex-col justify-center items-start pl-10 pr-6">
-            <h2 className="text-white text-2xl md:text-3xl font-semibold mb-6 max-w-[320px] leading-snug">
-              Start Reaching Your Customers Today!
+          <div className="absolute inset-0 bg-black/20 flex flex-col justify-end items-start pl-10 pr-6 pb-60">
+            <h2 className="text-white text-1xl md:text-2xl font-semibold mb-6 leading-snug">
+              Start Reaching Your Customers<br />Today!
             </h2>
             <Button className="bg-[#B2F02F] text-black hover:bg-[#a0e027] rounded-full px-6 py-3">
               Get Started
@@ -27,21 +27,21 @@ function ContactUs() {
         </div>
 
         {/* Right Form Side */}
-        <div className="flex flex-col justify-center h-full px-6 md:px-16 bg-[#e5e7eb] ">
-          <div className="w-full max-w-[500px]">
+        <div className="flex flex-col justify-center min-h-screen px-6 md:px-16 py-12 bg-[#e5e7eb] pb-60 pt-20">
+          <div className="w-full max-w-[500px] mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#222f36] text-center">
-              Lets get in{" "}
+              Let’s get in{" "}
               <span
-            className="text-[#1e1e1e] rounded inline-block "
-            style={{
-              background:
-                "linear-gradient(90deg, #BCF939 0%, rgba(245, 255, 224, 0) 100%)",
-            }}
-          >
-             touch !
-          </span>
+                className="text-[#1e1e1e] rounded inline-block"
+                style={{
+                  background:
+                    "linear-gradient(90deg, #BCF939 0%, rgba(245, 255, 224, 0) 100%)",
+                }}
+              >
+                touch!
+              </span>
             </h2>
-            <p className="text-gray-500 text-sm mb-8 text-center ">
+            <p className="text-gray-500 text-sm mb-8 text-center">
               Send us a message or email hi@zapflow.io
             </p>
 
@@ -90,7 +90,6 @@ function ContactUs() {
                 Send Message
               </Button>
             </form>
-            
           </div>
         </div>
       </div>

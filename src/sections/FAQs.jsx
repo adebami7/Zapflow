@@ -1,6 +1,6 @@
 import { Disclosure, Transition } from "@headlessui/react";
 // import SectionBadge from "../components/sectionBadge";
-import { Plus, Minus } from "lucide-react";
+import { Plus, X } from "lucide-react";
 import { useState } from "react";
 
 const faqs = [
@@ -135,7 +135,7 @@ function FAQs() {
                         }`}
                       >
                         {open ? (
-                          <Minus className="h-3 w-3 text-white" />
+                          <X className="h-3.5 w-3.25 text-white" strokeWidth={2} />
                         ) : (
                           <Plus className="h-3 w-3 text-[#0A5FFA]" />
                         )}
@@ -207,7 +207,7 @@ function FAQs() {
                         }`}
                       >
                         {open ? (
-                          <Minus className="h-3 w-3 text-white" />
+                          <X className="h-3.5 w-3.25 text-white" strokeWidth={2} />
                         ) : (
                           <Plus className="h-3 w-3 text-[#0A5FFA]" />
                         )}

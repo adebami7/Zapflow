@@ -1,19 +1,18 @@
-import React from "react";
-import FeatureCard from "../components/FeatureCard";
-
-import Image18 from "../assets/image 18.png";
-import Image20 from "../assets/image 20.png";
-import Image21 from "../assets/image 21.png";
-import Image22 from "../assets/image 22.png";
+import Works01 from "../assets/images/works01.svg";
+import Works02 from "../assets/images/works02.svg";
+import Works03 from "../assets/images/works03.svg";
 
 const HowZapflowWorks = () => {
   return (
-    <section className="bg-[#00329B] py-20 px-4" id="how-it-works">
-      <div className="max-w-[1296px] mx-auto">
-        <h1 className="text-white text-[32px] sm:text-[36px] text-center font-semibold mb-12">
+    <section
+      className="bg-[#00329B] px-[72px] pt-[51px] pb-[87px]"
+      id="how-it-works"
+    >
+      <div className="max-w-[1440px] mx-auto">
+        <h1 className="text-[#F0F0F2] text-[32px] sm:text-[48px] text-center font-bold mb-20 leading-[50px]">
           How Zapflow{" "}
           <span
-            className="text-[#ffffff] rounded inline-block"
+            className="text-[#F0F0F2] inline-block pl-2"
             style={{
               background:
                 "linear-gradient(90deg, #BCF939 0%, rgba(255, 255, 255, 0) 100%)",
@@ -23,71 +22,37 @@ const HowZapflowWorks = () => {
           </span>
         </h1>
 
-        <div className="flex flex-col sm:flex-row justify-center items-center gap-8">
-          <FeatureCard
-            bgColor="#B6CFFE"
-            title="Connect Your Channels"
-            images={[
-              {
-                src: Image20,
-                style: {
-                  top: "-140px",
-                  left: "0px",
-                  width: "100%",
-                  height: "100%",
-                  objectFit: "contain",
-                },
-                zIndex: 1,
-              },
-              {
-                src: Image18,
-                style: {
-                  top: "90px",
-                  left: "0px",
-                  width: "100%",
-                  height: "100%",
-                  objectFit: "contain",
-                },
-                zIndex: 2,
-              },
-            ]}
-          />
-
-          <FeatureCard
-            bgColor="#D7FB88"
-            title="Create Campaigns"
-            images={[
-              {
-                src: Image21,
-                style: {
-                  top: "0px",
-                  left: "0px",
-                  width: "100%",
-                  height: "100%",
-                  objectFit: "cover",
-                },
-                zIndex: 1,
-              },
-            ]}
-          />
-
-          <FeatureCard
-            bgColor="#FDEEAB"
-            title="Track & Optimize"
-            images={[
-              {
-                src: Image22,
-                style: {
-                  top: "0px",
-                  left: "0px",
-                  width: "100%",
-                  height: "100%",
-                  objectFit: "fill",
-                },
-                zIndex: 1,
-              },
-            ]}
-          />
+        <div className="grid lg:grid-cols-3 gap-[46px]">
+          <div
+            className="w-full h-[572px] rounded-2xl bg-cover bg-center relative"
+            style={{ backgroundImage: `url(${Works01})` }}
+          >
+            <div className="absolute bottom-0 rounded-b-2xl w-full bg-[#B6CFFE] pt-10 pb-6 px-6">
+              <p className="text-[#3D414D] font-semibold text-[32px]">
+                Connect Your Channels
+              </p>
+            </div>
+          </div>
+          <div
+            className="w-full h-[572px] rounded-2xl bg-cover bg-center relative"
+            style={{ backgroundImage: `url(${Works02})` }}
+          >
+            <div className="absolute bottom-0 rounded-b-2xl w-full bg-[#D7FB88] pt-10 pb-6 px-6">
+              <p className="text-[#3D414D] font-semibold text-[32px]">
+                Create Campaigns
+              </p>
+            </div>
+          </div>
+          <div
+            className="w-full h-[572px] rounded-2xl bg-cover bg-center relative"
+            style={{ backgroundImage: `url(${Works03})` }}
+          >
+            <div className="absolute bottom-0 rounded-b-2xl w-full bg-[#FDEEAB] pt-10 pb-6 px-6">
+              <p className="text-[#3D414D] font-semibold text-[32px]">
+                Track & Optimize
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>

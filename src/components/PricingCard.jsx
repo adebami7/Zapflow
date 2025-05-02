@@ -1,40 +1,45 @@
-import React from "react";
 import { Check } from "lucide-react";
 
-const PricingCard = ({ title, price, features, highlighted, note, isPopular }) => {
+const PricingCard = ({
+  title,
+  price,
+  features,
+  highlighted,
+  note,
+  isPopular,
+}) => {
   const bgTop = highlighted ? "#CEDFFE" : isPopular ? "#F0F0F2" : "#F0F0F2";
 
   return (
     <div
-      className={`relative flex flex-col justify-between w-full max-w-[280px] min-h-[550px] rounded-[10px] overflow-hidden shadow-md border
-        ${isPopular ? "border-[#BCF939]" : "border-gray-200"}
+      className={`relative flex flex-col justify-between w-full min-h-[550px] rounded-[10px] overflow-hidden shadow-md border
+        ${isPopular ? "border-[#0A5FFA] border-dashed" : "border-transparent"}
       `}
     >
-      {/* POPULAR badge */}
       {isPopular && (
-        <div className="absolute top-3 right-3 bg-[#BCF939] text-[#00329B] text-xs font-semibold px-3 py-1 rounded-full z-10 shadow-sm">
+        <div className="absolute top-6 right-8 bg-[#BCF939] text-[#00329B] text-xs font-semibold px-3 py-1 rounded-full z-10 shadow-sm">
           POPULAR
         </div>
       )}
 
       {/* Top content */}
-      <div className="p-6" style={{ backgroundColor: bgTop }}>
-        <div className="text-left space-y-2">
-          <h3 className="text-xl font-semibold text-[#1E1E1E]">{title}</h3>
-          <p className="text-3xl font-bold text-[#1E1E1E]">
+      <div className="py-6 px-8" style={{ backgroundColor: bgTop }}>
+        <div className="text-left space-y-4">
+          <h3 className="text-base font-semibold text-[#3D414D]">{title}</h3>
+          <p className="text-[48px] font-bold text-[#3D414D] leading-[50px]">
             {price}
-            <span className="text-sm font-normal text-[#6B7280]"> /Month</span>
+            <span className="text-xs font-normal text-[#797D87]"> /Month</span>
           </p>
-          {note && <p className="text-xs text-gray-500">{note}</p>}
+          {note && <p className="text-xs text-[#797D87] font-medium">{note}</p>}
         </div>
 
-        <button className="mt-6 w-full bg-[#1866FF] hover:bg-[#0049cc] transition text-white py-2 rounded-full font-medium text-sm">
+        <button className="mt-6 w-full bg-[#0A5FFA] hover:bg-[#0A5FFA] text-base transition text-white py-2 rounded-full font-medium">
           Subscribe Now
         </button>
       </div>
 
       {/* Features */}
-      <ul className="flex-1 px-3 py-6 text-sm text-left space-y-3 bg-white">
+      <ul className="flex-1 px-4 py-6 text-base text-left space-y-[22px] bg-white">
         {features.map((feature, index) => (
           <li key={index} className="flex items-start gap-2">
             <div className="bg-[#BCF939] rounded-full p-1 flex items-center justify-center w-6 h-6">

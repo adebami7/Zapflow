@@ -1,17 +1,19 @@
-import React from "react";
 import PricingCard from "../components/PricingCard";
 
 const Pricing = () => {
   return (
-    <section className="bg-[#00329B] py-20 px-4 text-white" id="pricing">
+    <section
+      className="bg-[#00329B] pt-[56px] pb-[86px] px-[128px]"
+      id="pricing"
+    >
       <div className="max-w-[1200px] mx-auto text-center">
-        <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+        <h2 className="text-3xl sm:text-[48px] font-bold mb-4 text-[#F0F0F2] leading-[50px]">
           We’ve got a plan for every{" "}
           <span
-            className="px-2 rounded"
+            className="inline-block text-[#F0F0F2] pl-2"
             style={{
-              background: "linear-gradient(90deg, #BCF939 0%, rgba(255,255,255,0) 100%)",
-              color: "#ffffff",
+              background:
+                "linear-gradient(90deg, #BCF939 0%, rgba(255,255,255,0) 100%)",
             }}
           >
             need
@@ -19,7 +21,7 @@ const Pricing = () => {
         </h2>
 
         {/* Toggle Switch */}
-        <div className="mt-4 flex justify-center items-center gap-4">
+        <div className="mt-4 flex justify-center items-center gap-4 text-[#F0F0F2] text-base font-medium">
           <span>Pay Monthly</span>
           <div className="w-[50px] h-[24px] bg-transparent border border-white rounded-full p-1 flex items-center justify-start">
             <div className="w-[18px] h-[18px] rounded-full bg-[#BCF939]" />
@@ -33,7 +35,7 @@ const Pricing = () => {
         </div>
 
         {/* First Row */}
-        <div className="mt-12 flex flex-wrap gap-8 justify-center items-stretch">
+        <div className="mt-12 grid lg:grid-cols-3 gap-10">
           <PricingCard
             title="Free"
             price="$0"
@@ -79,32 +81,6 @@ const Pricing = () => {
             ]}
           />
         </div>
-
-        {/* Second Row */}
-        {/* <div className="mt-12 flex flex-wrap gap-8 justify-center">
-          <PricingCard
-            title="Premium"
-            price="$69"
-            note="Pay annually ($249) and save $599"
-            features={[
-              "Everything in Standard",
-              "Add up to 4000 contacts",
-              "15,000 SMS credits",
-              "4 WhatsApp Account",
-            ]}
-          />
-          <PricingCard
-            title="Enterprise"
-            price="Custom"
-            note="Pay annually ($105) and save $243"
-            features={[
-              "Everything in Premium",
-              "Add custom contacts",
-              "Send custom mails monthly",
-              "Custom SMS credits",
-            ]}
-          />
-        </div> */}
       </div>
     </section>
   );

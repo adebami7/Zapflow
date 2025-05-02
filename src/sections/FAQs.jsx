@@ -1,6 +1,6 @@
 import { Disclosure, Transition } from "@headlessui/react";
 // import SectionBadge from "../components/sectionBadge";
-import { Plus, X } from "lucide-react";
+import { CircleCheckBig, Plus, X } from "lucide-react";
 import { useState } from "react";
 
 const faqs = [
@@ -32,8 +32,8 @@ const faqs = [
       "Social media posts and replies",
       "SMS notifications and promotions",
       "Chatbot responses",
-      "Drip campaigns and follow-ups"
-    ]
+      "Drip campaigns and follow-ups",
+    ],
   },
   {
     question: "Does the tool provide analytics and reporting?",
@@ -47,7 +47,8 @@ const faqs = [
   },
   {
     question: "Is there a limit to the number of messages I can send?",
-    answer: "Message limits depend on your subscription plan. Check our Pricing Page for details on message allowances and upgrades.",
+    answer:
+      "Message limits depend on your subscription plan. Check our Pricing Page for details on message allowances and upgrades.",
   },
   {
     question: "Does ZapFlow support A/B testing?",
@@ -85,13 +86,13 @@ function FAQs() {
   const [openIndex, setOpenIndex] = useState(0);
 
   return (
-    <section id="faqs" className="py-[70px] px-6 bg-[#f0f0f2]">
-      <div className="max-w-[1296px] mx-auto">
+    <section id="faqs" className="pt-[51px] pb-[115px] px-[72px] bg-[#f0f0f2]">
+      <div className="max-w-[1440px] mx-auto">
         {/* <SectionBadge label="FAQs" /> */}
-        <h1 className="mt-4 mb-2 font-semibold text-center text-[32px] lg:text-[36px] text-[#222f36]">
+        <h1 className="mb-2 font-semibold text-center leading-[50px] text-[32px] lg:text-[48px] text-[#3D414D]">
           Frequently asked{" "}
           <span
-            className="text-[#1e1e1e] rounded inline-block"
+            className="text-[#1e1e1e] inline-block pl-2"
             style={{
               background:
                 "linear-gradient(90deg, #BCF939 0%, rgba(245, 255, 224, 0) 100%)",
@@ -100,12 +101,12 @@ function FAQs() {
             questions?
           </span>
         </h1>
-        <p className="text-[15px] mb-12 text-[#98a5c3] text-center">
-        Got questions? We've got answers.
+        <p className="text-base mb-12 text-[#5B5F6A] text-center">
+          Got questions? We&apos;ve got answers.
         </p>
 
-        <div className="grid md:grid-cols-2 gap-4 max-w-[1200px] mx-auto">
-          <div className="space-y-4">
+        <div className="grid md:grid-cols-2 gap-[150px]">
+          <div className="space-y-6">
             {faqs.slice(0, 6).map((faq, index) => (
               <Disclosure
                 key={index}
@@ -114,14 +115,18 @@ function FAQs() {
                 onChange={(isOpen) => isOpen && setOpenIndex(index)}
               >
                 {({ open }) => (
-                  <div className="overflow-hidden transition-colors duration-200 rounded-[6px] border shadow-sm">
+                  <div
+                    className={`overflow-hidden transition-colors duration-200 rounded-[16px]   ${
+                      open ? "border" : "border-none"
+                    }`}
+                  >
                     <Disclosure.Button
-                      className={`flex w-full items-center justify-between px-4 py-3 text-left ${
+                      className={`flex w-full items-center justify-between py-5 px-6 text-left ${
                         open ? "bg-[#0A5FFA]-100" : "bg-white"
                       }`}
                     >
                       <span
-                        className={`font-medium text-[13px] ${
+                        className={`font-medium text-[18px] ${
                           open ? "text-[#0A5FFA]" : "text-[#222f36]"
                         }`}
                       >
@@ -135,9 +140,12 @@ function FAQs() {
                         }`}
                       >
                         {open ? (
-                          <X className="h-3.5 w-3.25 text-white" strokeWidth={2} />
+                          <X
+                            className="h-3.5 w-3.25 text-white"
+                            strokeWidth={2}
+                          />
                         ) : (
-                          <Plus className="h-3 w-3 text-[#0A5FFA]" />
+                          <Plus className="min-h-[24px] min-w-[24px] text-[#0A5FFA]" />
                         )}
                       </div>
                     </Disclosure.Button>
@@ -149,36 +157,37 @@ function FAQs() {
                       leaveFrom="transform scale-100 opacity-100"
                       leaveTo="transform scale-95 opacity-0"
                     >
-                      {/* <Disclosure.Panel className="py-3 px-4 text-xs font-medium text-[#98a5c3]">
-                        {faq.answer}
-                      </Disclosure.Panel> */}
-                      <Disclosure.Panel className="py-3 px-4 text-xs font-medium text-[#98a5c3]">
-  {Array.isArray(faq.answer) ? (
-    <>
-      <p>{faq.answer[0]}</p> {/* Display the first sentence as normal text */}
-      <ul className="pl-5 space-y-1">
-  {faq.answer.slice(1).map((item, index) => (
-    <li key={index} className="flex items-center gap-2">
-      <span className="text-[#0A5FFA]">✅</span> {/* Custom bullet icon */}
-      {item}
-    </li>
-  ))}
-</ul>
-
-    </>
-  ) : (
-    <p>{faq.answer}</p>
-  )}
-</Disclosure.Panel>
-
-
+                      <Disclosure.Panel className="px-6 py-5 font-medium text-[#98a5c3] text-base">
+                        {Array.isArray(faq.answer) ? (
+                          <>
+                            <p className="text-base font-medium text-[#98a5c3]">
+                              {faq.answer[0]}
+                            </p>{" "}
+                            <ul className="pl-5 space-y-5 mt-3">
+                              {faq.answer.slice(1).map((item, index) => (
+                                <li
+                                  key={index}
+                                  className="flex items-center gap-2"
+                                >
+                                  <span className="text-[#0A5FFA]">
+                                    <CircleCheckBig />
+                                  </span>{" "}
+                                  {item}
+                                </li>
+                              ))}
+                            </ul>
+                          </>
+                        ) : (
+                          <p>{faq.answer}</p>
+                        )}
+                      </Disclosure.Panel>
                     </Transition>
                   </div>
                 )}
               </Disclosure>
             ))}
           </div>
-          <div className="space-y-4">
+          <div className="space-y-6">
             {faqs.slice(6, 12).map((faq, index) => (
               <Disclosure
                 key={index + 6}
@@ -186,15 +195,19 @@ function FAQs() {
                 onChange={(isOpen) => isOpen && setOpenIndex(index + 6)}
               >
                 {({ open }) => (
-                  <div className="overflow-hidden transition-colors duration-200 rounded-[6px] border shadow-sm">
+                  <div
+                    className={`overflow-hidden transition-colors duration-200 rounded-[16px]   ${
+                      open ? "border" : "border-none"
+                    }`}
+                  >
                     <Disclosure.Button
-                      className={`flex w-full items-center justify-between px-4 py-3 text-left ${
+                      className={`flex w-full items-center justify-between px-6 py-5 text-left ${
                         open ? "bg-[#0A5FFA]-100" : "bg-white"
                       }`}
                     >
                       <span
-                        className={`font-medium text-[13px] ${
-                          open ? "text-[#0A5FFA]" : "text-[#222f36]"
+                        className={`font-semibold text-[18px] ${
+                          open ? "text-[#0A5FFA]" : "text-[#3D414D]"
                         }`}
                       >
                         {faq.question}
@@ -207,9 +220,12 @@ function FAQs() {
                         }`}
                       >
                         {open ? (
-                          <X className="h-3.5 w-3.25 text-white" strokeWidth={2} />
+                          <X
+                            className="h-3.5 w-3.25 text-white"
+                            strokeWidth={2}
+                          />
                         ) : (
-                          <Plus className="h-3 w-3 text-[#0A5FFA]" />
+                          <Plus className="min-h-[24px] min-w-[24px] text-[#0A5FFA]" />
                         )}
                       </div>
                     </Disclosure.Button>
@@ -221,7 +237,7 @@ function FAQs() {
                       leaveFrom="transform scale-100 opacity-100"
                       leaveTo="transform scale-95 opacity-0"
                     >
-                      <Disclosure.Panel className="py-3 px-4 text-xs font-medium text-[#98a5c3]">
+                      <Disclosure.Panel className="px-6 py-5 text-base font-medium text-[#98a5c3]">
                         {faq.answer}
                       </Disclosure.Panel>
                     </Transition>

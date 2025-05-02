@@ -1,195 +1,92 @@
-import React from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Autoplay } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import "swiper/css/autoplay";
+import Quote from "../assets/images/quote.svg";
+import Testimonial01 from "../assets/images/testimonial01.svg";
+import Testimonial02 from "../assets/images/testimonial02.svg";
+import Testimonial03 from "../assets/images/testimonial03.svg";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
-import Avatar1 from "../assets/images/Osaro-Destiny.jpg";
-import Avatar2 from "../assets/images/Toyin-Omotosho.jpg";
-import Avatar3 from "../assets/images/Ronald-Nzimora.jpg";
-import { AlignCenter } from 'lucide-react';
-
-const testimonials = [
-  {
-    id: 1,
-    name: "Osaro Destiny | CEO, Ekiema Wellness",
-    since: "2001",
-    image: Avatar1,
-    text: "The WhatsApp automation feature is next level—effortless lead nurturing and sales conversion.",
-    rating: 5,
-    daysAgo: 10,
-  },
-  {
-    id: 2,
-    name: "Toyin Omotosho | Internet Entrepreneur",
-    since: "2023",
-    image: Avatar2,
-    text: "The WhatsApp automation feature is next level—effortless lead nurturing and sales conversion.",
-    rating: 5,
-    daysAgo: 10,
-  },
-  {
-    id: 3,
-    name: "Ronald Nzimora | Ecommerce Coach",
-    since: "2022",
-    image: Avatar3,
-    text: "The WhatsApp automation feature is next level—effortless lead nurturing and sales conversion.",
-    rating: 5,
-    daysAgo: 8,
-  },
-];
-
-function TestimonialCard({ name, role, text, image, isCenter }) {
+function Testimonials() {
   return (
-    <div
-      className={`flex flex-col items-center text-center rounded-lg p-6 transition-all duration-300 ${
-        isCenter
-          ? "bg-white shadow-xl scale-105"
-          : "bg-white/20 backdrop-blur-sm scale-95"
-      }`}
-    >
-      <img
-        src={image}
-        alt={name}
-        className="w-16 h-16 rounded-full object-cover mb-4"
-      />
-      <svg
-        className="w-8 h-8 text-gray-400 mb-2"
-        fill="currentColor"
-        viewBox="0 0 24 24"
-      >
-        <path d="M7.17 8A4.17 4.17 0 003 12.17V21h6v-8.83A4.17 4.17 0 007.17 8zM17.17 8A4.17 4.17 0 0013 12.17V21h6v-8.83A4.17 4.17 0 0017.17 8z" />
-      </svg>
-      <p className={`text-sm ${isCenter ? "text-gray-700" : "text-white/80"}`}>
-        {text}
-      </p>
-      <div className="mt-4">
-        <h4
-          className={`font-semibold ${
-            isCenter ? "text-black" : "text-white"
-          } text-sm`}
-        >
-          {name}
-        </h4>
-        <p
-          className={`text-xs mt-1 ${
-            isCenter ? "text-gray-500" : "text-white/70"
-          }`}
-        >
-          {role}
+    <div className="bg-[#06348A] pt-[56px] pb-[114px] px-[128px]">
+      <div className="max-w-[1440px] mx-auto">
+        <h2 className="text-[32px] sm:text-[48px] text-center font-bold text-[#F0F0F2] mb-5 leading-[50px]">
+          What our customers are{" "}
+          <span
+            className="text-[#F0F0F2] inline-block pl-2"
+            style={{
+              background:
+                "linear-gradient(90deg, #BCF939 0%, rgba(255, 255, 255, 0) 100%)",
+            }}
+          >
+            {" "}
+            saying
+          </span>
+        </h2>
+        <p className="text-base text-[#F0F0F2] text-center font-medium">
+          Customer satisfaction and experience are our top priorities
         </p>
+
+        <div className="flex items-center justify-center relative pt-[5rem]">
+          <button className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10">
+            <ChevronLeft className="text-white w-10 h-10" />
+          </button>
+
+          <div className="bg-[#CEDFFE] w-[305px] h-[250px] rounded-xl p-4 relative mt-6 mr-[-24px] z-0">
+            <img
+              src={Testimonial01}
+              className="absolute top-[-35px] w-[68px] h-[68px] left-1/2 transform -translate-x-1/2"
+            />
+            <img src={Quote} />
+            <p className="text-base font-medium text-[#5B5F6A] leading-7 mt-[-50px]">
+              From Email to SMS, we finally have one tool to reach all our
+              customers. The best part? It&apos;s ridiculously easy to use.
+            </p>
+            <h1 className="text-[#3D414D] font-bold text-xl mt-4">Tolu B.</h1>
+            <p className="text-[#797D87] font-medium text-xs">
+              Founder of Sprout&Scale
+            </p>
+          </div>
+
+          <div className="bg-white w-[445px] h-[365px] rounded-xl py-6 pl-4 pr-16 relative z-10">
+            <img
+              src={Testimonial03}
+              className="absolute top-[-35px] w-[100px] h-[100px] left-1/2 transform -translate-x-1/2"
+            />
+            <img src={Quote} className="w-[73px]" />
+            <p className="text-2xl font-medium text-[#5B5F6A] leading-[40px] mt-[-64px]">
+              Zapflow helped us cut down on manual follow-ups by 80%. Now, our
+              campaigns run themselves and conversions are way up!
+            </p>
+            <h1 className="text-[#3D414D] font-bold text-[32px] mt-4">
+              Chidi A.
+            </h1>
+            <p className="text-[#797D87] font-medium text-base">
+              Growth Lead at NovaMart
+            </p>
+          </div>
+
+          <div className="bg-[#CEDFFE] w-[305px] h-[250px] rounded-xl p-4 relative mt-6 ml-[-24px] z-0">
+            <img
+              src={Testimonial02}
+              className="absolute top-[-35px] w-[68px] h-[68px] left-1/2 transform -translate-x-1/2"
+            />
+            <img src={Quote} />
+            <p className="text-base font-medium text-[#5B5F6A] leading-7 mt-[-50px]">
+              The analytics dashboard is a game changer. We know exactly
+              what&apos;s working, and we&apos;ve doubled our lead conversions.
+            </p>
+            <h1 className="text-[#3D414D] font-bold text-xl mt-4">Sarah E.</h1>
+            <p className="text-[#797D87] font-medium text-xs">
+              CEO at FinSpace
+            </p>
+          </div>
+
+          <button className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10">
+            <ChevronRight className="text-white w-10 h-10" />
+          </button>
+        </div>
       </div>
     </div>
   );
 }
-
-function Testimonials ()  {
-  return (
-    <section className="py-20 bg-blue-700 relative">
-      <div className="container mx-auto px-4 text-center">
-        <h2 className="text-white text-3xl md:text-4xl font-bold mb-4">
-          What our customers are <span
-            className="text-[#1e1e1e] rounded inline-block"
-            style={{
-              background:
-                "linear-gradient(90deg, #BCF939 0%, rgba(245, 255, 224, 0) 100%)",
-            }}
-          >
-            saying
-          </span>
-        </h2>
-        <p className="text-white/80 mb-12">
-          Customer satisfaction and experience are our top priorities
-        </p>
-
-        <Swiper
-          modules={[Navigation, Autoplay]}
-          navigation
-          loop
-          autoplay={{ delay: 4000 }}
-          centeredSlides
-          slidesPerView={3}
-          spaceBetween={0}
-          breakpoints={{
-            0: {
-              slidesPerView: 1, // Mobile: 1 card
-            },
-            640: {
-              slidesPerView: 2, // Tablet: 2 cards
-            },
-            1024: {
-              slidesPerView: 3, // Desktop: 3 cards
-            },
-          }}
-        >
-          {testimonials.map((testimonial, index) => (
-            <SwiperSlide key={index}>
-              {({ isActive }) => (
-                <div
-                  className={`relative rounded-3xl p-6 flex flex-col items-center text-center transition-all duration-300 ${
-                    isActive
-                      ? 'bg-white shadow-lg scale-105'
-                      : 'bg-[#9DBFFD] backdrop-blur-md text-white scale-95'
-                  }`}
-                >
-                  {/* Avatar */}
-                  <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-white absolute -top-4">
-                    <img
-                      src={testimonial.image}
-                      alt={testimonial.name}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-
-                  {/* Quotation mark */}
-                  <div className="text-9xl mt-10 mb-4 self-start text-left">
-  <span className={isActive ? 'text-[#CEDFFE]' : 'text-white/70'}>
-    &ldquo;
-  </span>
-</div>
-
-
-                  {/* Testimonial text */}
-                  <p
-                    className={` self-start text-left text-[30px] mb-6 ${
-                      isActive ? 'text-gray-700' : 'text-white'
-                    }`}
-                  >
-                    {testimonial.text}
-                  </p>
-
-                  {/* Name */}
-                  <h3 className="mb-1 self-start text-left">
-  <span className={`block text-3xl font-bold ${
-    isActive ? 'text-gray-900' : 'text-white'
-  }`}>
-    {testimonial.name.split('|')[0].trim()}
-  </span>
-  <span className={`block text-sm ${
-    isActive ? 'text-gray-500' : 'text-white/70'
-  }`}>
-    {testimonial.name.split('|')[1]?.trim()}
-  </span>
-</h3>
-
-
-                  {/* Role */}
-                  <p
-                    className={`text-sm ${
-                      isActive ? 'text-gray-500' : 'text-white/70'
-                    }`}
-                  >
-                    {testimonial.role}
-                  </p>
-                </div>
-              )}
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      </div>
-    </section>
-  );
-};
 
 export default Testimonials;

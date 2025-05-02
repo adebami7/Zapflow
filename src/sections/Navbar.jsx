@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Button from "../components/Button";
 import Drawer from "../components/Drawer";
 import { Link as ScrollLink } from "react-scroll";
+import Logo from "../assets/images/logo.svg";
 
 function MenuItems() {
   const navbarHeight = 100;
@@ -20,8 +21,8 @@ function MenuItems() {
       {items.map((item, index) => (
         <li
           key={index}
-          className={`p-3 text-sm font-medium cursor-pointer ${
-            item.label === "Home" ? "text-[#0A5FFA]" : "text-[#3b4a62]"
+          className={`p-3 text-base font-medium cursor-pointer ${
+            item.label === "Home" ? "text-[#0A5FFA]" : "text-[#5B5F6A]"
           } hover:text-[#0A5FFA]`}
         >
           <ScrollLink
@@ -51,17 +52,12 @@ function Navbar() {
 
   return (
     <nav
-      className={`relative bg-[#f7f8fc] py-3 px-10 z-50 ${
+      className={`relative bg-[#f7f8fc] py-5 px-[74px] z-50 ${
         isFixed ? "fixed-navbar shadow-md" : ""
       }`}
     >
-      <div className="max-w-[1296px] mx-auto flex items-center justify-between">
-      <img
-  src="/src/assets/ZAPFLOW LOGO-BLACK-3.png"
-  alt="Zapflow Logo"
-  className="h-8 w-auto sm:h-10"
-/>
-
+      <div className="max-w-[1440px] mx-auto flex items-center justify-between">
+        <img src={Logo} alt="Zapflow Logo" className="h-8 w-auto sm:h-10" />
 
         <ul className="hidden lg:flex items-center gap-4">
           <MenuItems />
@@ -69,10 +65,10 @@ function Navbar() {
 
         <div className="flex items-center gap-3">
           <Button className=" w-[160px] h-[40px] bg-transparent border border-[#0A5FFA] text-[#0A5FFA] text-sm px-5 py-1.5 hover:bg-[#e4eaff] rounded-full">
-            Log in
+            Log In
           </Button>
           <Button className=" w-[160px] h-[40px] bg-[#0A5FFA] text-white text-sm px-5 py-1.5 hover:bg-[#0A5FFA] rounded-full">
-            Sign up
+            Sign Up
           </Button>
         </div>
 
@@ -87,5 +83,3 @@ function Navbar() {
 }
 
 export default Navbar;
-
-

@@ -22,7 +22,7 @@ const BusinessCard = ({ image, title }) => {
 
 const BusinessTypes = () => {
   return (
-    <section className="bg-[#F5F9FF] px-[72px] pt-[51px] pb-[150px] relative overflow-hidden">
+    <section className="bg-[#F5F9FF] px-6 md:px-[72px] pt-[51px] pb-[150px] relative overflow-hidden">
       <img
         src={SubHero06}
         alt="gray ellipse"

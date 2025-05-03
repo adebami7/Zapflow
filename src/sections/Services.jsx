@@ -43,7 +43,7 @@ function Services() {
   return (
     <section
       id="services"
-      className="relative pt-[51px] pb-[115px] px-[72px] bg-[#f5f6fa] overflow-hidden"
+      className="relative pt-[51px] pb-[115px] px-[36px] md:px-[72px] bg-[#f5f6fa] overflow-hidden"
     >
       <img
         src={SubHero06}
@@ -67,7 +67,7 @@ function Services() {
       />
 
       <div className="relative z-10 max-w-[1440px] mx-auto">
-        <h1 className="mb-4 font-bold text-center text-[32px] lg:text-[48px] text-[#3D414D] leading-[50px]">
+        <h1 className="mb-4 font-bold text-center text-[28px] lg:text-[48px] text-[#3D414D] md:leading-[50px]">
           Why choose{" "}
           <span
             className="text-[#3D414D] rounded inline-block pl-2"
@@ -80,7 +80,7 @@ function Services() {
           </span>
         </h1>
 
-        <p className="text-base mb-12 font-medium text-[#797D87] text-center leading-7">
+        <p className=" text-xs md:text-base mb-12 font-medium text-[#797D87] text-center md:leading-7">
           The all-in-one marketing automation tool designed to simplify sales,
           nurture <br />
           leads, and skyrocket conversions—all in one place!

@@ -4,9 +4,9 @@ import Logo from "../assets/images/logo-black.svg";
 
 function Footer() {
   return (
-    <footer className="bg-[#232323] text-[#F0F0F2] pt-[81px] pb-[115px] px-[72px]">
+    <footer className="bg-[#232323] text-[#F0F0F2] pt-[81px] pb-[115px] lg:px-[72px] px-6">
       <div className="max-w-[1440px] mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 sm:justify-items-center">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 sm:justify-items-start">
           <div className="space-y-4">
             <a href="/" className="flex items-start">
               <h1 className="text-2xl text-white font-semibold">
@@ -26,7 +26,7 @@ function Footer() {
             </p>
           </div>
 
-          <div className="text-right">
+          <div className="lg:text-right">
             <h3 className="text-[#F0F0F2] text-base font-semibold mb-6">
               PAGES
             </h3>
@@ -46,7 +46,7 @@ function Footer() {
             </ul>
           </div>
 
-          <div className="text-right">
+          <div className="lg:text-right">
             <h3 className="text-[#F0F0F2] text-base font-semibold mb-6">
               INFO
             </h3>
@@ -68,12 +68,12 @@ function Footer() {
             </ul>
           </div>
 
-          <div className="text-right">
+          <div className="lg:text-right">
             <h3 className="text-[#F0F0F2] text-base font-semibold mb-6">
               CONTACT
             </h3>
             <ul className="space-y-4">
-              <li className="flex justify-end items-center gap-2 text-base hover:text-white">
+              <li className="flex lg:justify-end items-center gap-2 text-base hover:text-white">
                 hi@zapflow.co
               </li>
             </ul>

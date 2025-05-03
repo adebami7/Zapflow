@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Dialog, Transition, DialogPanel } from "@headlessui/react";
 import { Menu, X } from "lucide-react";
+import Logo from "../assets/images/logo.svg";
 
 function Drawer({ children }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -52,15 +53,19 @@ function Drawer({ children }) {
             leaveFrom="translate-x-0"
             leaveTo="-translate-x-full"
           >
-            <div className="fixed inset-y-0 left-0 w-[235px] bg-white shadow-lg z-20">
+            <div className="fixed inset-y-0 left-0 w-full bg-[#F0F0F2] shadow-lg z-20">
               <DialogPanel className="h-full">
                 <div className="p-4">
-                  <button
-                    onClick={closeDrawer}
-                    className="absolute top-2 right-2 p-2 text-[#657a99] hover:text-brandPrimary focus:outline-none"
-                  >
-                    <X className="h-6 w-6" />
-                  </button>
+                  <div className="flex items-center justify-between mb-7">
+                    <img src={Logo} />
+                    <button
+                      onClick={closeDrawer}
+                      className="p-2 text-[#657a99] hover:text-brandPrimary focus:outline-none"
+                    >
+                      <X className="h-7 w-7" />
+                    </button>
+                  </div>
+
                   <ul className="flex flex-col gap-4">{children}</ul>
                 </div>
               </DialogPanel>

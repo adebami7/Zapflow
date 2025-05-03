@@ -9,7 +9,7 @@ function MenuItems() {
 
   const items = [
     { to: "home", label: "Home" },
-    { to: "services", label: "Services" },
+    // { to: "services", label: "Services" },
     { to: "pricing", label: "Pricing" },
     { to: "faqs", label: "FAQs" },
     { to: "testimonials", label: "Testimonials" },
@@ -21,7 +21,7 @@ function MenuItems() {
       {items.map((item, index) => (
         <li
           key={index}
-          className={`p-3 text-base font-medium cursor-pointer ${
+          className={`p-3 lg:text-sm text-base py-4 lg:py-0 xl:text-base border border-transparent border-b-[#A7AAB2] lg:border-none font-medium cursor-pointer ${
             item.label === "Home" ? "text-[#0A5FFA]" : "text-[#5B5F6A]"
           } hover:text-[#0A5FFA]`}
         >
@@ -52,18 +52,18 @@ function Navbar() {
 
   return (
     <nav
-      className={`relative bg-[#f7f8fc] py-5 px-[74px] z-50 ${
+      className={`relative bg-[#f7f8fc] py-5 px-4 lg:px-10 xl:px-[74px] max-w-[1440px] mx-auto z-50 flex items-center justify-between ${
         isFixed ? "fixed-navbar shadow-md" : ""
       }`}
     >
-      <div className="max-w-[1440px] mx-auto flex items-center justify-between">
+      <div className="flex items-center justify-between w-full">
         <img src={Logo} alt="Zapflow Logo" className="h-8 w-auto sm:h-10" />
 
         <ul className="hidden lg:flex items-center gap-4">
           <MenuItems />
         </ul>
 
-        <div className="flex items-center gap-3">
+        <div className="hidden lg:flex items-center gap-3">
           <Button className=" w-[160px] h-[40px] bg-transparent border border-[#0A5FFA] text-[#0A5FFA] text-sm px-5 py-1.5 hover:bg-[#e4eaff] rounded-full">
             Log In
           </Button>
@@ -71,12 +71,20 @@ function Navbar() {
             Sign Up
           </Button>
         </div>
+      </div>
+      <div className="">
+        <Drawer>
+          <MenuItems />
 
-        <div className="lg:hidden absolute left-[100px]">
-          <Drawer>
-            <MenuItems />
-          </Drawer>
-        </div>
+          <div className="flex flex-col items-center gap-4">
+            <Button className="w-[80%] h-[48px] bg-transparent border border-[#0A5FFA] text-[#0A5FFA] text-base px-5 py-1.5 hover:bg-[#e4eaff] rounded-full">
+              Log In
+            </Button>
+            <Button className=" w-[80%] h-[48px] bg-[#0A5FFA] text-white text-base px-5 py-1.5 hover:bg-[#0A5FFA] rounded-full">
+              Sign Up
+            </Button>
+          </div>
+        </Drawer>
       </div>
     </nav>
   );

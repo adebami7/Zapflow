@@ -12,7 +12,7 @@ const PricingCard = ({
 
   return (
     <div
-      className={`relative flex flex-col justify-between w-full min-h-[550px] rounded-[10px] overflow-hidden shadow-md border
+      className={`relative flex flex-col justify-between w-full min-h-[550px] h-[700px] lg:h-full rounded-[10px] overflow-hidden shadow-md border
         ${isPopular ? "border-[#0A5FFA] border-dashed" : "border-transparent"}
       `}
     >

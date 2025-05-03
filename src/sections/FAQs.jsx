@@ -86,7 +86,10 @@ function FAQs() {
   const [openIndex, setOpenIndex] = useState(0);
 
   return (
-    <section id="faqs" className="pt-[51px] pb-[115px] px-[72px] bg-[#f0f0f2]">
+    <section
+      id="faqs"
+      className="pt-[51px] pb-[115px] px-6 lg:px-[72px] bg-[#f0f0f2]"
+    >
       <div className="max-w-[1440px] mx-auto">
         {/* <SectionBadge label="FAQs" /> */}
         <h1 className="mb-2 font-semibold text-center leading-[50px] text-[32px] lg:text-[48px] text-[#3D414D]">
@@ -105,7 +108,7 @@ function FAQs() {
           Got questions? We&apos;ve got answers.
         </p>
 
-        <div className="grid md:grid-cols-2 gap-[150px]">
+        <div className="grid md:grid-cols-2 gap-6 lg:gap-[150px]">
           <div className="space-y-6">
             {faqs.slice(0, 6).map((faq, index) => (
               <Disclosure
@@ -126,7 +129,7 @@ function FAQs() {
                       }`}
                     >
                       <span
-                        className={`font-medium text-[18px] ${
+                        className={`font-medium text-base lg:text-[18px] ${
                           open ? "text-[#0A5FFA]" : "text-[#222f36]"
                         }`}
                       >
@@ -206,7 +209,7 @@ function FAQs() {
                       }`}
                     >
                       <span
-                        className={`font-semibold text-[18px] ${
+                        className={`font-semibold text-base lg:text-[18px] ${
                           open ? "text-[#0A5FFA]" : "text-[#3D414D]"
                         }`}
                       >

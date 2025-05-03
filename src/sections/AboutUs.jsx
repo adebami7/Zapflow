@@ -5,7 +5,7 @@ import Works03 from "../assets/images/works03.svg";
 const HowZapflowWorks = () => {
   return (
     <section
-      className="bg-[#00329B] px-[72px] pt-[51px] pb-[87px]"
+      className="bg-[#00329B] px-6 md:px-[72px] pt-[51px] pb-[87px]"
       id="how-it-works"
     >
       <div className="max-w-[1440px] mx-auto">

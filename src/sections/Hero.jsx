@@ -17,17 +17,14 @@ function Hero() {
   return (
     <section
       id="home"
-      className="bg-[#f7f8fc] px-[72px] pt-6 relative overflow-hidden"
+      className="bg-[#f7f8fc] px-4 lg:px-[72px] pt-11 lg:pt-6 relative overflow-hidden"
     >
-      <div className="max-w-[1440px] mx-auto flex flex-col-reverse lg:flex-row items-center justify-between">
-        <div className="lg:w-1/2">
+      <div className="max-w-[1440px] mx-auto flex flex-col gap-10 lg:gap-0 lg:flex-row items-center justify-between">
+        <div className="lg:w-1/2 w-full">
           <p className="text-base text-[#0A5FFA] font-semibold mb-2">
             Streamlined and Inclusive
           </p>
-          <h1
-            className="text-4xl sm:text-[56px] sm:leading-[72px] font-bold text-black mb-4"
-            style={{ lineHeight: "72px" }}
-          >
+          <h1 className="text-[32px] lg:text-[56px] leading-[40px] w-[80%] lg:w-full lg:leading-[72px] font-bold text-black mb-4">
             Market Smarter, Sell Faster. All Channels.
             <br />
             <span
@@ -56,47 +53,47 @@ function Hero() {
           </div>
         </div>
 
-        <div className="relative lg:w-1/2 mb-10 lg:mb-0">
+        <div className="relative lg:w-1/2 w-full mb-10 lg:mb-0">
           <img
             src={HeroMain}
             alt="Hero Visual"
-            className="w-[589px] h-[589px] object-cover relative z-10"
+            className="md:w-[589px] md:h-[589px] h-[384px] object-cover relative z-10 mx-auto"
           />
 
           <img
             src={SubHero01}
             alt="sub-hero-01"
-            className="absolute top-[203px] right-[24px] z-10"
+            className="absolute md:top-[203px] top-[148px] right-[24px] z-10 w-[156px] h-[92px] md:w-[265px] md:h-[156px]"
           />
 
           <img
             src={SubHero02}
             alt="sub-hero-02"
-            className="absolute top-[410px] z-10"
+            className="absolute top-[275px] md:top-[410px] z-10 w-[156px] h-[92px] md:w-[265px] md:h-[156px]"
           />
 
           <img
             src={SubHero03}
             alt="sub-hero-03"
-            className="absolute top-[160px] left-[95px] z-10"
+            className="absolute md:top-[160px] md:left-[95px] top-[100px] left-[90px] z-10 md:w-[151px] md:h-[46px] h-[27px] w-[89px]"
           />
 
           <img
             src={SubHero04}
             alt="sub-hero-04"
-            className="absolute top-[206px] left-[95px] z-10"
+            className="absolute md:top-[206px] md:left-[95px] top-[128px] left-[89px] z-10 md:w-[217px] md:h-[45px] h-[26px] w-[128px]"
           />
 
           <img
             src={SubHero05}
             alt="sub-hero-05"
-            className="absolute bottom-[24px] right-[105px] z-10"
+            className="absolute bottom-[24px] right-[50px] z-10 md:w-[217px] md:h-[45px] h-[26px] w-[128px]"
           />
 
           <img
             src={SubHero06}
             alt="sub-hero-06"
-            className="absolute top-[105px] left-[20px]"
+            className="absolute top-[105px] left-[20px] md:w-[63px] md:h-[63px] h-[36px] w-[36px]"
           />
 
           <img
@@ -120,25 +117,25 @@ function Hero() {
           <img
             src={SubHero10}
             alt="sub-hero-10"
-            className="absolute bottom-[-28px] left-[400px] z-0"
+            className="absolute bottom-[-28px] md:left-[400px] left-[220px] z-0 md:w-[211px] md:h-[211px] h-[124px] w-[124px]"
           />
 
           <img
             src={SubHero11}
             alt="sub-hero-11"
-            className="absolute bottom-0 left-[195px] z-0 h-[443px] w-[334px]"
+            className="absolute md:bottom-0 md:left-[195px] left-[96px] bottom-[-47px] z-0 md:h-[443px] md:w-[334px] w-[215px] h-[375px]"
           />
 
           <img
             src={SubHero12}
             alt="sub-hero-12"
-            className="absolute z-10 top-[175px] left-[480px]"
+            className="absolute z-10 top-[175px] left-0 lg:left-[480px]"
           />
         </div>
       </div>
 
       <div className="bg-[#D7FB88] py-8 mt-10 mx-[-72px]">
-        <div className="max-w-[1296px] mx-auto px-6 flex flex-col md:flex-row justify-between items-center text-center gap-6">
+        <div className="max-w-[1296px] mx-auto px-6 flex flex-col md:flex-row justify-between items-center text-center gap-10 md:gap-6">
           {/* Stat 1 */}
           <div className="flex items-center text-left gap-[10px]">
             <p className="text-[56px] font-bold text-[#20211B]">2x</p>

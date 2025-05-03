@@ -3,7 +3,7 @@ import PricingCard from "../components/PricingCard";
 const Pricing = () => {
   return (
     <section
-      className="bg-[#00329B] pt-[56px] pb-[86px] px-[128px]"
+      className="bg-[#00329B] pt-[56px] pb-[86px] px-6 lg:px-[128px]"
       id="pricing"
     >
       <div className="max-w-[1200px] mx-auto text-center">

@@ -8,7 +8,7 @@ function ContactUs() {
 
   return (
     <section id="contact" className="w-full">
-      <div className="grid lg:grid-cols-[42%_58%] h-[850px]">
+      <div className="grid lg:grid-cols-[42%_58%] lg:h-[850px]">
         <div
           className="relative"
           style={{
@@ -17,7 +17,7 @@ function ContactUs() {
             backgroundPosition: "center",
           }}
         >
-          <div className="absolute inset-0 bg-black/20 flex flex-col justify-end items-start px-10 pb-32">
+          <div className="flex flex-col lg:absolute lg:bottom-0 justify-end items-start px-10 pt-[160px] lg:pt-0 pb-9 lg:pb-32">
             <h2 className="text-[#F0F0F2] text-xl md:text-[32px] font-bold mb-6 leading-[40px]">
               Start Reaching Your Customers
               <br />
@@ -30,7 +30,7 @@ function ContactUs() {
         </div>
 
         <div className="flex flex-col justify-start bg-[#F0F0F2]">
-          <div className="w-full max-w-[450px] mx-auto px-4 pt-16">
+          <div className="w-full max-w-[450px] mx-auto px-4 pt-16 pb-16 lg:pb-0">
             <h2 className="text-3xl md:text-[48px] font-bold mb-[18px] text-[#3D414D] text-center">
               Let&apos;s get in{" "}
               <span

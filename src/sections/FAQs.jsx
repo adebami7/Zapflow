@@ -125,7 +125,7 @@ function FAQs() {
                   >
                     <Disclosure.Button
                       className={`flex w-full items-center justify-between py-5 px-6 text-left ${
-                        open ? "bg-[#0A5FFA]-100" : "bg-white"
+                        open ? "bg-white" : "bg-white"
                       }`}
                     >
                       <span
@@ -160,7 +160,7 @@ function FAQs() {
                       leaveFrom="transform scale-100 opacity-100"
                       leaveTo="transform scale-95 opacity-0"
                     >
-                      <Disclosure.Panel className="px-6 py-5 font-medium text-[#98a5c3] text-base">
+                      <Disclosure.Panel className="px-6 py-5 font-medium text-[#98a5c3] text-base bg-white">
                         {Array.isArray(faq.answer) ? (
                           <>
                             <p className="text-base font-medium text-[#98a5c3]">
@@ -205,7 +205,7 @@ function FAQs() {
                   >
                     <Disclosure.Button
                       className={`flex w-full items-center justify-between px-6 py-5 text-left ${
-                        open ? "bg-[#0A5FFA]-100" : "bg-white"
+                        open ? "bg-white" : "bg-white"
                       }`}
                     >
                       <span
@@ -240,7 +240,7 @@ function FAQs() {
                       leaveFrom="transform scale-100 opacity-100"
                       leaveTo="transform scale-95 opacity-0"
                     >
-                      <Disclosure.Panel className="px-6 py-5 text-base font-medium text-[#98a5c3]">
+                      <Disclosure.Panel className="px-6 py-5 text-base font-medium text-[#98a5c3] bg-white">
                         {faq.answer}
                       </Disclosure.Panel>
                     </Transition>

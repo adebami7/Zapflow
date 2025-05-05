@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import Button from "../components/Button";
 import HeroMain from "../assets/images/hero-main.svg";
 import SubHero01 from "../assets/images/sub-hero01.svg";
@@ -54,22 +55,28 @@ function Hero() {
         </div>
 
         <div className="relative lg:w-1/2 w-full mb-10 lg:mb-0">
-          <img
+          <motion.img
             src={HeroMain}
             alt="Hero Visual"
             className="md:w-[589px] md:h-[589px] h-[384px] object-cover relative z-10 mx-auto"
+            whileHover={{ scale: 1.05 }}
+            transition={{ type: "spring", stiffness: 400, damping: 10 }}
           />
 
-          <img
+          <motion.img
             src={SubHero01}
             alt="sub-hero-01"
             className="absolute md:top-[203px] top-[148px] right-[24px] z-10 w-[156px] h-[92px] md:w-[265px] md:h-[156px]"
+            whileHover={{ y: 10 }}
+            transition={{ type: "spring", stiffness: 400, damping: 10 }}
           />
 
-          <img
+          <motion.img
             src={SubHero02}
             alt="sub-hero-02"
             className="absolute top-[275px] md:top-[410px] z-10 w-[156px] h-[92px] md:w-[265px] md:h-[156px]"
+            whileHover={{ y: 10 }}
+            transition={{ type: "spring", stiffness: 400, damping: 10 }}
           />
 
           <img

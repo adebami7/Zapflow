@@ -52,7 +52,7 @@ function Navbar() {
 
   return (
     <nav
-      className={`relative bg-[#f7f8fc] py-5 px-4 lg:px-10 xl:px-[74px] max-w-[1440px] mx-auto z-50 flex items-center justify-between ${
+      className={`relative bg-[#f7f8fc] py-5 px-4 lg:px-10 xl:px-[74px]  z-50 flex items-center justify-between ${
         isFixed ? "fixed-navbar shadow-md" : ""
       }`}
     >

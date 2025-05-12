@@ -8,91 +8,29 @@ function ContactUs() {
 
   return (
     <section id="contact" className="w-full">
-      <div className="grid lg:grid-cols-[42%_58%] lg:h-[850px]">
-        <div
-          className="relative"
-          style={{
-            backgroundImage: `url(${ContactBg})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
-        >
-          <div className="flex flex-col lg:absolute lg:bottom-0 justify-end items-start px-10 pt-[160px] lg:pt-0 pb-9 lg:pb-32">
-            <h2 className="text-[#F0F0F2] text-xl md:text-[32px] font-bold mb-6 leading-[40px]">
-              Start Reaching Your Customers
-              <br />
-              Today!
-            </h2>
-            <Button className="bg-[#B2F02F] hover:bg-[#a0e027] !text-base rounded-full text-[#3D414D] px-[64px] py-3">
-              Get Started
-            </Button>
-          </div>
-        </div>
+      <div
+        className="relative w-full h-[500px] md:h-[650px] lg:h-[850px] flex items-center"
+        style={{
+          backgroundImage: `url(${ContactBg})`,
+          backgroundSize: "cover", // scales the image down to 80% of container
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "center top 40% ",
+        }}
+        
+      >
+        {/* Overlay for darkening the background */}
+        <div className="absolute inset-0 bg-black bg-opacity-40 z-0" />
 
-        <div className="flex flex-col justify-start bg-[#F0F0F2]">
-          <div className="w-full max-w-[450px] mx-auto px-4 pt-16 pb-16 lg:pb-0">
-            <h2 className="text-3xl md:text-[48px] font-bold mb-[18px] text-[#3D414D] text-center">
-              Let&apos;s get in{" "}
-              <span
-                className="text-[#3D414D] inline-block"
-                style={{
-                  background:
-                    "linear-gradient(90deg, #BCF939 0%, rgba(245, 255, 224, 0) 100%)",
-                }}
-              >
-                touch!
-              </span>
-            </h2>
-            <p className="text-[#5B5F6A] text-base mb-12 font-medium text-center">
-              Send us a message or email hi@zapflow.io
-            </p>
+        {/* Content */}
+        <div className="relative z-10 px-6 md:px-16 lg:px-24 w-full max-w-[900px]">
+  <h2 className="text-white text-3xl md:text-5xl lg:text-[48px] font-bold leading-tight mb-8 lg:whitespace-nowrap">
+    Start Reaching Your Customers Today!
+  </h2>
+  <Button className="bg-[#B2F02F] hover:bg-[#a0e027] text-lg md:text-xl rounded-full text-[#3D414D] px-10 md:px-14 py-4 md:py-5 font-semibold shadow-md">
+    Get Started
+  </Button>
+</div>
 
-            <form onSubmit={handleSubmit} className="space-y-8">
-              <div className="flex flex-col">
-                <label className="text-xs text-[#616060] mb-2">Full Name</label>
-                <input
-                  type="text"
-                  className="w-full bg-transparent border border-gray-300 rounded-lg px-3 py-3 !h-[56px] text-sm focus:outline-none focus:ring-0 focus:ring-blue-500 text-[#222f36]"
-                />
-              </div>
-
-              <div className="flex flex-col">
-                <label className="text-xs text-[#616060] mb-2">Email</label>
-                <input
-                  type="email"
-                  className="w-full bg-transparent border border-gray-300 rounded-lg px-3 py-3 !h-[56px] text-sm focus:outline-none focus:ring-0 focus:ring-blue-500 text-[#222f36]"
-                />
-              </div>
-
-              <div className="flex flex-col">
-                <label className="text-xs text-[#616060] mb-2">
-                  Mobile Number
-                </label>
-                <input
-                  type="tel"
-                  className="w-full bg-transparent border border-gray-300 rounded-lg px-3 py-3 !h-[56px] text-sm focus:outline-none focus:ring-0 focus:ring-blue-500 text-[#222f36]"
-                />
-              </div>
-
-              <div className="flex flex-col">
-                <label className="text-xs text-[#616060] mb-2">Message</label>
-                <textarea
-                  rows="4"
-                  className="w-full bg-transparent border border-gray-300 rounded-lg px-3 py-3 !h-[98px] text-sm focus:outline-none focus:ring-0 focus:ring-blue-500 text-[#222f36]"
-                ></textarea>
-              </div>
-
-              <div className="flex items-center px-7">
-                <Button
-                  type="submit"
-                  className="w-full bg-[#0041C4] hover:bg-[#0032a7] text-white font-semibold rounded-full py-3"
-                >
-                  Send Message
-                </Button>
-              </div>
-            </form>
-          </div>
-        </div>
       </div>
     </section>
   );

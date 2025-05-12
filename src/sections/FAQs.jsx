@@ -92,7 +92,7 @@ function FAQs() {
     >
       <div className="max-w-[1440px] mx-auto">
         {/* <SectionBadge label="FAQs" /> */}
-        <h1 className="mb-2 font-semibold text-center leading-[50px] text-[32px] lg:text-[48px] text-[#3D414D]">
+        <h2 className="mb-2 font-semibold text-center leading-[50px] text-[32px] lg:text-[48px] text-[#3D414D]">
           Frequently asked{" "}
           <span
             className="text-[#1e1e1e] inline-block pl-2"
@@ -103,7 +103,7 @@ function FAQs() {
           >
             questions?
           </span>
-        </h1>
+        </h2>
         <p className="text-base mb-12 text-[#5B5F6A] text-center">
           Got questions? We&apos;ve got answers.
         </p>

@@ -41,7 +41,7 @@ function Testimonials() {
                 From Email to SMS, we finally have one tool to reach all our
                 customers. The best part? It&apos;s ridiculously easy to use.
               </p>
-              <h1 className="text-[#3D414D] font-bold text-xl mt-4">Tolu B.</h1>
+              <h4 className="text-[#3D414D] font-bold text-xl mt-4">Tolu B.</h4>
               <p className="text-[#797D87] font-medium text-xs">
                 Founder of Sprout&Scale
               </p>
@@ -58,9 +58,9 @@ function Testimonials() {
               Zapflow helped us cut down on manual follow-ups by 80%. Now, our
               campaigns run themselves and conversions are way up!
             </p>
-            <h1 className="text-[#3D414D] font-bold text-2xl lg:text-[32px] mt-4">
+            <h4 className="text-[#3D414D] font-bold text-2xl lg:text-[32px] mt-4">
               Chidi A.
-            </h1>
+            </h4>
             <p className="text-[#797D87] font-medium text-xs lg:text-base">
               Growth Lead at NovaMart
             </p>
@@ -78,9 +78,9 @@ function Testimonials() {
                 what&apos;s working, and we&apos;ve doubled our lead
                 conversions.
               </p>
-              <h1 className="text-[#3D414D] font-bold text-xl mt-4">
+              <h4 className="text-[#3D414D] font-bold text-xl mt-4">
                 Sarah E.
-              </h1>
+              </h4>
               <p className="text-[#797D87] font-medium text-xs">
                 CEO at FinSpace
               </p>

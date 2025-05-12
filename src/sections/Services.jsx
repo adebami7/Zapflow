@@ -119,7 +119,7 @@ function Services() {
       />
 
       <div className="relative z-10 max-w-[1440px] mx-auto">
-        <h1
+        <h2
           className={`mb-4 font-bold text-center text-[28px] lg:text-[48px] text-[#3D414D] md:leading-[50px] transition-all duration-700 ease-out ${
             animatedItems.header
               ? "opacity-100 translate-y-0"
@@ -136,7 +136,7 @@ function Services() {
           >
             Zapflow?
           </span>
-        </h1>
+        </h2>
 
         <p
           className={`text-xs md:text-base mb-12 font-medium text-[#797D87] text-center md:leading-7 transition-all duration-700 ease-out ${

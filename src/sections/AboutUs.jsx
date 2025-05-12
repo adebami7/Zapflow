@@ -49,7 +49,7 @@ const HowZapflowWorks = () => {
       id="how-it-works"
     >
       <div className="max-w-[1440px] mx-auto">
-        <h1 className="text-[#F0F0F2] text-[32px] sm:text-[48px] text-center font-bold mb-20 leading-[50px]">
+        <h2 className="text-[#F0F0F2] text-[32px] sm:text-[48px] text-center font-bold mb-20 leading-[50px]">
           How Zapflow{" "}
           <span
             className="text-[#F0F0F2] inline-block pl-2"
@@ -60,7 +60,7 @@ const HowZapflowWorks = () => {
           >
             works
           </span>
-        </h1>
+        </h2>
 
         <div className="grid lg:grid-cols-3 gap-[46px]">
           <div

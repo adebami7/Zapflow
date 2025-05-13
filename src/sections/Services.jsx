@@ -22,7 +22,7 @@ const services = [
     icon: Services02,
     title: "Save Time & Resources",
     description:
-      "Ditch multiple subscriptions and complex systems. Zapflow does it all!",
+      "Ditch multiple subscriptions and complex systems. ZapFlow simplifies, connects, and delivers.",
   },
   {
     id: 3,

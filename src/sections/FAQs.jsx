@@ -209,7 +209,7 @@ function FAQs() {
                       }`}
                     >
                       <span
-                        className={`font-semibold text-base lg:text-[18px] ${
+                        className={`font-medium text-base lg:text-[18px] ${
                           open ? "text-[#0A5FFA]" : "text-[#3D414D]"
                         }`}
                       >

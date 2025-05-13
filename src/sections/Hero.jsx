@@ -26,7 +26,7 @@ function Hero() {
             Streamlined and Inclusive
           </p>
           <h1 className="text-[32px] lg:text-[56px] leading-[40px] w-[80%] lg:w-full lg:leading-[72px] font-bold text-black mb-4">
-          Zapflow: Best WhatsApp, SMS, Email and Voice
+          Best WhatsApp, SMS, Email and Voice
             <br />
             <span
               className="text-[#1e1e1e] px-3 py-1 rounded inline-block"

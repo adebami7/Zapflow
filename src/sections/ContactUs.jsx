@@ -20,7 +20,7 @@ function ContactUs() {
       >
 <div className="absolute bottom-0 w-full h-[40%] bg-gradient-to-t from-black to-transparent z-0" />
         {/* Content */}
-       <div className="absolute bottom-36 z-10 px-6 md:px-16 lg:px-24 w-full max-w-[950px]">
+       <div className="absolute bottom-20 z-10 px-6 md:px-16 lg:px-24 w-full max-w-[950px]">
     <h2 className="text-white text-3xl md:text-5xl lg:text-[48px] font-bold leading-tight mb-8 lg:whitespace-nowrap">
       Start Reaching Your Customers Today!
     </h2>

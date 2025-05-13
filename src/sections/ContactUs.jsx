@@ -1,5 +1,5 @@
 import Button from "../components/Button";
-import ContactBg from "../assets/images/contact-us.png";
+import ContactBg from "../assets/images/contact-us-2.svg";
 
 function ContactUs() {
   const handleSubmit = (e) => {

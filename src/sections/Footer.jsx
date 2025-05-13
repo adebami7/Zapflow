@@ -51,7 +51,7 @@ function Footer() {
         {/* COMPANY */}
         <div className="space-y-4 lg:text-right">
           <h3 className="text-white font-semibold text-md tracking-wide">COMPANY</h3>
-          <ul className="space-y-2 text-sm">
+          <ul className="space-y-2 text-md">
             <li><a href="#" className="hover:text-white">Contact Us</a></li>
             <li><a href="#" className="hover:text-white">FAQs</a></li>
             <li><a href="#" className="hover:text-white">Testimonials</a></li>

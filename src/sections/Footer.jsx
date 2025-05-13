@@ -10,13 +10,13 @@ function Footer() {
       {/* LEFT COLUMN: LOGO + DESCRIPTION */}
    <div className="md:col-span-1 space-y-4">
   <a href="/" className="flex items-start">
-          <h1 className="text-2xl text-white font-semibold">
+          <h2 className="text-2xl text-white font-semibold">
             <img
               src={Logo}
               alt="Zapflow Logo"
               className="h-8 w-auto sm:h-10"
             />
-          </h1>
+          </h2>
         </a>
   <p className="text-[13px]  max-w-sm">
     All-in-one marketing software to grow your<br /> business through Email, SMS, WhatsApp&nbsp;&amp;&nbsp; <br /> Voice, all from one place.
@@ -51,7 +51,7 @@ function Footer() {
         {/* COMPANY */}
         <div className="space-y-4 lg:text-right">
           <h3 className="text-white font-semibold text-md tracking-wide">COMPANY</h3>
-          <ul className="space-y-2 text-sm">
+          <ul className="space-y-2 text-md">
             <li><a href="#" className="hover:text-white">Contact Us</a></li>
             <li><a href="#" className="hover:text-white">FAQs</a></li>
             <li><a href="#" className="hover:text-white">Testimonials</a></li>

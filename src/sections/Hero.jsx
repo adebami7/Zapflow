@@ -4,7 +4,7 @@ import HeroMain from "../assets/images/hero-main.svg";
 import SubHero01 from "../assets/images/sub-hero01.svg";
 import SubHero02 from "../assets/images/sub-hero02.svg";
 import SubHero03 from "../assets/images/sub-hero03.svg";
-import SubHero04 from "../assets/images/sub-hero04.svg";
+import SubHero4 from "../assets/images/sub-hero4.svg";
 import SubHero05 from "../assets/images/sub-hero05.svg";
 import SubHero06 from "../assets/images/sub-hero06.svg";
 import SubHero07 from "../assets/images/sub-hero07.svg";
@@ -86,8 +86,8 @@ function Hero() {
           />
 
           <img
-            src={SubHero04}
-            alt="sub-hero-04"
+            src={SubHero4}
+            alt="sub-hero-4"
             className="absolute md:top-[206px] md:left-[95px] top-[128px] left-[89px] z-10 md:w-[217px] md:h-[45px] h-[26px] w-[128px]"
           />
 

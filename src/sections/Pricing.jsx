@@ -1,7 +1,27 @@
 import { motion } from "framer-motion";
 import PricingCard from "../components/PricingCard";
+import { useEffect, useState } from "react";
 
 const Pricing = () => {
+  const [viewportMargin, setViewportMargin] = useState("-200px");
+
+  useEffect(() => {
+    const isMobile = window.innerWidth < 768;
+    if (isMobile) {
+      setViewportMargin("-50px");
+    } else {
+      setViewportMargin("-200px");
+    }
+
+    const handleResize = () => {
+      const isMobileNow = window.innerWidth < 768;
+      setViewportMargin(isMobileNow ? "-50px" : "-200px");
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   const container = {
     hidden: { opacity: 0 },
     show: {
@@ -26,7 +46,7 @@ const Pricing = () => {
         <motion.div
           initial="hidden"
           whileInView="show"
-          viewport={{ once: true, margin: "-200px" }}
+          viewport={{ once: true, margin: viewportMargin }}
           variants={container}
         >
           <motion.h2
@@ -65,7 +85,7 @@ const Pricing = () => {
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-200px" }}
+          viewport={{ once: true, margin: viewportMargin }}
           transition={{ duration: 0.5 }}
           className="mt-12 grid lg:grid-cols-3 gap-10"
         >

@@ -56,25 +56,24 @@ function Services() {
       (entries) => {
         const [entry] = entries;
         if (entry.isIntersecting) {
+          // Start header animation immediately
+          setAnimatedItems((prev) => ({ ...prev, header: true }));
+
+          // Start subtext animation after 200ms
           setTimeout(() => {
-            setAnimatedItems((prev) => ({ ...prev, header: true }));
+            setAnimatedItems((prev) => ({ ...prev, subtext: true }));
 
-            setTimeout(() => {
-              setAnimatedItems((prev) => ({ ...prev, subtext: true }));
-
+            // Start card animations in quick succession
+            services.forEach((_, index) => {
               setTimeout(() => {
-                services.forEach((_, index) => {
-                  setTimeout(() => {
-                    setAnimatedItems((prev) => {
-                      const newCards = [...prev.cards];
-                      newCards[index] = true;
-                      return { ...prev, cards: newCards };
-                    });
-                  }, index * 400);
+                setAnimatedItems((prev) => {
+                  const newCards = [...prev.cards];
+                  newCards[index] = true;
+                  return { ...prev, cards: newCards };
                 });
-              }, 400);
-            }, 400);
-          }, 0);
+              }, index * 150); // Reduced delay between cards
+            });
+          }, 200); // Reduced delay before subtext
         }
       },
       {
@@ -120,7 +119,7 @@ function Services() {
 
       <div className="relative z-10 max-w-[1440px] mx-auto">
         <h2
-          className={`mb-4 font-bold text-center text-[28px] lg:text-[48px] text-[#3D414D] md:leading-[50px] transition-all duration-700 ease-out ${
+          className={`mb-4 font-bold text-center text-[28px] lg:text-[48px] text-[#3D414D] md:leading-[50px] transition-all duration-500 ease-out ${
             animatedItems.header
               ? "opacity-100 translate-y-0"
               : "opacity-0 -translate-y-5"
@@ -139,13 +138,13 @@ function Services() {
         </h2>
 
         <p
-          className={`text-xs md:text-base mb-12 font-medium text-[#797D87] text-center md:leading-7 transition-all duration-700 ease-out ${
+          className={`text-xs md:text-base mb-12 font-medium text-[#797D87] text-center md:leading-7 transition-all duration-500 ease-out ${
             animatedItems.subtext
               ? "opacity-100 translate-y-0"
               : "opacity-0 translate-y-5"
           }`}
           style={{
-            transitionDelay: animatedItems.subtext ? "500ms" : "0ms",
+            transitionDelay: animatedItems.subtext ? "200ms" : "0ms",
           }}
         >
           The all-in-one marketing automation tool designed to simplify sales,
@@ -157,14 +156,14 @@ function Services() {
           {services.map((service, index) => (
             <div
               key={service.id}
-              className={`transition-all duration-700 ease-out ${
+              className={`transition-all duration-500 ease-out ${
                 animatedItems.cards[index]
                   ? "opacity-100 translate-y-0"
                   : "opacity-0 translate-y-10"
               }`}
               style={{
                 transitionDelay: animatedItems.cards[index]
-                  ? `${1200 + index * 400}ms`
+                  ? `${400 + index * 150}ms`
                   : "0ms",
               }}
             >

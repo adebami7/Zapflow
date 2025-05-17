@@ -30,6 +30,12 @@ input {
   height: 44.8px;
 }
 
+img {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  backface-visibility: hidden;
+}
+
 input:focus,
 textarea:focus {
   border-color: #735dff;

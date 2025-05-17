@@ -98,7 +98,7 @@ function Hero() {
 
           <img
             src={SubHero04}
-            alt="sub-hero-04"
+            alt="sub-hero-4"
             className="absolute md:top-[206px] md:left-[95px] top-[128px] left-[89px] z-10 md:w-[217px] md:h-[45px] h-[26px] w-[128px]"
           />
 

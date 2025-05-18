@@ -3,6 +3,7 @@ import Button from "../components/Button";
 import Drawer from "../components/Drawer";
 import { Link as ScrollLink } from "react-scroll";
 import Logo from "../assets/images/logo.svg";
+import { Link } from "react-router-dom";
 
 function MenuItems() {
   const navbarHeight = 100;
@@ -64,12 +65,18 @@ function Navbar() {
         </ul>
 
         <div className="hidden lg:flex items-center gap-3">
-          <Button className=" w-[160px] h-[40px] bg-transparent border border-[#0A5FFA] text-[#0A5FFA] text-sm px-5 py-1.5 hover:bg-[#e4eaff] rounded-full">
+          <Link
+            to="https://development.zapflow.cc"
+            className="flex items-center justify-center w-[160px] h-[40px] bg-transparent border border-[#0A5FFA] text-[#0A5FFA] text-sm px-5 py-1.5 hover:bg-[#e4eaff] rounded-full"
+          >
             Log In
-          </Button>
-          <Button className=" w-[160px] h-[40px] bg-[#0A5FFA] text-white text-sm px-5 py-1.5 hover:bg-[#0A5FFA] rounded-full">
+          </Link>
+          <Link
+            to="https://development.zapflow.cc/sign-up"
+            className="flex items-center justify-center w-[160px] h-[40px] bg-[#0A5FFA] text-white text-sm px-5 py-1.5 hover:bg-[#0A5FFA] rounded-full"
+          >
             Sign Up
-          </Button>
+          </Link>
         </div>
       </div>
       <div className="">

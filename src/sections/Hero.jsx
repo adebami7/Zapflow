@@ -23,7 +23,7 @@ function Hero() {
       <div className="max-w-[1440px] mx-auto flex flex-col gap-10 lg:gap-0 lg:flex-row items-center justify-between">
         <div className="lg:w-1/2 w-full">
           <p className="text-base text-[#0A5FFA] font-semibold mb-2">
-            Streamlined and Inclusive
+            Smarter Campaigns. Better Results.
           </p>
           <h1 className="text-[29px] lg:text-[55px] leading-[40px] w-[80%] lg:hidden  lg:w-full lg:leading-[72px] font-bold text-black mb-4">
             Best WhatsApp, SMS, Email and Voice automation{" "}

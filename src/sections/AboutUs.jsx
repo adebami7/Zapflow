@@ -1,10 +1,16 @@
 import { useEffect, useRef, useState } from "react";
-import Works01 from "../assets/images/works01.svg";
-import Works02 from "../assets/images/works02.svg";
-import Works03 from "../assets/images/works03.svg";
+import Works01 from "../assets/images/works01.png";
+import Works02 from "../assets/images/works02.png";
+import Works03 from "../assets/images/works03.png";
+import Works04 from "../assets/images/works04.png";
 
 const HowZapflowWorks = () => {
-  const [visibleCards, setVisibleCards] = useState([false, false, false]);
+  const [visibleCards, setVisibleCards] = useState([
+    false,
+    false,
+    false,
+    false,
+  ]);
   const [hoveredCard, setHoveredCard] = useState(null);
   const sectionRef = useRef(null);
 
@@ -16,15 +22,14 @@ const HowZapflowWorks = () => {
       (entries) => {
         const [entry] = entries;
         if (entry.isIntersecting) {
-          // Animate cards one by one
-          [0, 1, 2].forEach((index) => {
+          [0, 1, 2, 3].forEach((index) => {
             setTimeout(() => {
               setVisibleCards((prev) => {
                 const newCards = [...prev];
                 newCards[index] = true;
                 return newCards;
               });
-            }, index * 300);
+            }, index * 400);
           });
         }
       },
@@ -62,9 +67,9 @@ const HowZapflowWorks = () => {
           </span>
         </h2>
 
-        <div className="grid lg:grid-cols-3 gap-[46px]">
+        <div className="grid lg:grid-cols-4 gap-[24px]">
           <div
-            className={`w-full h-[572px] rounded-2xl bg-cover bg-center relative overflow-hidden transition-all duration-500 ${
+            className={`w-full h-[572px] rounded-2xl bg-[#F0F0F2] bg-cover bg-center relative overflow-hidden transition-all duration-500 ${
               visibleCards[0]
                 ? "translate-y-0 opacity-100"
                 : "translate-y-20 opacity-0"
@@ -74,16 +79,17 @@ const HowZapflowWorks = () => {
             onMouseLeave={() => setHoveredCard(null)}
           >
             <div
-              className={`absolute bottom-0 rounded-b-2xl w-full bg-[#B6CFFE] pt-10 pb-6 px-6 transition-all duration-300 ${
-                hoveredCard === 0 ? "h-[200px]" : "h-[120px]"
+              className={`absolute bottom-0 rounded-b-2xl w-full bg-[#B6CFFE] pt-4 pb-6 px-4 transition-all duration-300 ${
+                hoveredCard === 0 ? "h-[150px]" : "h-[80px]"
               }`}
             >
-              <p className="text-[#3D414D] font-semibold text-[32px]">
-                Connect Your Channels
+              <p className="text-[#3D414D] font-semibold text-[24px]">
+                Import Your Leads
               </p>
               {hoveredCard === 0 && (
                 <p className="text-[#5B5F6A] mt-4 text-base font-medium max-w-[250px]">
-                  Setup Sender IDs for Email, SMS, WhatsApp, and Voice.
+                  Upload contacts or collect leads from forms, or CRM
+                  integrations.{" "}
                 </p>
               )}
             </div>
@@ -100,16 +106,17 @@ const HowZapflowWorks = () => {
             onMouseLeave={() => setHoveredCard(null)}
           >
             <div
-              className={`absolute bottom-0 rounded-b-2xl w-full bg-[#D7FB88] pt-10 pb-6 px-6 transition-all duration-300 ${
-                hoveredCard === 1 ? "h-[200px]" : "h-[120px]"
+              className={`absolute bottom-0 rounded-b-2xl w-full bg-[#D7FB88] pt-4 pb-6 px-4 transition-all duration-300 ${
+                hoveredCard === 1 ? "h-[150px]" : "h-[80px]"
               }`}
             >
-              <p className="text-[#3D414D] font-semibold text-[32px]">
-                Create Campaigns
+              <p className="text-[#3D414D] font-semibold text-[24px]">
+                Send Campaigns
               </p>
               {hoveredCard === 1 && (
                 <p className="text-[#5B5F6A] mt-4 text-base font-medium max-w-[250px]">
-                  Schedule messages or trigger automation.
+                  Create & send personalized multi-channel broadcasts in
+                  minutes.
                 </p>
               )}
             </div>
@@ -126,16 +133,43 @@ const HowZapflowWorks = () => {
             onMouseLeave={() => setHoveredCard(null)}
           >
             <div
-              className={`absolute bottom-0 rounded-b-2xl w-full bg-[#FDEEAB] pt-10 pb-6 px-6 transition-all duration-300 ${
-                hoveredCard === 2 ? "h-[200px]" : "h-[120px]"
+              className={`absolute bottom-0 rounded-b-2xl w-full bg-[#FDEEAB] pt-4 pb-6 px-4 transition-all duration-300 ${
+                hoveredCard === 2 ? "h-[150px]" : "h-[80px]"
               }`}
             >
-              <p className="text-[#3D414D] font-semibold text-[32px]">
-                Track & Optimize
+              <p className="text-[#3D414D] font-semibold text-[24px]">
+                Automate Conversations
               </p>
               {hoveredCard === 2 && (
                 <p className="text-[#5B5F6A] mt-4 text-base font-medium max-w-[250px]">
-                  Measure performance. Improve results.
+                  Automate flows that respond, follow up, and engage customers.
+                </p>
+              )}
+            </div>
+          </div>
+
+          <div
+            className={`w-full h-[572px] rounded-2xl bg-cover bg-center relative overflow-hidden transition-all duration-500 delay-150 ${
+              visibleCards[3]
+                ? "translate-y-0 opacity-100"
+                : "translate-y-20 opacity-0"
+            }`}
+            style={{ backgroundImage: `url(${Works04})` }}
+            onMouseEnter={() => setHoveredCard(3)}
+            onMouseLeave={() => setHoveredCard(null)}
+          >
+            <div
+              className={`absolute bottom-0 rounded-b-2xl w-full bg-[#E2CCFF] pt-4 pb-6 px-4 transition-all duration-300 ${
+                hoveredCard === 3 ? "h-[150px]" : "h-[80px]"
+              }`}
+            >
+              <p className="text-[#3D414D] font-semibold text-[24px]">
+                Track And Optimize
+              </p>
+              {hoveredCard === 3 && (
+                <p className="text-[#5B5F6A] mt-4 text-base font-medium max-w-[250px]">
+                  Track clicks to conversions in real time for smarter
+                  decisions.{" "}
                 </p>
               )}
             </div>

@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
 import Button from "../components/Button";
-import HeroMain from "../assets/images/hero-main.svg";
-import SubHero01 from "../assets/images/sub-hero01.svg";
-import SubHero02 from "../assets/images/sub-hero02.svg";
-import SubHero03 from "../assets/images/sub-hero03.svg";
-import SubHero04 from "../assets/images/sub-hero04.svg";
-import SubHero05 from "../assets/images/sub-hero05.svg";
+import HeroMain from "../assets/images/hero-main.png";
+import SubHero01 from "../assets/images/sub-hero01.png";
+import SubHero02 from "../assets/images/sub-hero02.png";
+import SubHero03 from "../assets/images/sub-hero03.png";
+import SubHero04 from "../assets/images/sub-hero04.png";
+import SubHero05 from "../assets/images/sub-hero05.png";
 import SubHero06 from "../assets/images/sub-hero06.svg";
 import SubHero07 from "../assets/images/sub-hero07.svg";
 import SubHero08 from "../assets/images/sub-hero08.svg";
@@ -25,9 +25,20 @@ function Hero() {
           <p className="text-base text-[#0A5FFA] font-semibold mb-2">
             Smarter Campaigns. Better Results{" "}
           </p>
-          <h1 className="text-[32px] lg:text-[56px] leading-[40px] w-[80%] lg:w-full lg:leading-[72px] font-bold text-black mb-4">
-            Best WhatsApp, SMS, Email and Voice
-            <br />
+          <h1 className="text-[29px] lg:text-[55px] leading-[40px] w-[80%] lg:hidden  lg:w-full lg:leading-[72px] font-bold text-black mb-4">
+            Best WhatsApp, SMS, Email and Voice automation{" "}
+            <span
+              className="text-[#1e1e1e] px-3 py-1 rounded inline-block"
+              style={{
+                background:
+                  "linear-gradient(90deg, #BCF939 0%, rgba(245, 255, 224, 0) 100%)",
+              }}
+            >
+              software.
+            </span>
+          </h1>
+          <h1 className="text-[29px] lg:text-[55px] leading-[40px] w-[80%] hidden lg:block lg:w-full lg:leading-[72px] font-bold text-black mb-4">
+            Best WhatsApp, SMS, Email and Voice{" "}
             <span
               className="text-[#1e1e1e] px-3 py-1 rounded inline-block"
               style={{
@@ -87,7 +98,7 @@ function Hero() {
 
           <img
             src={SubHero04}
-            alt="sub-hero-04"
+            alt="sub-hero-4"
             className="absolute md:top-[206px] md:left-[95px] top-[128px] left-[89px] z-10 md:w-[217px] md:h-[45px] h-[26px] w-[128px]"
           />
 

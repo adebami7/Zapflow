@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Button from "../components/Button";
 import HeroMain from "../assets/images/hero-main.png";
@@ -15,6 +16,20 @@ import SubHero11 from "../assets/images/sub-hero11.svg";
 import SubHero12 from "../assets/images/sub-hero12.svg";
 
 function Hero() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 1024);
+    };
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <section
       id="home"
@@ -23,31 +38,34 @@ function Hero() {
       <div className="max-w-[1440px] mx-auto flex flex-col gap-10 lg:gap-0 lg:flex-row items-center justify-between">
         <div className="lg:w-1/2 w-full">
           <p className="text-base text-[#0A5FFA] font-semibold mb-2">
-            Smarter Campaigns. Better Results.
+            Smarter Campaigns. Better Results{" "}
           </p>
-          <h1 className="text-[29px] lg:text-[55px] leading-[40px] w-[80%] lg:hidden  lg:w-full lg:leading-[72px] font-bold text-black mb-4">
-            Best WhatsApp, SMS, Email and Voice automation{" "}
-            <span
-              className="text-[#1e1e1e] px-3 py-1 rounded inline-block"
-              style={{
-                background:
-                  "linear-gradient(90deg, #BCF939 0%, rgba(245, 255, 224, 0) 100%)",
-              }}
-            >
-              software.
-            </span>
-          </h1>
-          <h1 className="text-[29px] lg:text-[55px] leading-[40px] w-[80%] hidden lg:block lg:w-full lg:leading-[72px] font-bold text-black mb-4">
+          <h1 className="text-[29px] lg:text-[55px] leading-[40px] w-[80%] lg:w-full lg:leading-[72px] font-bold text-black mb-4">
             Best WhatsApp, SMS, Email and Voice{" "}
-            <span
-              className="text-[#1e1e1e] px-3 py-1 rounded inline-block"
-              style={{
-                background:
-                  "linear-gradient(90deg, #BCF939 0%, rgba(245, 255, 224, 0) 100%)",
-              }}
-            >
-              automation software.
-            </span>
+            {isMobile ? (
+              <>
+                automation{" "}
+                <span
+                  className="text-[#1e1e1e] px-3 py-1 rounded inline-block"
+                  style={{
+                    background:
+                      "linear-gradient(90deg, #BCF939 0%, rgba(245, 255, 224, 0) 100%)",
+                  }}
+                >
+                  software.
+                </span>
+              </>
+            ) : (
+              <span
+                className="text-[#1e1e1e] px-3 py-1 rounded inline-block"
+                style={{
+                  background:
+                    "linear-gradient(90deg, #BCF939 0%, rgba(245, 255, 224, 0) 100%)",
+                }}
+              >
+                automation software.
+              </span>
+            )}
           </h1>
 
           <p className="text-[#797D87] font-semibold leading-[28px] text-base mb-8 max-w-[500px]">

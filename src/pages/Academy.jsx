@@ -69,7 +69,7 @@ function Academy() {
               </h3>
               <Link
                 to={`/academy/${createSlug(content.title)}`}
-                className="py-2 px-3 text-[#989BA3] text-sm lg:ext-base flex items-center gap-1"
+                className="p-3 text-[#989BA3] text-sm lg:ext-base flex items-center gap-1"
               >
                 Get Started
                 <ArrowRight size={16} color="#989BA3" />

@@ -6,7 +6,10 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 
 function Testimonials() {
   return (
-    <div className="bg-[#06348A] pt-[56px] pb-[114px] px-6 lg:px-[128px]">
+    <div
+      id="testimonials"
+      className="bg-[#06348A] pt-[56px] pb-[114px] px-6 lg:px-[128px]"
+    >
       <div className="max-w-[1440px] mx-auto">
         <h2 className="text-[32px] sm:text-[48px] text-center font-bold text-[#F0F0F2] mb-5 leading-[50px]">
           What our customers are{" "}

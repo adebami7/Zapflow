@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import { useState, useRef } from "react"; // Import useState and useRef
+import { useState, useRef } from "react";
 import Academy01 from "../assets/images/academy01.png";
 
 function AcademyContent() {
@@ -140,13 +140,10 @@ function AcademyContent() {
     { name: "Voice Setup", id: "voice-setup" },
   ];
 
-  // State to track the active item
   const [activeItem, setActiveItem] = useState(items[0].id);
 
-  // Refs for each section
   const sectionRefs = useRef({});
 
-  // Function to handle click and scroll to section
   const handleItemClick = (id) => {
     setActiveItem(id);
     const element = sectionRefs.current[id];
@@ -154,7 +151,7 @@ function AcademyContent() {
       const offsetTop =
         element.getBoundingClientRect().top + window.pageYOffset;
       window.scrollTo({
-        top: offsetTop - 100, // Adjust for the 77px fixed header
+        top: offsetTop - 100,
         behavior: "smooth",
       });
     }
@@ -163,7 +160,7 @@ function AcademyContent() {
   return (
     <div className="bg-[#F0F0F2] min-h-screen">
       <div className="py-[77px] max-w-[1280px] mx-auto xl:px-0 px-6">
-        <div className="flex flex-col items-center gap-2 max-w-[590px] mx-auto mb-16">
+        <div className="flex flex-col items-center gap-2 max-w-[590px] mx-auto mb-12 lg:mb-16">
           <h2 className="font-medium text-2xl text-[#5B5F6A] text-center">
             {content.title}
           </h2>
@@ -174,22 +171,20 @@ function AcademyContent() {
             </span>
           </p>
         </div>
-        <div className="flex lg:flex-row flex-col items-start gap-[86px]">
-          {/* Fixed Sidebar */}
-          <div className="lg:w-[27%] w-full bg-[#CEDFFE] shadow-lg fixed lg:sticky top-[77px] h-[calc(100vh-77px)] lg:h-[256px] pt-4 overflow-y-auto">
+        <div className="flex lg:flex-row flex-col items-start gap-10 lg:gap-[86px]">
+          <div className="lg:w-[27%] w-full bg-[#CEDFFE] shadow-lg relative lg:sticky lg:top-[77px] h-[256px] pt-4 overflow-y-auto">
             {items.map((item) => (
               <div
                 key={item.id}
                 onClick={() => handleItemClick(item.id)}
                 className={`text-${
                   activeItem === item.id ? "[#0A5FFA]" : "[#5B5F6A]"
-                } text-base px-5 py-2 mb-4 cursor-pointer hover:text-[#0A5FFA] transition-colors duration-200`}
+                } text-sm lg:text-base px-5 py-2 mb-4 cursor-pointer hover:text-[#0A5FFA] transition-colors duration-200`}
               >
                 {item.name}
               </div>
             ))}
           </div>
-          {/* Scrollable Main Content */}
           <div className="lg:w-[73%] w-full">
             <img
               src={content.image}
@@ -197,9 +192,9 @@ function AcademyContent() {
               className="w-full mb-4"
             />
             <div
+              className="text-sm lg:text-base"
               ref={(el) => {
                 if (el) {
-                  // Assign refs to each section based on their id
                   const sections = el.querySelectorAll("h3[id]");
                   sections.forEach((section) => {
                     sectionRefs.current[section.id] = section;

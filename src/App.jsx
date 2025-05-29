@@ -16,6 +16,7 @@ import Testimonials from "./sections/Testimonials";
 import Integrations from "./pages/Integrations";
 import Academy from "./pages/Academy";
 import AcademyContent from "./pages/AcademyContent";
+import About from "./pages/About";
 
 export default function App() {
   return (
@@ -41,6 +42,8 @@ export default function App() {
         <Route path="/integrations" element={<Integrations />} />
         <Route path="/academy" element={<Academy />} />
         <Route path="/academy/:title" element={<AcademyContent />} />
+        <Route path="/about" element={<About />} />
+
         <Route path="/blog" element={<Blog />} />
         <Route path="/help-center" element={<HelpCenter />} />
         <Route path="/legal/:tab" element={<LegalPage />} />

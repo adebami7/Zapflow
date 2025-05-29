@@ -10,7 +10,6 @@ function Footer() {
     <footer className="bg-[#232323] text-[#F0F0F2] pt-20 pb-20 px-6 lg:px-[72px]">
       <div className="max-w-[1440px] mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-5 gap-8 items-start">
-          {/* LEFT COLUMN: LOGO + DESCRIPTION */}
           <div className="md:col-span-1 space-y-4">
             <a href="/" className="flex items-start">
               <h2 className="text-2xl text-white font-semibold">
@@ -31,7 +30,6 @@ function Footer() {
             </p>
           </div>
 
-          {/* RIGHT COLUMNS */}
           <div className="md:col-span-4 grid grid-cols-2 lg:grid-cols-4 gap-6">
             {/* PRODUCT */}
             <div className="space-y-4 lg:text-right">
@@ -50,9 +48,9 @@ function Footer() {
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-white">
+                  <Link to="/pricing" className="hover:text-white">
                     Pricing
-                  </a>
+                  </Link>
                 </li>
                 <li>
                   <Link to="/integrations" className="hover:text-white">
@@ -62,13 +60,11 @@ function Footer() {
               </ul>
             </div>
 
-            {/* RESOURCES */}
             <div className="space-y-4 lg:text-right">
               <h3 className="text-white font-semibold text-md tracking-wide">
                 RESOURCES
               </h3>
               <ul className="space-y-2 text-md">
-                {/* Use Link for React Router navigation */}
                 <li>
                   <Link to="/blog" className="hover:text-white">
                     Blog
@@ -98,7 +94,6 @@ function Footer() {
               </ul>
             </div>
 
-            {/* COMPANY */}
             <div className="space-y-4 lg:text-right">
               <h3 className="text-white font-semibold text-md tracking-wide">
                 COMPANY
@@ -132,7 +127,6 @@ function Footer() {
               </ul>
             </div>
 
-            {/* CONTACT */}
             <div className="space-y-4 lg:text-right">
               <h3 className="text-white font-semibold text-md tracking-wide">
                 CONTACT

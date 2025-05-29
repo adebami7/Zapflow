@@ -2,21 +2,21 @@ import Button from "../components/Button";
 
 function Careers() {
   const positions = [
-    // {
-    //   title: "Account Manager",
-    //   department: "Success",
-    //   type: "Full time, Remote",
-    // },
-    // {
-    //   title: "Account Manager",
-    //   department: "Success",
-    //   type: "Full time, Remote",
-    // },
+    {
+      title: "Account Manager",
+      department: "Success",
+      type: "Full time, Remote",
+    },
+    {
+      title: "Account Manager",
+      department: "Success",
+      type: "Full time, Remote",
+    },
   ];
 
   return (
     <div>
-      <div className="bg-[#06348A] h-[346px] flex items-center justify-center">
+      <div className="bg-[#06348A] h-[346px] px-6 flex items-center justify-center">
         <div className="max-w-[627px] mx-auto">
           <h2 className="lg:text-[32px] text-2xl text-center font-bold text-[#F0F0F2] mb-5">
             <span
@@ -30,14 +30,14 @@ function Careers() {
               Join Team Zapflow!
             </span>
           </h2>
-          <p className="lg:text-base text-sm mt-[22px] font-medium text-[#F0F0F2]">
+          <p className="lg:text-base text-center text-sm mt-[22px] font-medium text-[#F0F0F2]">
             We&apos;re building the future of customer communication and we want
             you on board.
           </p>
         </div>
       </div>
-      <div className="bg-[#F0F0F2] py-[55px] px-[72px]">
-        <h2 className="lg:text-[32px] text-xl mb-9 font-semibold text-[#5B5F6A]">
+      <div className="bg-[#F0F0F2] lg:py-[55px] lg:px-[72px] p-6">
+        <h2 className="lg:text-[24px] text-xl mb-9 font-semibold text-[#5B5F6A]">
           Open Positions
         </h2>
 
@@ -50,13 +50,13 @@ function Careers() {
             positions.map((position, index) => (
               <div
                 key={index}
-                className="bg-[#F0F0F2] shadow-[0px_1px_7.1px_0px_#00000040] py-10 rounded px-[46px] flex items-start justify-between w-full"
+                className="bg-[#F0F0F2] gap-6 lg:gap-0 shadow-[0px_1px_7.1px_0px_#00000040] py-10 rounded px-[46px] flex flex-col lg:flex-row items-start justify-between w-full"
               >
-                <div className="flex items-center flex-col gap-6">
-                  <h3 className="font-semibold text-[32px] text-[#5B5F6A]">
+                <div className="flex items-start flex-col gap-2 lg:gap-6">
+                  <h3 className="font-semibold text-2xl text-[#5B5F6A]">
                     {position.title}
                   </h3>
-                  <div className="flex items-center gap-4">
+                  <div className="flex items-center flex-wrap gap-4">
                     <p className="text-[#989BA3] text-base font-semibold">
                       {position.department}
                     </p>

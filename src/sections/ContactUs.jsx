@@ -34,7 +34,10 @@ function ContactUs() {
           <h2 className="text-white text-3xl md:text-5xl lg:text-[48px] font-bold leading-tight mb-8 lg:whitespace-nowrap">
             Start Reaching Your Customers Today!
           </h2>
-          <Button className="bg-[#B2F02F] hover:bg-[#a0e027] text-lg md:text-xl rounded-full text-[#3D414D] px-10 md:px-14 py-4 md:py-5 font-medium shadow-md">
+          <Button
+            variant="secondary"
+            className="text-lg md:text-xl px-10 md:px-14 py-4 md:py-5 font-medium shadow-md"
+          >
             Get Started
           </Button>
         </div>

@@ -2,23 +2,14 @@ import { Link } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
 import HeroBg from "../assets/images/academyHero.png";
 import Button from "../components/Button";
+import Academy01 from "../assets/images/academy01.png";
+import { ArrowRight } from "lucide-react";
 
 function Academy() {
   const academyContent = [
     {
-      title: "Getting Started with Email Marketing",
-      description:
-        "Learn the basics of setting up effective email campaigns to engage your audience.",
-    },
-    {
-      title: "Mastering SMS Marketing Strategies",
-      description:
-        "Discover how to craft compelling SMS messages to boost customer retention.",
-    },
-    {
-      title: "WhatsApp for Business Growth",
-      description:
-        "Explore how to leverage WhatsApp for personalized customer interactions.",
+      title: "Setting up WhatsApp, Email, SMS, and Voice",
+      img: Academy01,
     },
   ];
 
@@ -36,7 +27,7 @@ function Academy() {
         style={{ backgroundImage: `url(${HeroBg})` }}
       >
         <div className="lg:pl-[72px] py-[135px] px-6">
-          <h1 className="lg:text-[56px] font-bold text-[#F0F0F2]">
+          <h1 className="lg:text-[56px] text-[32px] font-bold text-[#F0F0F2]">
             <span
               className="text-[#F0F0F2] rounded inline-block pl-2"
               style={{
@@ -47,7 +38,7 @@ function Academy() {
               Zapflow Academy
             </span>
           </h1>
-          <p className="text-base font-semibold mt-4 mb-10 max-w-[559px] text-[#F0F0F2] leading-[28px]">
+          <p className="lg:text-base text-sm font-semibold mt-4 mb-10 max-w-[559px] text-[#F0F0F2] leading-[28px]">
             Get free, quick, expert-led tutorials to help you create better
             campaigns, automate workflows, and grow with data-driven marketing.
             Learn how to use Zapflow to connect smarter
@@ -58,22 +49,30 @@ function Academy() {
         </div>
       </div>
 
-      <div id="academy" className="py-[77px] max-w-[1188px] mx-auto">
-        <h2 className="text-3xl font-semibold text-[#232323] mb-8">
-          Zapflow Academy
-        </h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div
+        id="academy"
+        className="py-[77px] max-w-[1296px] mx-auto px-6 xl:px-0"
+      >
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-6 gap-y-10">
           {academyContent.map((content, index) => (
-            <div key={index} className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-semibold text-[#232323] mb-2">
+            <div key={index} className="bg-white rounded-lg shadow-md">
+              <img
+                src={content.img}
+                className="rounded-t-lg object-cover h-[162px] w-full"
+              />
+              <div className="flex items-center gap-1 font-normal px-3 my-3">
+                <div className="rounded-full bg-[#0A5FFA] w-2 h-2" />
+                <p className="text-[#0A5FFA]">5 min</p>
+              </div>
+              <h3 className="lg:text-2xl text-lg font-medium text-[#5B5F6A] mb-1 px-3">
                 {content.title}
               </h3>
-              <p className="text-[#555] mb-4">{content.description}</p>
               <Link
                 to={`/academy/${createSlug(content.title)}`}
-                className="inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition-colors"
+                className="py-2 px-3 text-[#989BA3] text-sm lg:ext-base flex items-center gap-1"
               >
-                Read More
+                Get Started
+                <ArrowRight size={16} color="#989BA3" />
               </Link>
             </div>
           ))}

@@ -19,8 +19,8 @@ function Button({
       ? "bg-transparent border border-[#0A5FFA] text-[#0A5FFA]"
       : "bg-transparent border border-[#0A5FFA] text-[#0A5FFA] hover:bg-[#e4eaff] hover:text-[#0A5FFA] hover:border-[#0A5FFA]",
     secondary: disabled
-      ? "bg-[#5B5F6A] text-white"
-      : "bg-[#5B5F6A] text-white hover:bg-[#A7AAB2] hover:text-white",
+      ? "bg-[#BCF939] text-[#3D414D]"
+      : "bg-[#BCF939] text-[#3D414D] hover:bg-[#0A5FFA] hover:text-white",
   };
 
   return (

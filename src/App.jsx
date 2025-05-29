@@ -17,10 +17,13 @@ import Integrations from "./pages/Integrations";
 import Academy from "./pages/Academy";
 import AcademyContent from "./pages/AcademyContent";
 import About from "./pages/About";
+import ScrollToTop from "./components/ScrollToTop";
 
 export default function App() {
   return (
     <Router>
+      <ScrollToTop />
+
       <Navbar />
       <Routes>
         <Route

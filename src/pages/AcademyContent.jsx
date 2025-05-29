@@ -172,18 +172,21 @@ function AcademyContent() {
           </p>
         </div>
         <div className="flex lg:flex-row flex-col items-start gap-10 lg:gap-[86px]">
-          <div className="lg:w-[27%] w-full bg-[#CEDFFE] shadow-lg relative lg:sticky lg:top-[77px] h-[256px] pt-4 overflow-y-auto">
-            {items.map((item) => (
-              <div
-                key={item.id}
-                onClick={() => handleItemClick(item.id)}
-                className={`text-${
-                  activeItem === item.id ? "[#0A5FFA]" : "[#5B5F6A]"
-                } text-sm lg:text-base px-5 py-2 mb-4 cursor-pointer hover:text-[#0A5FFA] transition-colors duration-200`}
-              >
-                {item.name}
-              </div>
-            ))}
+          <div className="h-[256px] bg-[#CEDFFE] lg:w-[27%] w-full pt-4 shadow-lg overflow-hidden relative lg:sticky lg:top-[77px]">
+            <div className="h-full overflow-y-auto">
+              {items.map((item) => (
+                <div
+                  key={item.id}
+                  onClick={() => handleItemClick(item.id)}
+                  className={`text-${
+                    activeItem === item.id ? "[#0A5FFA]" : "[#5B5F6A]"
+                  } text-base px-5 py-2 mb-4 cursor-pointer hover:text-[#0A5FFA] transition-colors duration-200 font-semibold`}
+                >
+                  {item.name}
+                </div>
+              ))}
+            </div>
+            <div className="absolute bottom-0 w-full h-1/3 bg-gradient-to-t from-[#CEDFFE] to-transparent pointer-events-none"></div>
           </div>
           <div className="lg:w-[73%] w-full">
             <img

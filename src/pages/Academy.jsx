@@ -64,7 +64,7 @@ function Academy() {
                 <div className="rounded-full bg-[#0A5FFA] w-2 h-2" />
                 <p className="text-[#0A5FFA]">5 min</p>
               </div>
-              <h3 className="lg:text-2xl text-lg font-medium text-[#5B5F6A] mb-1 px-3">
+              <h3 className="lg:text-xl text-lg font-medium text-[#5B5F6A] mb-1 px-3">
                 {content.title}
               </h3>
               <Link

@@ -37,15 +37,6 @@ function MenuItems() {
 
   return (
     <>
-      <li
-        className={`p-3 lg:text-sm text-base py-4 lg:py-0 xl:text-base border border-transparent border-b-[#A7AAB2] lg:border-none font-medium cursor-pointer ${
-          location.pathname === "/" && !location.hash
-            ? "text-[#0A5FFA]"
-            : "text-[#5B5F6A]"
-        } hover:text-[#0A5FFA]`}
-      >
-        <Link to="/">Home</Link>
-      </li>
       {items.map((item, index) => (
         <li
           key={index}

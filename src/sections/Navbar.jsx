@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { Link as ScrollLink } from "react-scroll";
 import Button from "../components/Button";
 import Drawer from "../components/Drawer";
-import { Link as ScrollLink } from "react-scroll";
 import Logo from "../assets/images/logo.svg";
-import { Link } from "react-router-dom";
 
 function MenuItems() {
-  const navbarHeight = 100;
+  const navbarHeight = 150;
+  const location = useLocation();
 
   const items = [
     { to: "home", label: "Home" },
@@ -17,23 +18,53 @@ function MenuItems() {
     { to: "contact", label: "Contact Us" },
   ];
 
+  useEffect(() => {
+    if (location.pathname === "/" && location.hash) {
+      const sectionId = location.hash.replace("#", "");
+      const element = document.getElementById(sectionId);
+      if (element) {
+        window.scrollTo({
+          top: element.offsetTop - navbarHeight,
+          behavior: "smooth",
+        });
+      }
+    }
+  }, [location]);
+
+  const isActive = (item) => {
+    return location.pathname === "/" && location.hash === `#${item.to}`;
+  };
+
   return (
     <>
+      <li
+        className={`p-3 lg:text-sm text-base py-4 lg:py-0 xl:text-base border border-transparent border-b-[#A7AAB2] lg:border-none font-medium cursor-pointer ${
+          location.pathname === "/" && !location.hash
+            ? "text-[#0A5FFA]"
+            : "text-[#5B5F6A]"
+        } hover:text-[#0A5FFA]`}
+      >
+        <Link to="/">Home</Link>
+      </li>
       {items.map((item, index) => (
         <li
           key={index}
           className={`p-3 lg:text-sm text-base py-4 lg:py-0 xl:text-base border border-transparent border-b-[#A7AAB2] lg:border-none font-medium cursor-pointer ${
-            item.label === "Home" ? "text-[#0A5FFA]" : "text-[#5B5F6A]"
+            isActive(item) ? "text-[#0A5FFA]" : "text-[#5B5F6A]"
           } hover:text-[#0A5FFA]`}
         >
-          <ScrollLink
-            to={item.to}
-            smooth={true}
-            duration={500}
-            offset={-navbarHeight}
-          >
-            {item.label}
-          </ScrollLink>
+          {location.pathname === "/" ? (
+            <ScrollLink
+              to={item.to}
+              smooth={true}
+              duration={500}
+              offset={-navbarHeight}
+            >
+              {item.label}
+            </ScrollLink>
+          ) : (
+            <Link to={`/#${item.to}`}>{item.label}</Link>
+          )}
         </li>
       ))}
     </>
@@ -53,7 +84,7 @@ function Navbar() {
 
   return (
     <nav
-      className={`relative bg-[#f7f8fc] py-5 px-4 lg:px-10 xl:px-[74px]  z-50 flex items-center justify-between ${
+      className={`relative bg-[#f7f8fc] py-5 px-4 lg:px-10 xl:px-[74px] z-50 flex items-center justify-between ${
         isFixed ? "fixed-navbar shadow-md" : ""
       }`}
     >
@@ -65,31 +96,44 @@ function Navbar() {
         </ul>
 
         <div className="hidden lg:flex items-center gap-3">
-          <Link
-            to="/"
-            className="flex items-center justify-center w-[160px] h-[40px] bg-transparent border border-[#0A5FFA] text-[#0A5FFA] text-sm px-5 py-1.5 hover:bg-[#e4eaff] rounded-full"
-          >
-            Log In
+          <Link to="/">
+            <Button
+              variant="outline"
+              className="w-[160px] h-[40px] text-sm px-5 py-1.5"
+            >
+              Log In
+            </Button>
           </Link>
-          <Link
-            to="/"
-            className="flex items-center justify-center w-[160px] h-[40px] bg-[#0A5FFA] text-white text-sm px-5 py-1.5 hover:bg-[#0A5FFA] rounded-full"
-          >
-            Sign Up
+          <Link to="/">
+            <Button
+              variant="primary"
+              className="w-[160px] h-[40px] text-sm px-5 py-1.5"
+            >
+              Sign Up
+            </Button>
           </Link>
         </div>
       </div>
       <div className="">
         <Drawer>
           <MenuItems />
-
           <div className="flex flex-col items-center gap-4">
-            <Button className="w-[80%] h-[48px] bg-transparent border border-[#0A5FFA] text-[#0A5FFA] text-base px-5 py-1.5 hover:bg-[#e4eaff] rounded-full">
-              Log In
-            </Button>
-            <Button className=" w-[80%] h-[48px] bg-[#0A5FFA] text-white text-base px-5 py-1.5 hover:bg-[#0A5FFA] rounded-full">
-              Sign Up
-            </Button>
+            <Link to="/">
+              <Button
+                variant="outline"
+                className="w-[80%] h-[48px] text-base px-5 py-1.5"
+              >
+                Log In
+              </Button>
+            </Link>
+            <Link to="/">
+              <Button
+                variant="primary"
+                className="w-[80%] h-[48px] text-base px-5 py-1.5"
+              >
+                Sign Up
+              </Button>
+            </Link>
           </div>
         </Drawer>
       </div>

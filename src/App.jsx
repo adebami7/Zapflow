@@ -21,6 +21,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import Careers from "./pages/Careers";
 import PricingPage from "./pages/PricingPage";
 import FAQ from "./pages/FAQ";
+import UseCases from "./pages/UseCases";
 
 export default function App() {
   return (
@@ -52,10 +53,12 @@ export default function App() {
         <Route path="/careers" element={<Careers />} />
         <Route path="/pricing" element={<PricingPage />} />
         <Route path="/faqs" element={<FAQ />} />
-
+        <Route path="/use-cases" element={<UseCases />} />
+        <Route path="/terms" element={<UseCases />} />
+        <Route path="/refund-policy" element={<UseCases />} />
+        <Route path="/privacy-policy" element={<UseCases />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/help-center" element={<HelpCenter />} />
-        <Route path="/legal/:tab" element={<LegalPage />} />
       </Routes>
 
       <Footer />

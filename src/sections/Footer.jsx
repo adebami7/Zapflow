@@ -38,14 +38,9 @@ function Footer() {
               </h3>
               <ul className="space-y-2 text-md">
                 <li>
-                  <a href="#" className="hover:text-white">
-                    Features
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white">
+                  <Link to="/use-cases" className="hover:text-white">
                     Use Cases
-                  </a>
+                  </Link>
                 </li>
                 <li>
                   <Link to="/pricing" className="hover:text-white">

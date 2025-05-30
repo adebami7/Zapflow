@@ -1,9 +1,12 @@
 import { motion } from "framer-motion";
 import PricingCard from "../components/PricingCard";
 import { useEffect, useState } from "react";
+import Button from "../components/Button";
+import { Check } from "lucide-react";
 
 const Pricing = () => {
   const [viewportMargin, setViewportMargin] = useState("-200px");
+  const [isYearly, setIsYearly] = useState(false);
 
   useEffect(() => {
     const isMobile = window.innerWidth < 768;
@@ -37,9 +40,24 @@ const Pricing = () => {
     show: { opacity: 1, y: 0 },
   };
 
+  const pricingData = {
+    basic: {
+      monthly: "₦50,000",
+      yearly: "₦500,000",
+    },
+    standard: {
+      monthly: "₦100,000",
+      yearly: "₦1,000,000",
+    },
+    premium: {
+      monthly: "₦200,000",
+      yearly: "₦2,000,000",
+    },
+  };
+
   return (
     <section
-      className="bg-[#00329B] pt-[56px] pb-[86px] px-6 lg:px-[128px]"
+      className="bg-[#00329B] pt-[56px] pb-[86px] px-6 xl:px-[128px]"
       id="pricing"
     >
       <div className="max-w-[1200px] mx-auto text-center">
@@ -71,7 +89,13 @@ const Pricing = () => {
           >
             <span>Pay Monthly</span>
             <label className="relative inline-flex items-center cursor-pointer">
-              <input type="checkbox" value="" className="sr-only peer" />
+              <input
+                type="checkbox"
+                value=""
+                className="sr-only peer"
+                checked={isYearly}
+                onChange={(e) => setIsYearly(e.target.checked)}
+              />{" "}
               <div className="w-12 h-6 bg-transparent border border-white rounded-full peer peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-[4px] after:left-[8px] after:bg-[#BCF939] after:rounded-full after:h-4 after:w-4 after:transition-all"></div>
             </label>
             <span>Pay Yearly</span>
@@ -82,6 +106,64 @@ const Pricing = () => {
           </motion.div>
         </motion.div>
 
+        <div className="rounded-2xl hidden mb-10 lg:flex w-full mt-20">
+          <div className="w-[31%] flex items-start flex-col rounded-l-xl bg-[#F0F0F2] py-6 px-4">
+            <p className="text-[#3D414D] text-base text-semibold">Free</p>
+            <h1 className="xl:text-[48px] md:text-[32px] text-[#3D414D] font-bold">
+              ₦0<span className="text-xs text-[#797D87]">/month</span>
+            </h1>
+            <p className="text-xs mb-4 text-[#797D87] font-medium">
+              Test the waters with essential features.
+            </p>
+            <Button className="w-full h-[45px]">Get Started</Button>
+          </div>
+          <div className="w-[69%] bg-white rounded-r-xl py-14 grid grid-cols-2 xl:grid-cols-3 gap-x-3 gap-y-2 px-6">
+            <div className="flex items-start gap-2">
+              <div className="bg-[#BCF939] rounded-full p-1 flex items-center justify-center w-6 h-6">
+                <Check size={14} stroke="#00329B" strokeWidth={2} />
+              </div>
+              <span className="text-[#1E1E1E] text-start">
+                Add up to 500 contacts
+              </span>
+            </div>{" "}
+            <div className="flex items-start gap-2">
+              <div className="bg-[#BCF939] rounded-full p-1 flex items-center justify-center w-6 h-6">
+                <Check size={14} stroke="#00329B" strokeWidth={2} />
+              </div>
+              <span className="text-[#1E1E1E] text-start">
+                3 Lead Generation Forms
+              </span>
+            </div>
+            <div className="flex items-start gap-2">
+              <div className="bg-[#BCF939] rounded-full p-1 flex items-center justify-center w-6 h-6">
+                <Check size={14} stroke="#00329B" strokeWidth={2} />
+              </div>
+              <span className="text-[#1E1E1E] text-start">1 User Seat</span>
+            </div>{" "}
+            <div className="flex items-start gap-2">
+              <div className="bg-[#BCF939] rounded-full p-1 flex items-center justify-center w-6 h-6">
+                <Check size={14} stroke="#00329B" strokeWidth={2} />
+              </div>
+              <span className="text-[#1E1E1E] text-start">
+                15000 mails monthly
+              </span>
+            </div>{" "}
+            <div className="flex items-start gap-2">
+              <div className="bg-[#BCF939] rounded-full p-1 flex items-center justify-center w-6 h-6">
+                <Check size={14} stroke="#00329B" strokeWidth={2} />
+              </div>
+              <span className="text-[#1E1E1E] text-start">100 SMS credits</span>
+            </div>{" "}
+            <div className="flex items-start gap-2">
+              <div className="bg-[#BCF939] rounded-full p-1 flex items-center justify-center w-6 h-6">
+                <Check size={14} stroke="#00329B" strokeWidth={2} />
+              </div>
+              <span className="text-[#1E1E1E] text-start">
+                Flexible Add-ons Available
+              </span>
+            </div>{" "}
+          </div>
+        </div>
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -89,21 +171,27 @@ const Pricing = () => {
           transition={{ duration: 0.5 }}
           className="mt-12 grid lg:grid-cols-3 gap-10"
         >
-          <PricingCard
-            title="Free"
-            price="$0"
-            note="Test the waters with essential features"
-            features={[
-              "Add up to 500 contacts",
-              "15000 mails monthly",
-              "3 Lead Generation Forms",
-              "100 SMS credits",
-              "1 User Seat",
-            ]}
-          />
+          <div className="lg:hidden block">
+            <PricingCard
+              title="Free"
+              price="₦0"
+              note="Pay annually ($54) and save $126"
+              features={[
+                "Add up to 500 contacts",
+                "3 Lead Generation Forms",
+                "1 User Seat",
+                "15000 mails monthly",
+                "100 SMS credits",
+                "Flexible Add-ons Available",
+              ]}
+            />
+          </div>
+
           <PricingCard
             title="Basic"
-            price="$15"
+            price={
+              isYearly ? pricingData.basic.yearly : pricingData.basic.monthly
+            }
             note="Pay annually ($54) and save $126"
             features={[
               "Add up to 1000 contacts",
@@ -120,7 +208,11 @@ const Pricing = () => {
           />
           <PricingCard
             title="Standard"
-            price="$29"
+            price={
+              isYearly
+                ? pricingData.standard.yearly
+                : pricingData.standard.monthly
+            }
             note="Pay annually ($105) and save $243"
             isPopular
             highlighted
@@ -133,7 +225,89 @@ const Pricing = () => {
               "5 User Seats",
             ]}
           />
+          <PricingCard
+            title="Premium"
+            price={
+              isYearly
+                ? pricingData.premium.yearly
+                : pricingData.premium.monthly
+            }
+            note="Full marketing power with priority support"
+            features={[
+              "Everything in Standard",
+              "Add up to 4000 contacts",
+              "15,000 SMS credits",
+              "4 WhatsApp Account",
+            ]}
+          />
+
+          <div className="lg:hidden block">
+            <PricingCard
+              title="Enterprise"
+              price="Custom"
+              note="Pay annually ($54) and save $126"
+              features={[
+                "Scalable usage",
+                "Dedicated account manager",
+                "Custom integrations",
+                "Priority support",
+                "SLA & security compliance",
+              ]}
+            />
+          </div>
         </motion.div>
+        <div className="rounded-2xl mb-10 hidden lg:flex w-full mt-20">
+          <div className="w-[31%] flex items-start flex-col rounded-l-xl bg-[#F0F0F2] py-6 px-4">
+            <p className="text-[#3D414D] text-base text-semibold">Enterprise</p>
+            <h1 className="xl:text-[48px] md:text-[32px] text-[#3D414D] font-bold">
+              Custom<span className="text-xs text-[#797D87]">/month</span>
+            </h1>
+            <p className="text-xs mb-4 text-[#797D87] font-medium">
+              Custom solutions for large-scale marketing success.{" "}
+            </p>
+            <Button className="w-full h-[45px]">Contact Us</Button>
+          </div>
+          <div className="w-[69%] bg-white rounded-r-xl py-14 grid grid-cols-2 xl:grid-cols-3 gap-x-3 gap-y-2 px-6">
+            <div className="flex items-start gap-2">
+              <div className="bg-[#BCF939] rounded-full p-1 flex items-center justify-center w-6 h-6">
+                <Check size={14} stroke="#00329B" strokeWidth={2} />
+              </div>
+              <span className="text-[#1E1E1E] text-start">Scalable usage</span>
+            </div>{" "}
+            <div className="flex items-start gap-2">
+              <div className="bg-[#BCF939] rounded-full p-1 flex items-center justify-center w-6 h-6">
+                <Check size={14} stroke="#00329B" strokeWidth={2} />
+              </div>
+              <span className="text-[#1E1E1E] text-start">
+                Dedicated account manager
+              </span>
+            </div>
+            <div className="flex items-start gap-2">
+              <div className="bg-[#BCF939] rounded-full p-1 flex items-center justify-center w-6 h-6">
+                <Check size={14} stroke="#00329B" strokeWidth={2} />
+              </div>
+              <span className="text-[#1E1E1E] text-start">
+                Custom integrations
+              </span>
+            </div>{" "}
+            <div className="flex items-start gap-2">
+              <div className="bg-[#BCF939] rounded-full p-1 flex items-center justify-center w-6 h-6">
+                <Check size={14} stroke="#00329B" strokeWidth={2} />
+              </div>
+              <span className="text-[#1E1E1E] text-start">
+                Priority support
+              </span>
+            </div>{" "}
+            <div className="flex items-start gap-2">
+              <div className="bg-[#BCF939] rounded-full p-1 flex items-center justify-center w-6 h-6">
+                <Check size={14} stroke="#00329B" strokeWidth={2} />
+              </div>
+              <span className="text-[#1E1E1E] text-start">
+                SLA & security compliance
+              </span>
+            </div>{" "}
+          </div>
+        </div>
       </div>
     </section>
   );

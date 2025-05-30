@@ -155,7 +155,7 @@ function BlogContent() {
           <h2 className="font-medium text-2xl text-[#5B5F6A] text-center">
             {content.title}
           </h2>
-          <p className="text-base text-[#5B5F6A]">
+          <p className="text-base text-[#5B5F6A] text-center">
             By{" "}
             <span className="text-[#0A5FFA] underline underline-offset-2">
               {content.author}

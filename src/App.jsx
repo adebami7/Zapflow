@@ -5,7 +5,7 @@ import ContactUs from "./sections/ContactUs";
 import FAQs from "./sections/FAQs";
 import Footer from "./sections/Footer";
 import Hero from "./sections/Hero";
-import HelpCenter from "./sections/HelpCenter";
+import HelpCenter from "./pages/HelpCenter";
 import Navbar from "./sections/Navbar";
 import Pricing from "./sections/Pricing";
 import Services from "./sections/Services";
@@ -23,6 +23,8 @@ import UseCases from "./pages/UseCases";
 import TermsAndConditions from "./pages/TermsAndConditions";
 import RefundPolicy from "./pages/RefundPolicy";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
+import Blog from "./pages/Blog";
+import BlogContent from "./pages/BlogContent";
 
 export default function App() {
   return (
@@ -50,6 +52,8 @@ export default function App() {
         <Route path="/integrations" element={<Integrations />} />
         <Route path="/academy" element={<Academy />} />
         <Route path="/academy/:title" element={<AcademyContent />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/blog/:title" element={<BlogContent />} />
         <Route path="/about" element={<About />} />
         <Route path="/careers" element={<Careers />} />
         <Route path="/pricing" element={<PricingPage />} />

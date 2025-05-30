@@ -2,10 +2,16 @@ import { Facebook, Instagram, Youtube } from "lucide-react";
 import Logo from "../assets/images/logo-black.svg";
 import { Link } from "react-router-dom";
 
-// ...
-<Link to="/blog">Blog</Link>;
-
 function Footer() {
+  const scrollToTestimonials = () => {
+    setTimeout(() => {
+      const testimonialsSection = document.getElementById("testimonials");
+      if (testimonialsSection) {
+        testimonialsSection.scrollIntoView({ behavior: "smooth" });
+      }
+    }, 100);
+  };
+
   return (
     <footer className="bg-[#232323] text-[#F0F0F2] pt-20 pb-20 px-6 lg:px-[72px]">
       <div className="max-w-[1440px] mx-auto">
@@ -22,8 +28,8 @@ function Footer() {
             </a>
             <p className="text-[13px] max-w-sm">
               All-in-one marketing software to grow your
-              <br /> business through Email, SMS, WhatsApp&nbsp;&amp;&nbsp;{" "}
-              <br /> Voice, all from one place.
+              <br /> business through Email, SMS, WhatsApp & <br /> Voice, all
+              from one place.
             </p>
             <p className="text-[13px] mt-6">
               © 2025 Zapflow. All rights reserved
@@ -75,16 +81,19 @@ function Footer() {
                     Academy
                   </Link>
                 </li>
-
                 <li>
                   <Link to="/help-center" className="hover:text-white">
                     Help Center
                   </Link>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-white">
+                  <Link
+                    to="/"
+                    onClick={scrollToTestimonials}
+                    className="hover:text-white"
+                  >
                     Testimonials
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>

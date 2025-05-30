@@ -22,10 +22,10 @@ const PricingCard = ({
         </div>
       )}
 
-      <div className="py-6 px-8" style={{ backgroundColor: bgTop }}>
+      <div className="py-6 px-7" style={{ backgroundColor: bgTop }}>
         <div className="text-left space-y-4">
           <h3 className="text-base font-semibold text-[#3D414D]">{title}</h3>
-          <p className="text-[48px] font-bold text-[#3D414D] leading-[50px]">
+          <p className="xl:text-[48px] md:text-[32px] font-bold text-[#3D414D] leading-[50px]">
             {price}
             <span className="text-xs font-normal text-[#797D87]"> /Month</span>
           </p>

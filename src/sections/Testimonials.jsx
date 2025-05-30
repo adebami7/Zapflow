@@ -6,7 +6,10 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 
 function Testimonials() {
   return (
-    <div className="bg-[#06348A] pt-[56px] pb-[114px] px-6 lg:px-[128px]">
+    <div
+      id="testimonials"
+      className="bg-[#06348A] pt-[56px] pb-[114px] px-6 lg:px-[128px]"
+    >
       <div className="max-w-[1440px] mx-auto">
         <h2 className="text-[32px] sm:text-[48px] text-center font-bold text-[#F0F0F2] mb-5 leading-[50px]">
           What our customers are{" "}
@@ -48,13 +51,13 @@ function Testimonials() {
             </div>
           </div>
 
-          <div className="bg-white md:w-[445px] md:h-[365px] w-full h-[289px] rounded-xl py-6 pl-4 pr-4 lg:pr-16 relative z-10">
+          <div className="bg-white md:min-w-[445px] md:h-[365px] w-full h-[289px] rounded-xl py-6 pl-4 pr-4 lg:pr-16 relative z-10">
             <img
               src={Testimonial03}
               className="absolute top-[-35px] md:w-[100px] md:h-[100px] w-[72px] h-[72px] left-1/2 transform -translate-x-1/2"
             />
             <img src={Quote} className="w-[73px]" />
-            <p className=" text-lg lg:text-2xl font-medium text-[#5B5F6A] lg:leading-[40px] mt-[-64px]">
+            <p className="text-lg xl:text-2xl font-medium text-[#5B5F6A] lg:leading-[40px] mt-[-64px]">
               Zapflow helped us cut down on manual follow-ups by 80%. Now, our
               campaigns run themselves and conversions are way up!
             </p>

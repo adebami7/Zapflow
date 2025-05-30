@@ -20,6 +20,7 @@ import About from "./pages/About";
 import ScrollToTop from "./components/ScrollToTop";
 import Careers from "./pages/Careers";
 import PricingPage from "./pages/PricingPage";
+import FAQ from "./pages/FAQ";
 
 export default function App() {
   return (
@@ -50,6 +51,7 @@ export default function App() {
         <Route path="/about" element={<About />} />
         <Route path="/careers" element={<Careers />} />
         <Route path="/pricing" element={<PricingPage />} />
+        <Route path="/faqs" element={<FAQ />} />
 
         <Route path="/blog" element={<Blog />} />
         <Route path="/help-center" element={<HelpCenter />} />

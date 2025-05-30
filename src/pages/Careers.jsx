@@ -2,16 +2,16 @@ import Button from "../components/Button";
 
 function Careers() {
   const positions = [
-    {
-      title: "Account Manager",
-      department: "Success",
-      type: "Full time, Remote",
-    },
-    {
-      title: "Account Manager",
-      department: "Success",
-      type: "Full time, Remote",
-    },
+    // {
+    //   title: "Account Manager",
+    //   department: "Success",
+    //   type: "Full time, Remote",
+    // },
+    // {
+    //   title: "Account Manager",
+    //   department: "Success",
+    //   type: "Full time, Remote",
+    // },
   ];
 
   return (

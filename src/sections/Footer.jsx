@@ -71,9 +71,9 @@ function Footer() {
                   </Link>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-white">
+                  <Link to="/faqs" className="hover:text-white">
                     FAQs
-                  </a>
+                  </Link>
                 </li>
                 <li>
                   <Link to="/academy" className="hover:text-white">

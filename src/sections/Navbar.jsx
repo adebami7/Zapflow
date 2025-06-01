@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
 import Button from "../components/Button";
 import Drawer from "../components/Drawer";
@@ -8,6 +8,7 @@ import Logo from "../assets/images/logo.svg";
 function MenuItems() {
   const navbarHeight = 150;
   const location = useLocation();
+const navigate = useNavigate();
 
   const items = [
     { to: "home", label: "Home" },
@@ -54,7 +55,23 @@ function MenuItems() {
               {item.label}
             </ScrollLink>
           ) : (
-            <Link to={`/#${item.to}`}>{item.label}</Link>
+            <button
+  onClick={() => {
+    navigate("/");
+    setTimeout(() => {
+      const el = document.getElementById(item.to);
+      if (el) {
+        window.scrollTo({
+          top: el.offsetTop - navbarHeight,
+          behavior: "smooth",
+        });
+      }
+    }, 100); // short delay to ensure routing happens
+  }}
+>
+  {item.label}
+</button>
+
           )}
         </li>
       ))}

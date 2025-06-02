@@ -177,10 +177,10 @@ const Pricing = () => {
               price="₦0"
               note="Pay annually ($54) and save $126"
               features={[
-                "Add up to 500 contacts",
+                "Add up to 250 contacts",
                 "3 Lead Generation Forms",
                 "1 User Seat",
-                "15000 mails monthly",
+                "10000 mails monthly",
                 "100 SMS credits",
                 "Flexible Add-ons Available",
               ]}
@@ -192,7 +192,7 @@ const Pricing = () => {
             price={
               isYearly ? pricingData.basic.yearly : pricingData.basic.monthly
             }
-            note="Pay annually ($54) and save $126"
+            note="Boost your outreach with expanded messaging."
             features={[
               "Add up to 1000 contacts",
               "Unlimited mails monthly",
@@ -213,7 +213,7 @@ const Pricing = () => {
                 ? pricingData.standard.yearly
                 : pricingData.standard.monthly
             }
-            note="Pay annually ($105) and save $243"
+            note="Automate and scale your marketing efforts."
             isPopular
             highlighted
             features={[
@@ -245,7 +245,7 @@ const Pricing = () => {
             <PricingCard
               title="Enterprise"
               price="Custom"
-              note="Pay annually ($54) and save $126"
+              note="Custom solutions for large-scale marketing success."
               features={[
                 "Scalable usage",
                 "Dedicated account manager",

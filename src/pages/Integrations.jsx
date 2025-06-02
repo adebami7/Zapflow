@@ -30,6 +30,27 @@ function Integrations() {
 
   return (
     <div className="bg-[#F0F0F2]">
+      <div className="bg-[#06348A] h-[346px] px-6 flex items-center justify-center">
+        <div className="max-w-[627px] mx-auto">
+          <h2 className="lg:text-[32px] text-2xl text-center font-bold text-[#F0F0F2] mb-5">
+            <span
+              className="text-[#F0F0F2] leading-[50px] inline-block pl-2"
+              style={{
+                background:
+                  "linear-gradient(90deg, #BCF939 0%, rgba(255, 255, 255, 0) 100%)",
+              }}
+            >
+              Integrations
+            </span>
+          </h2>
+          <p className="lg:text-base text-center text-sm mt-[22px] font-medium text-[#F0F0F2]">
+            Discover how teams use Zapflow to simplify communication, boost
+            engagement, and drive results across industries, channels, and
+            customer journeys.
+          </p>
+        </div>
+      </div>
+
       <div className="py-[77px] max-w-[1188px] mx-auto px-6">
         <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-x-[80px] gap-y-[36px]">
           {integrations.map((integration, index) => (

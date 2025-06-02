@@ -15,7 +15,7 @@ const navigate = useNavigate();
     // { to: "services", label: "Services" },
     { to: "pricing", label: "Pricing" },
     { to: "faqs", label: "FAQs" },
-    { to: "testimonials", label: "Testimonials" },
+    { to: "about", label: "About Us" },
     { to: "contact", label: "Contact Us" },
   ];
 

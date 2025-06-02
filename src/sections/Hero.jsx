@@ -74,7 +74,7 @@ function Hero() {
             messages, track performance, and grow revenue.
           </p>
           <div className="flex gap-4">
-            <Button className="px-6 py-3 text-sm">Start Free Trial</Button>
+            <Button className="px-6 py-3 text-sm">Get Started</Button>
             <Button variant="secondary" className="px-8 py-3 text-sm">
               See Demo
             </Button>

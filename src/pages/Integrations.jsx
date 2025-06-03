@@ -40,7 +40,7 @@ function Integrations() {
                   "linear-gradient(90deg, #BCF939 0%, rgba(255, 255, 255, 0) 100%)",
               }}
             >
-              Integrations
+               Our Integrations
             </span>
           </h2>
           <p className="lg:text-base text-center text-sm mt-[22px] font-medium text-[#F0F0F2]">

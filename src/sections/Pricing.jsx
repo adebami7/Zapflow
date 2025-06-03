@@ -55,6 +55,8 @@ const Pricing = () => {
     },
   };
 
+  const billingInterval = isYearly ? "/year" : "/month";
+
   return (
     <section
       className="bg-[#00329B] pt-[56px] pb-[86px] px-6 xl:px-[128px]"
@@ -101,7 +103,7 @@ const Pricing = () => {
             <span>Pay Yearly</span>
 
             <button className="ml-2 bg-[#BCF939] text-[#00329B] font-medium px-4 py-1.5 rounded-full text-sm">
-              Save 30%
+              Save 2 months
             </button>
           </motion.div>
         </motion.div>
@@ -109,9 +111,9 @@ const Pricing = () => {
         <div className="rounded-2xl hidden mb-10 lg:flex w-full mt-20">
           <div className="w-[31%] flex items-start flex-col rounded-l-xl bg-[#F0F0F2] py-6 px-4">
             <p className="text-[#3D414D] text-base text-semibold">Free</p>
-            <h1 className="xl:text-[48px] md:text-[32px] text-[#3D414D] font-bold">
-              ₦0<span className="text-xs text-[#797D87]">/month</span>
-            </h1>
+            <h2 className="xl:text-[48px] md:text-[32px] text-[#3D414D] font-bold">
+              ₦0<span className="text-xs text-[#797D87]">{billingInterval}</span>
+            </h2>
             <p className="text-xs mb-4 text-[#797D87] font-medium">
               Test the waters with essential features.
             </p>
@@ -123,7 +125,7 @@ const Pricing = () => {
                 <Check size={14} stroke="#00329B" strokeWidth={2} />
               </div>
               <span className="text-[#1E1E1E] text-start">
-                Add up to 500 contacts
+                Add up to 250 contacts
               </span>
             </div>{" "}
             <div className="flex items-start gap-2">
@@ -145,14 +147,14 @@ const Pricing = () => {
                 <Check size={14} stroke="#00329B" strokeWidth={2} />
               </div>
               <span className="text-[#1E1E1E] text-start">
-                15000 mails monthly
+                10000 mails monthly
               </span>
             </div>{" "}
             <div className="flex items-start gap-2">
               <div className="bg-[#BCF939] rounded-full p-1 flex items-center justify-center w-6 h-6">
                 <Check size={14} stroke="#00329B" strokeWidth={2} />
               </div>
-              <span className="text-[#1E1E1E] text-start">100 SMS credits</span>
+              <span className="text-[#1E1E1E] text-start">50 SMS credits</span>
             </div>{" "}
             <div className="flex items-start gap-2">
               <div className="bg-[#BCF939] rounded-full p-1 flex items-center justify-center w-6 h-6">
@@ -175,13 +177,14 @@ const Pricing = () => {
             <PricingCard
               title="Free"
               price="₦0"
-              note="Pay annually ($54) and save $126"
+              billingInterval={billingInterval}
+              note="Test the waters with essential features."
               features={[
                 "Add up to 250 contacts",
                 "3 Lead Generation Forms",
                 "1 User Seat",
                 "10000 mails monthly",
-                "100 SMS credits",
+                "50 SMS credits",
                 "Flexible Add-ons Available",
               ]}
             />
@@ -192,6 +195,7 @@ const Pricing = () => {
             price={
               isYearly ? pricingData.basic.yearly : pricingData.basic.monthly
             }
+            billingInterval={billingInterval}
             note="Boost your outreach with expanded messaging."
             features={[
               "Add up to 1000 contacts",
@@ -213,6 +217,7 @@ const Pricing = () => {
                 ? pricingData.standard.yearly
                 : pricingData.standard.monthly
             }
+            billingInterval={billingInterval}
             note="Automate and scale your marketing efforts."
             isPopular
             highlighted
@@ -232,6 +237,7 @@ const Pricing = () => {
                 ? pricingData.premium.yearly
                 : pricingData.premium.monthly
             }
+            billingInterval={billingInterval}
             note="Full marketing power with priority support"
             features={[
               "Everything in Standard",
@@ -245,6 +251,7 @@ const Pricing = () => {
             <PricingCard
               title="Enterprise"
               price="Custom"
+              billingInterval={billingInterval}
               note="Custom solutions for large-scale marketing success."
               features={[
                 "Scalable usage",
@@ -259,9 +266,9 @@ const Pricing = () => {
         <div className="rounded-2xl mb-10 hidden lg:flex w-full mt-20">
           <div className="w-[31%] flex items-start flex-col rounded-l-xl bg-[#F0F0F2] py-6 px-4">
             <p className="text-[#3D414D] text-base text-semibold">Enterprise</p>
-            <h1 className="xl:text-[48px] md:text-[32px] text-[#3D414D] font-bold">
-              Custom<span className="text-xs text-[#797D87]">/month</span>
-            </h1>
+            <h2 className="xl:text-[48px] md:text-[32px] text-[#3D414D] font-bold">
+              Custom<span className="text-xs text-[#797D87]">{billingInterval}</span>
+            </h2>
             <p className="text-xs mb-4 text-[#797D87] font-medium">
               Custom solutions for large-scale marketing success.{" "}
             </p>

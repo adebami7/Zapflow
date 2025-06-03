@@ -10,14 +10,14 @@ function MenuItems() {
   const location = useLocation();
 const navigate = useNavigate();
 
-  const items = [
-    { to: "home", label: "Home" },
-    // { to: "services", label: "Services" },
-    { to: "pricing", label: "Pricing" },
-    { to: "faqs", label: "FAQs" },
-    { to: "about", label: "About Us" },
-    { to: "contact", label: "Contact Us" },
-  ];
+ const items = [
+  { path: "/", label: "Home", isScroll: true, sectionId: "home" },
+  { path: "/about", label: "About Us" },
+  { path: "/pricing", label: "Pricing" },
+  { path: "/faqs", label: "FAQs" },
+  { path: "/contact", label: "Contact Us" },
+];
+
 
   useEffect(() => {
     if (location.pathname === "/" && location.hash) {
@@ -37,46 +37,30 @@ const navigate = useNavigate();
   };
 
   return (
-    <>
-      {items.map((item, index) => (
-        <li
-          key={index}
-          className={`p-3 lg:text-sm text-base py-4 lg:py-0 xl:text-base border border-transparent border-b-[#A7AAB2] lg:border-none font-medium cursor-pointer ${
-            isActive(item) ? "text-[#0A5FFA]" : "text-[#5B5F6A]"
-          } hover:text-[#0A5FFA]`}
-        >
-          {location.pathname === "/" ? (
-            <ScrollLink
-              to={item.to}
-              smooth={true}
-              duration={500}
-              offset={-navbarHeight}
-            >
-              {item.label}
-            </ScrollLink>
-          ) : (
-            <button
-  onClick={() => {
-    navigate("/");
-    setTimeout(() => {
-      const el = document.getElementById(item.to);
-      if (el) {
-        window.scrollTo({
-          top: el.offsetTop - navbarHeight,
-          behavior: "smooth",
-        });
-      }
-    }, 100); // short delay to ensure routing happens
-  }}
->
-  {item.label}
-</button>
-
-          )}
-        </li>
-      ))}
-    </>
-  );
+  <>
+    {items.map((item, index) => (
+      <li
+        key={index}
+        className={`p-3 lg:text-sm text-base py-4 lg:py-0 xl:text-base border border-transparent border-b-[#A7AAB2] lg:border-none font-medium cursor-pointer ${
+          location.pathname === item.path ? "text-[#0A5FFA]" : "text-[#5B5F6A]"
+        } hover:text-[#0A5FFA]`}
+      >
+        {item.isScroll && location.pathname === "/" ? (
+          <ScrollLink
+            to={item.sectionId}
+            smooth={true}
+            duration={500}
+            offset={-navbarHeight}
+          >
+            {item.label}
+          </ScrollLink>
+        ) : (
+          <Link to={item.path}>{item.label}</Link>
+        )}
+      </li>
+    ))}
+  </>
+);
 }
 
 function Navbar() {
@@ -97,7 +81,13 @@ function Navbar() {
       }`}
     >
       <div className="flex items-center justify-between w-full">
-        <img src={Logo} alt="Zapflow Logo" className="h-8 w-auto sm:h-10" />
+        <a href="/" className="flex items-start">
+            <img
+              src={Logo}
+              alt="Zapflow Logo"
+              className="h-8 w-auto sm:h-10"
+            />
+        </a>
 
         <ul className="hidden lg:flex items-center gap-4">
           <MenuItems />

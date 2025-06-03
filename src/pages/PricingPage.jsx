@@ -208,7 +208,7 @@ function PricingPage() {
               </label>
               <span>Pay Yearly</span>
               <button className="ml-2 bg-[#BCF939] text-[#00329B] font-medium px-4 py-1.5 rounded-full text-sm">
-                Save 30%
+                Save 2 months
               </button>
             </div>
           </div>

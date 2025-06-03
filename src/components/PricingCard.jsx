@@ -7,6 +7,7 @@ const PricingCard = ({
   highlighted,
   note,
   isPopular,
+  billingInterval, // New prop
 }) => {
   const bgTop = highlighted ? "#CEDFFE" : isPopular ? "#F0F0F2" : "#F0F0F2";
 
@@ -27,9 +28,13 @@ const PricingCard = ({
           <h3 className="text-base font-semibold text-[#3D414D]">{title}</h3>
           <p className="xl:text-[48px] md:text-[32px] font-bold text-[#3D414D] leading-[50px]">
             {price}
-            <span className="text-xs font-normal text-[#797D87]"> /Month</span>
+            <span className="text-xs font-normal text-[#797D87]">
+              {billingInterval}
+            </span>
           </p>
-          {note && <p className="text-xs text-[#797D87] font-medium">{note}</p>}
+          {note && (
+            <p className="text-xs text-[#797D87] font-medium">{note}</p>
+          )}
         </div>
 
         <button className="mt-6 w-full bg-[#0A5FFA] hover:bg-[#BCF939] text-base transition text-white hover:text-[#3D414D] py-2 rounded-full font-medium">

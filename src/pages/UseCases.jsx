@@ -1,10 +1,10 @@
 import { useState } from "react";
 import FlashSalesImg from "../assets/images/flashSaleImg.png";
-import OnboardingImg from "../assets/images/flashSaleImg.png";
-import AppointmentImg from "../assets/images/flashSaleImg.png";
-import LeadNurturingImg from "../assets/images/flashSaleImg.png";
-import EventPromoImg from "../assets/images/flashSaleImg.png";
-import ReactivateImg from "../assets/images/flashSaleImg.png";
+import OnboardingImg from "../assets/images/OnboardingImg.png";
+import AppointmentImg from "../assets/images/AppointmentImg.png";
+import LeadNurturingImg from "../assets/images/LeadNurturingImg.png";
+import EventPromoImg from "../assets/images/EventPromoImg.png";
+import ReactivateImg from "../assets/images/ReactivateImg.png";
 
 const UseCaseSection = ({ id, name, image, useCase, howZapflowHelps }) => {
   return (

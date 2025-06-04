@@ -1,5 +1,6 @@
 import { Search } from "lucide-react";
 import { useState } from "react";
+ import { Helmet } from "react-helmet";
 
 const Section = ({ id, content }) => {
   return (
@@ -418,6 +419,15 @@ function HelpCenter() {
 
   return (
     <div>
+      {/* SEO META TAGS */}
+      <Helmet>
+         <title>ZapFlow Help Center | Get Support, Tutorials & Product Guides</title>
+        <meta
+          name="description"
+          content="Find answers, tutorials, and product support in the ZapFlow Help Center. Learn how to get the most out of ZapFlow’s automation tools with our step-by-step guides."
+        />
+        <link rel="canonical" href="https://www.zapflow.co/help-center" />
+      </Helmet>
       <div className="bg-[#06348A] h-[346px] px-6 flex items-center justify-center">
         <div className="max-w-[627px] mx-auto">
           <h2 className="lg:text-[32px] text-2xl text-center font-bold text-[#F0F0F2] mb-5">

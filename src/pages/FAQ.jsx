@@ -1,4 +1,6 @@
 import { useState, useRef } from "react";
+ import { Helmet } from "react-helmet";
+
 import { Disclosure, Transition } from "@headlessui/react";
 import { Plus, X } from "lucide-react";
 
@@ -104,6 +106,16 @@ function FAQ() {
 
   return (
     <div className="bg-[#F0F0F2] min-h-screen">
+      {/* SEO META TAGS */}
+      <Helmet>
+         <title>Zapflow FAQs | Get Answers to Common Questions</title>
+        <meta
+          name="description"
+          content="Have questions about Zapflow? Browse our frequently asked questions for quick answers on features, pricing, usage, and more."
+        />
+        <link rel="canonical" href="https://www.zapflow.co/faqs" />
+      </Helmet>
+
       <div className="py-[77px] max-w-[1280px] mx-auto xl:px-0 px-6">
         <div>
           <h1 className="text-[32px] mb-4 text-center font-bold text-[#5B5F6A]">

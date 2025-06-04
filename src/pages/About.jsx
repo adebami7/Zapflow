@@ -1,4 +1,5 @@
 import { useState, useRef } from "react";
+ import { Helmet } from "react-helmet";
 import About01 from "../assets/images/about01.png";
 
 function About() {
@@ -32,6 +33,16 @@ function About() {
 
   return (
     <div className="bg-[#F0F0F2] min-h-screen">
+      {/* SEO META TAGS */}
+      <Helmet>
+         <title>About Zapflow | Our Mission in Marketing Automation</title>
+        <meta
+          name="description"
+          content="Learn the story behind Zapflow, our mission, and how we’re helping businesses scale smarter with powerful marketing automation."
+        />
+        <link rel="canonical" href="https://www.zapflow.co/about" />
+      </Helmet>
+
       <div className="py-[77px] max-w-[1280px] mx-auto xl:px-0 px-6">
         <div>
           <h1 className="text-[32px] text-center font-bold text-[#5B5F6A]">

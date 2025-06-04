@@ -1,8 +1,20 @@
+ import { Helmet } from "react-helmet";
+
 import LegalLayout from "../sections/LegalLayout";
 
 function PrivacyPolicy() {
   return (
     <LegalLayout header="Privacy Policy">
+      {/* SEO META TAGS */}
+      <Helmet>
+         <title>Zapflow Privacy Policy | How We Protect Your Data</title>
+        <meta
+          name="description"
+          content="Learn how Zapflow collects, uses, and protects your personal data. Your privacy matters to us."
+        />
+        <link rel="canonical" href="https://www.zapflow.co/privacy-policy" />
+      </Helmet>
+
       <div className="prose text-[#5B5F6A]">
         <p className="mb-4">
           ZapFlow (&quot;we&quot;, &quot;us&quot;, &quot;our&quot;) is committed

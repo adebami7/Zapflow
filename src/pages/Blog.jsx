@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+ import { Helmet } from "react-helmet";
 import Blog01 from "../assets/images/blog01.png";
 import { ArrowRight } from "lucide-react";
 
@@ -21,6 +22,15 @@ function Blog() {
 
   return (
     <div className="bg-[#F0F0F2]">
+      {/* SEO META TAGS */}
+      <Helmet>
+         <title>Zapflow Blog | Marketing Tips, Trends & Automation</title>
+        <meta
+          name="description"
+          content="Stay updated with the latest marketing trends, automation tips, case studies, and guides on how to grow your business using Zapflow."
+        />
+        <link rel="canonical" href="https://www.zapflow.co/blog" />
+      </Helmet>
       <div className="bg-[#06348A] h-[346px] px-6 flex items-center justify-center">
         <div className="max-w-[627px] mx-auto">
           <h2 className="lg:text-[32px] text-2xl text-center font-bold text-[#F0F0F2] mb-5">

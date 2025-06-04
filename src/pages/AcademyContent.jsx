@@ -1,5 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useState, useRef } from "react";
+ import { Helmet } from "react-helmet";
+
 import Academy01 from "../assets/images/academy01.png";
 
 function AcademyContent() {
@@ -159,6 +161,16 @@ function AcademyContent() {
 
   return (
     <div className="bg-[#F0F0F2] min-h-screen">
+      {/* SEO META TAGS */}
+      <Helmet>
+         <title>Setup WhatsApp, SMS, Email & Voice | Zapflow Guide</title>
+        <meta
+          name="description"
+          content="Learn how to set up WhatsApp, SMS, email, and voice automation on Zapflow. Follow our beginner-friendly guide to get started fast."
+        />
+        <link rel="canonical" href="https://www.zapflow.co/academy/setting-up-whatsapp-email-sms-and-voice" />
+      </Helmet>
+
       <div className="py-[77px] max-w-[1280px] mx-auto xl:px-0 px-6">
         <div className="flex flex-col items-center gap-2 max-w-[590px] mx-auto mb-12 lg:mb-16">
           <h2 className="font-medium text-2xl text-[#5B5F6A] text-center">

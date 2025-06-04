@@ -1,8 +1,19 @@
+ import { Helmet } from "react-helmet";
 import LegalLayout from "../sections/LegalLayout";
 
 function TermsAndConditions() {
   return (
     <LegalLayout header="Terms & Conditions">
+      {/* SEO META TAGS */}
+      <Helmet>
+         <title>Zapflow Terms & Conditions | Legal Use of Platform</title>
+        <meta
+          name="description"
+          content="Read the terms and conditions governing the use of Zapflow's platform and services."
+        />
+        <link rel="canonical" href="https://www.zapflow.co/terms-and-conditions" />
+      </Helmet>
+
       <div className="prose text-[#5B5F6A]">
         <p className="mb-4">
           Welcome to Zapflow. These Terms & Conditions (&quot;Terms&quot;)

@@ -1,3 +1,4 @@
+ import { Helmet } from "react-helmet";
 import Button from "../components/Button";
 
 function Careers() {
@@ -16,6 +17,16 @@ function Careers() {
 
   return (
     <div>
+      {/* SEO META TAGS */}
+      <Helmet>
+         <title>Careers at Zapflow | Join Our Fast-Growing Tech Team</title>
+        <meta
+          name="description"
+          content="Join the team building Africa’s smartest marketing automation platform. Explore open roles and grow your career at Zapflow."
+        />
+        <link rel="canonical" href="https://www.zapflow.co/careers" />
+      </Helmet>
+
       <div className="bg-[#06348A] h-[346px] px-6 flex items-center justify-center">
         <div className="max-w-[627px] mx-auto">
           <h2 className="lg:text-[32px] text-2xl text-center font-bold text-[#F0F0F2] mb-5">

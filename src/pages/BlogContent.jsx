@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 import { useState, useRef } from "react";
+ import { Helmet } from "react-helmet";
 import Blog01 from "../assets/images/blog01.png";
 
 function BlogContent() {
@@ -150,6 +151,16 @@ function BlogContent() {
 
   return (
     <div className="bg-[#F0F0F2] min-h-screen">
+      {/* SEO META TAGS */}
+      <Helmet>
+         <title>Smart Ways to Stay Connected with Customers | Zapflow</title>
+        <meta
+          name="description"
+          content="Discover how Zapflow helps you stay connected with your customers through smart, automated campaigns across WhatsApp, SMS, email, and voice."
+        />
+        <link rel="canonical" href="https://www.zapflow.co/blog/the-smartest-way-to-stay-connected-with-your-customers" />
+      </Helmet>
+      
       <div className="py-[77px] max-w-[1280px] mx-auto xl:px-0 px-6">
         <div className="flex flex-col items-center gap-2 max-w-[590px] mx-auto mb-12 lg:mb-16">
           <h2 className="font-medium text-2xl text-[#5B5F6A] text-center">

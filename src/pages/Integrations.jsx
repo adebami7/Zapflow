@@ -1,3 +1,5 @@
+import { Helmet } from "react-helmet";
+
 import WhatsApp from "../assets/images/whatsappInt.png";
 import Zapier from "../assets/images/zapierInt.png";
 import Slack from "../assets/images/slackInt.png";
@@ -30,6 +32,15 @@ function Integrations() {
 
   return (
     <div className="bg-[#F0F0F2]">
+      {/* SEO META TAGS */}
+      <Helmet>
+         <title>Zapflow Integrations | Connect WhatsApp, Email & More</title>
+        <meta
+          name="description"
+          content="Connect Zapflow with your favorite tools. Explore powerful integrations with WhatsApp, email, SMS gateways, CRMs, and more."
+        />
+        <link rel="canonical" href="https://www.zapflow.co/integrations" />
+      </Helmet>
       <div className="bg-[#06348A] h-[346px] px-6 flex items-center justify-center">
         <div className="max-w-[627px] mx-auto">
           <h2 className="lg:text-[32px] text-2xl text-center font-bold text-[#F0F0F2] mb-5">

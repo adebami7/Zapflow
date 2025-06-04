@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import { Helmet } from "react-helmet";
 import Button from "../components/Button";
 import { Check, X } from "lucide-react";
 
@@ -159,7 +160,17 @@ function PricingPage() {
   ];
 
   return (
-    <>
+    <div>
+      {/* SEO META TAGS */}
+      <Helmet>
+         <title>Zapflow Pricing Plans | Flexible Options for All Sizes</title>
+        <meta
+          name="description"
+          content="Find a Zapflow plan that fits your business. Simple, flexible pricing to automate your marketing without breaking the bank. Start your free trial today."
+        />
+        <link rel="canonical" href="https://www.zapflow.co/pricing" />
+      </Helmet>
+      
       <div className="bg-[#F0F0F2] px-6 py-11 flex items-center flex-col">
         <h1 className="text-[32px] mb-4 text-center font-bold text-[#5B5F6A]">
           <span
@@ -371,7 +382,7 @@ function PricingPage() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

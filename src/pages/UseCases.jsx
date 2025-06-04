@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Helmet } from "react-helmet";
 import FlashSalesImg from "../assets/images/flashSaleImg.png";
 import OnboardingImg from "../assets/images/OnboardingImg.png";
 import AppointmentImg from "../assets/images/AppointmentImg.png";
@@ -93,6 +94,16 @@ function UseCases() {
 
   return (
     <div>
+      {/* SEO META TAGS */}
+      <Helmet>
+        <title>Use Cases | Zapflow Automation for Business Growth</title>
+        <meta
+          name="description"
+          content="Discover how businesses in e-commerce, real estate, coaching, and more use Zapflow to automate marketing, nurture leads, and boost conversions."
+        />
+        <link rel="canonical" href="https://www.zapflow.co/use-cases" />
+      </Helmet>
+      
       <div className="bg-[#06348A] h-[346px] px-6 flex items-center justify-center">
         <div className="max-w-[627px] mx-auto">
           <h2 className="lg:text-[32px] text-2xl text-center font-bold text-[#F0F0F2] mb-5">

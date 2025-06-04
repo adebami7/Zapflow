@@ -1,8 +1,20 @@
+ import { Helmet } from "react-helmet";
+
 import LegalLayout from "../sections/LegalLayout";
 
 function RefundPolicy() {
   return (
     <LegalLayout header="Refund Policy">
+      {/* SEO META TAGS */}
+      <Helmet>
+         <title>Zapflow Refund Policy | Learn About Our Guarantee</title>
+        <meta
+          name="description"
+          content="Understand Zapflow’s refund policy and how we handle cancellations and billing concerns."
+        />
+        <link rel="canonical" href="https://www.zapflow.co/refund-policy" />
+      </Helmet>
+
       <div className="prose text-[#5B5F6A]">
         <p className="mb-4">
           Please read this Refund Policy carefully before using ZapFlow or

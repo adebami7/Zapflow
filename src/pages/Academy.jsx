@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+ import { Helmet } from "react-helmet";
+
 import { Link as ScrollLink } from "react-scroll";
 import HeroBg from "../assets/images/academyHero.png";
 import Button from "../components/Button";
@@ -22,6 +24,16 @@ function Academy() {
 
   return (
     <div className="bg-[#F0F0F2]">
+      {/* SEO META TAGS */}
+      <Helmet>
+         <title>Zapflow Academy | Learn Marketing Automation Fast</title>
+        <meta
+          name="description"
+          content="Master Zapflow with step-by-step video tutorials, setup guides, and expert tips to get the most out of your marketing automation."
+        />
+        <link rel="canonical" href="https://www.zapflow.co/academy" />
+      </Helmet>
+
       <div
         className="bg-cover bg-center"
         style={{ backgroundImage: `url(${HeroBg})` }}

@@ -3,9 +3,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation } from "swiper/modules";
 import { motion } from "framer-motion";
 import Business01 from "../assets/images/business01.png";
-import Business02 from "../assets/images/business02.png";
+import Business2 from "../assets/images/business2.png";
 import Business03 from "../assets/images/business03.png";
-import Business04 from "../assets/images/business04.png";
+import Business4 from "../assets/images/business4.png";
 import Business05 from "../assets/images/business05.png";
 import SubHero06 from "../assets/images/sub-hero06.svg";
 import SubHero07 from "../assets/images/sub-hero07.svg";
@@ -78,7 +78,7 @@ const BusinessTypes = () => {
       subtext: "Convert more visitors into paying customers.",
     },
     {
-      image: Business02,
+      image: Business2,
       title: "Local Businesses",
       subtext: "Engage customers and drive sales on autopilot.",
     },
@@ -88,7 +88,7 @@ const BusinessTypes = () => {
       subtext: "Automate client outreach and follow-ups.",
     },
     {
-      image: Business04,
+      image: Business4,
       title: "SaaS & Startups",
       subtext: "Onboard users, nurture leads, and scale outreach.",
     },

@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import Button from "../components/Button";
-import ContactBg from "../assets/images/contact-us-2.png";
-import ContactBg2 from "../assets/images/contact-us-3.png";
+import ContactBg from "../assets/images/contact-us-4.png";
+import ContactBg2 from "../assets/images/contact-us-4.png";
 
 function ContactUs() {
   const [isMobile, setIsMobile] = useState(false);

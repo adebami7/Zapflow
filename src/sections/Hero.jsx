@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Button from "../components/Button";
-import HeroMain from "../assets/images/hero-main.png";
+import HeroMain1 from "../assets/images/hero-main1.png";
 import SubHero01 from "../assets/images/sub-hero01.png";
 import SubHero02 from "../assets/images/sub-hero02.png";
-import SubHero03 from "../assets/images/sub-hero03.png";
+import SubHero3 from "../assets/images/sub-hero3.png";
 import SubHero04 from "../assets/images/sub-hero04.png";
 import SubHero05 from "../assets/images/sub-hero05.png";
 import SubHero06 from "../assets/images/sub-hero06.svg";
@@ -83,9 +83,9 @@ function Hero() {
 
         <div className="relative lg:w-1/2 w-full mb-10 lg:mb-0">
           <motion.img
-            src={HeroMain}
+            src={HeroMain1}
             alt="Hero Visual"
-            className="md:w-[589px] md:h-[589px] h-[384px] object-cover relative z-10 mx-auto"
+            className="md:w-[593px] md:h-[593px] h-[440px] right-[28px] object-contain relative z-10 mx-auto"
             whileHover={{ scale: 1.05 }}
             transition={{ type: "spring", stiffness: 400, damping: 10 }}
           />
@@ -93,7 +93,7 @@ function Hero() {
           <motion.img
             src={SubHero01}
             alt="sub-hero-01"
-            className="absolute md:top-[203px] top-[148px] right-[24px] z-10 w-[156px] h-[92px] md:w-[265px] md:h-[156px]"
+            className="absolute md:top-[153px] top-[108px] right-[-62px] z-10 w-[156px] h-[92px] md:w-[265px] md:h-[156px]"
             whileHover={{ y: 10 }}
             transition={{ type: "spring", stiffness: 400, damping: 10 }}
           />
@@ -101,21 +101,21 @@ function Hero() {
           <motion.img
             src={SubHero02}
             alt="sub-hero-02"
-            className="absolute top-[275px] md:top-[410px] z-10 w-[156px] h-[92px] md:w-[265px] md:h-[156px]"
+            className="absolute left-[2px] top-[305px] md:top-[435px] z-10 w-[156px] h-[92px] md:w-[265px] md:h-[156px]"
             whileHover={{ y: 10 }}
             transition={{ type: "spring", stiffness: 400, damping: 10 }}
           />
 
           <img
-            src={SubHero03}
-            alt="sub-hero-03"
-            className="absolute md:top-[160px] md:left-[95px] top-[100px] left-[90px] z-10 md:w-[151px] md:h-[46px] h-[27px] w-[89px]"
+            src={SubHero3}
+            alt="sub-hero-3"
+            className="absolute md:top-[210px] md:left-[95px] top-[100px] left-[90px] z-10 md:w-[151px] md:h-[46px] h-[27px] w-[89px]"
           />
 
           <img
             src={SubHero04}
             alt="sub-hero-4"
-            className="absolute md:top-[206px] md:left-[95px] top-[128px] left-[89px] z-10 md:w-[217px] md:h-[45px] h-[26px] w-[128px]"
+            className="absolute md:top-[258px] md:left-[95px] top-[128px] left-[89px] z-10 md:w-[217px] md:h-[45px] h-[26px] w-[128px]"
           />
 
           <img
@@ -151,7 +151,7 @@ function Hero() {
           <img
             src={SubHero10}
             alt="sub-hero-10"
-            className="absolute bottom-[-28px] md:left-[400px] left-[220px] z-0 md:w-[211px] md:h-[211px] h-[124px] w-[124px]"
+            className="absolute bottom-[-18px] md:left-[490px] left-[220px] z-0 md:w-[211px] md:h-[211px] h-[124px] w-[124px]"
           />
 
           <img

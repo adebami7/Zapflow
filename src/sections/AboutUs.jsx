@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from "react";
-import Works01 from "../assets/images/works01.png";
-import Works02 from "../assets/images/works02.png";
+import Works1 from "../assets/images/works1.png";
+import Works2 from "../assets/images/works2.png";
 import Works03 from "../assets/images/works03.png";
-import Works04 from "../assets/images/works04.png";
+import Works4 from "../assets/images/works4.png";
 
 const HowZapflowWorks = () => {
   const [visibleCards, setVisibleCards] = useState([
@@ -74,7 +74,7 @@ const HowZapflowWorks = () => {
                 ? "translate-y-0 opacity-100"
                 : "translate-y-20 opacity-0"
             }`}
-            style={{ backgroundImage: `url(${Works01})` }}
+            style={{ backgroundImage: `url(${Works1})` }}
             onMouseEnter={() => setHoveredCard(0)}
             onMouseLeave={() => setHoveredCard(null)}
           >
@@ -101,7 +101,7 @@ const HowZapflowWorks = () => {
                 ? "translate-y-0 opacity-100"
                 : "translate-y-20 opacity-0"
             }`}
-            style={{ backgroundImage: `url(${Works02})` }}
+            style={{ backgroundImage: `url(${Works2})` }}
             onMouseEnter={() => setHoveredCard(1)}
             onMouseLeave={() => setHoveredCard(null)}
           >
@@ -154,7 +154,7 @@ const HowZapflowWorks = () => {
                 ? "translate-y-0 opacity-100"
                 : "translate-y-20 opacity-0"
             }`}
-            style={{ backgroundImage: `url(${Works04})` }}
+            style={{ backgroundImage: `url(${Works4})` }}
             onMouseEnter={() => setHoveredCard(3)}
             onMouseLeave={() => setHoveredCard(null)}
           >

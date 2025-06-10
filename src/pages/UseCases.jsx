@@ -2,10 +2,10 @@ import { useState } from "react";
 import { Helmet } from "react-helmet";
 import FlashSalesImg from "../assets/images/flashSaleImg.png";
 import OnboardingImg from "../assets/images/OnboardingImg.png";
-import AppointmentImg from "../assets/images/AppointmentImg.png";
-import LeadNurturingImg from "../assets/images/LeadNurturingImg.png";
+import AppointmentImg from "../assets/images/Appointment Img.png";
+import LeadNurturingImg from "../assets/images/LeadNurturing Img.png";
 import EventPromoImg from "../assets/images/EventPromoImg.png";
-import ReactivateImg from "../assets/images/ReactivateImg.png";
+import ReactivateImg from "../assets/images/Reactivate Img.png";
 
 const UseCaseSection = ({ id, name, image, useCase, howZapflowHelps }) => {
   return (
@@ -37,6 +37,15 @@ function UseCases() {
       howZapflowHelps:
         "With Zapflow, the brand can send coordinated broadcasts across WhatsApp, Email, SMS, and Voice to ensure maximum visibility. By creating a multi-channel campaign with countdown reminders and targeted messages based on purchase history, the brand boosts urgency and conversions—all from one dashboard.",
     },
+     {
+      name: "Appointment Reminders",
+      id: "appointment-reminders",
+      img: AppointmentImg,
+      useCase:
+        "A clinic wants to reduce no-shows by reminding patients of their upcoming appointments.",
+      howZapflowHelps:
+        "The clinic uses SMS and Voice automation to send timely reminders 24 hours before appointments. They also include reschedule options and confirmations. This keeps communication consistent and significantly reduces missed bookings.",
+    },
     {
       name: "Automated Customer Onboarding",
       id: "automated-customer-onboarding",
@@ -47,15 +56,6 @@ function UseCases() {
         "Using Automation Workflows, the company can trigger a series of emails and WhatsApp messages based on when a user signs up. The workflow includes welcome messages, feature highlights, and personalized check-ins—ensuring users are educated, engaged, and more likely to convert to paid plans.",
     },
     {
-      name: "Appointment Reminders",
-      id: "appointment-reminders",
-      img: AppointmentImg,
-      useCase:
-        "A clinic wants to reduce no-shows by reminding patients of their upcoming appointments.",
-      howZapflowHelps:
-        "The clinic uses SMS and Voice automation to send timely reminders 24 hours before appointments. They also include reschedule options and confirmations. This keeps communication consistent and significantly reduces missed bookings.",
-    },
-    {
       name: "Lead Nurturing",
       id: "lead-nurturing",
       img: LeadNurturingImg,
@@ -63,6 +63,15 @@ function UseCases() {
         "A real estate agency wants to follow up with leads from website inquiries.",
       howZapflowHelps:
         "Zapflow Forms capture new leads and automatically assign them to grouped contacts. An automation sequence sends personalized follow-up messages via WhatsApp and Email, offering property listings based on location or budget preferences. Agents can then reach out manually if leads respond or engage.",
+    },
+     {
+      name: "Reactivating Dormant Customers",
+      id: "reactivating-dormant-customers",
+      img: ReactivateImg,
+      useCase:
+        "A subscription service wants to re-engage inactive users who haven’t logged in for 30 days.",
+      howZapflowHelps:
+        "An automation rule detects inactivity and sends a series of re-engagement messages. These include a personalized 'We Miss You' email, an exclusive offer via SMS, and a reminder call using Voice broadcast. The workflow updates contact tags based on engagement to help the team follow up manually if needed.",
     },
     {
       name: "Event Promotions",
@@ -73,15 +82,7 @@ function UseCases() {
       howZapflowHelps:
         "The company can build a multi-step campaign: form collection for registration, automated reminders (Email + WhatsApp), and post-event follow-ups with replay links. Real-time analytics show engagement, so they can identify hot leads for future outreach.",
     },
-    {
-      name: "Reactivating Dormant Customers",
-      id: "reactivating-dormant-customers",
-      img: ReactivateImg,
-      useCase:
-        "A subscription service wants to re-engage inactive users who haven’t logged in for 30 days.",
-      howZapflowHelps:
-        "An automation rule detects inactivity and sends a series of re-engagement messages. These include a personalized 'We Miss You' email, an exclusive offer via SMS, and a reminder call using Voice broadcast. The workflow updates contact tags based on engagement to help the team follow up manually if needed.",
-    },
+   
   ];
 
   const [activeItem, setActiveItem] = useState(useCases[0].id);

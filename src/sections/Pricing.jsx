@@ -154,7 +154,7 @@ const Pricing = () => {
               <div className="bg-[#BCF939] rounded-full p-1 flex items-center justify-center w-6 h-6">
                 <Check size={14} stroke="#00329B" strokeWidth={2} />
               </div>
-              <span className="text-[#1E1E1E] text-start">50 SMS credits</span>
+              <span className="text-[#1E1E1E] text-start">10 SMS credits</span>
             </div>{" "}
             <div className="flex items-start gap-2">
               <div className="bg-[#BCF939] rounded-full p-1 flex items-center justify-center w-6 h-6">
@@ -184,7 +184,7 @@ const Pricing = () => {
                 "3 Lead Generation Forms",
                 "1 User Seat",
                 "10000 mails monthly",
-                "50 SMS credits",
+                "10 SMS credits",
                 "Flexible Add-ons Available",
               ]}
             />
@@ -198,16 +198,16 @@ const Pricing = () => {
             billingInterval={billingInterval}
             note="Boost your outreach with expanded messaging."
             features={[
-              "Add up to 1000 contacts",
+              "Add up to 1500 contacts",
               "Unlimited mails monthly",
               "Unlimited Lead Generation Forms",
-              "5000 SMS credits",
+              "1000 SMS credits",
               "Custom Email Integration",
               "1 WhatsApp Account",
               "Unlimited WhatsApp Status Automation",
               "Unlimited WhatsApp Broadcast",
               "10 Landing Pages",
-              "3 User Seats",
+              "2 User Seats",
             ]}
           />
           <PricingCard
@@ -224,9 +224,9 @@ const Pricing = () => {
             features={[
               "Everything in Basic",
               "Add up to 2500 contacts",
-              "10,000 SMS credits",
-              "2 WhatsApp Account",
-              "Unlimited Landing Pages",
+              "2500 SMS credits",
+              "2 WhatsApp Accounts",
+              "25 Landing Pages",
               "5 User Seats",
             ]}
           />
@@ -241,9 +241,11 @@ const Pricing = () => {
             note="Full marketing power with priority support"
             features={[
               "Everything in Standard",
-              "Add up to 4000 contacts",
-              "15,000 SMS credits",
-              "4 WhatsApp Account",
+              "Add up to 5000 contacts",
+              "6,000 SMS credits",
+              "5 WhatsApp Accounts",
+              "Unlimited Landing pages",
+              "10 User Seats",
             ]}
           />
 

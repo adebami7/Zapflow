@@ -1,4 +1,4 @@
-import { Facebook, Instagram, Youtube } from "lucide-react";
+import { Facebook, Instagram, Linkedin, Twitter, Youtube } from "lucide-react";
 import Logo from "../assets/images/logo-black.svg";
 import { Link } from "react-router-dom";
 
@@ -157,6 +157,17 @@ function Footer() {
                     name: "instagram",
                     url: "https://www.instagram.com/zapflowco/",
                   },
+                  {
+                    icon: Linkedin,
+                    name: "linkedin",
+                    url: "https://www.linkedin.com/company/zapflowco/",
+                  },
+                  {
+                    icon: Twitter, 
+                    name: "X (formerly Twitter)",
+                    url: "https://x.com/zapflowco",
+                  }
+
                 ].map(({ icon: Icon, name, url }) => (
                   <a
                     key={name}

@@ -12,10 +12,10 @@ const navigate = useNavigate();
 
  const items = [
   { path: "/", label: "Home", isScroll: true, sectionId: "home" },
-  { path: "/about", label: "About Us" },
   { path: "/pricing", label: "Pricing" },
   { path: "/faqs", label: "FAQs" },
-  { path: "/contact", label: "Contact Us" },
+  { path: "/about", label: "About Us" },
+  // { path: "/contact", label: "Contact Us" },
 ];
 
 

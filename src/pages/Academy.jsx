@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
  import { Helmet } from "react-helmet";
 
 import { Link as ScrollLink } from "react-scroll";
-import HeroBg from "../assets/images/academyHero.png";
+import HeroBg from "../assets/images/academy Hero.png";
 import Button from "../components/Button";
 import Academy01 from "../assets/images/academy01.png";
 import { ArrowRight } from "lucide-react";
